@@ -1,1 +1,4 @@
+Can't login (Win/linux) as another user without password even if we are admin and same for executing cmd (linux ?)
 
+useradd -m -s /bin/bash steam
+root@vps548077:~# sudo -i -u steam

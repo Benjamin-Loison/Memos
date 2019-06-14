@@ -1,0 +1,8 @@
+Rechercher "Terminal", ouvrez puis écrivez "java -jar [GLISSEZ ICI VOTRE LAUNCHER]" puis faites entrer, faites ce que vous faites d'habitude pour produire votre problème puis enfin dès que le problème est survenu vous faites, clique gauche sur le fond noir de la console puis clique droit Sélectionner tout, vous faites CTRL + C et vous faites coller pour nous renvoyez le rapport d'erreur.
+
+git command error:
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+solution: xcode-select --install
+
+https://support.apple.com/fr-fr/HT201255
+
