@@ -1,0 +1,4 @@
+History: %APPDATA%\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt (only input)
+
+Execute program: .\program.exe
+

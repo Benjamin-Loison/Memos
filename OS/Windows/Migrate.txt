@@ -1,0 +1,13 @@
+Procédure pour changer de disque dur tout en conservant exactement les données (photos personnels, programmes installés, paramètres de Windows...):
+
+/!\ Jamais essayé en changeant de version de Windows (testé que de Windows 10 à Windows 10) /!\
+
+1. Démarrer l'ordinateur avec une clé USB Windows (https://www.microsoft.com/fr-fr/software-download/windows10) ou utiliser les fonctionnalités similaires proposés directement sur le système d'exploitation dans les paramètres.
+2. Brancher (en plus) et installer EXACTEMENT la MEME VERSION et la MEME EDITION de Windows sur le disque dur que vous souhaitez utiliser à l'avenir (afin de créer les bonnes partitions pour le bon fonctionnement de Windows, /!\ ce nouveau disque dur doit au moins avoir la capacité utilisée avec toutes vos données de votre ancien disque dur /!\).
+3. Lancer avec votre Windows actuelle une invite de commandes en tant qu'administrateur.
+4. Trouver les lettres associées à votre ancien disque dur comportant Windows et le nouveau disque dur où vous souhaitez migréer vos données.
+5. Changer dans la commande suivante les lettres que vous avez trouvées (je considère que mon ancien disque Windows est le disque 'C' et que le nouveau est le 'D').
+6. Exécuter après avoir effectué le changement si nécessaire: robocopy C:\ D:\* /E /ZB /J /COPYALL /DCOPY:DAT /V /FP /BYTES /ETA /MT:128 /R:2 /W:2
+7. Patienter quelques heures si vous avez de nombreuses données...
+8. Redémarrer l'ordinateur sur le nouveau disque dur.
+9. Vous devez avoir exactement le même système d'exploitation qu'avant, vérifier que la migration s'est bien effectuée en débranchant l'ancien disque dur afin de vérifier que l'ordinateur n'utilisait pas celui-ci pour la vérification finale.

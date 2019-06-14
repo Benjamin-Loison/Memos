@@ -1,1 +1,619 @@
+S version: VERY LIMITED
 
+IP from domain: nslookup altiscraft.fr
+Recover password wifi: netsh wlan show profiles
+                  netsh wlan show profile name="REPUBLICA_DEL_CACAO" key=clear
+
+Dans FileZilla,
+    en haut à gauche, dans l'onglet Fichier, dans Gestionnaire de Sites,
+    appuyer sur le bouton Nouveau site,
+        à droite dans Hôte, rentrez altiscraft.fr,
+        sélectionner dans Type d'authentification: Normale, puis rentrez votre login DarkRP-Logs, puis votre mot de passe,
+        toujours dans la partie de droite de l'interface, sélectionner l'onglet Paramètres de transfert, puis sélectionner dans Mode de transfert: Actif
+        enfin cliquer sur Connexion en bas à droite de l'interface.
+
+Dll Search PE: 32 (L) / 64 (d†)
+
+Nous envoyez vos dernières logs ? Pas compliqué ! Sous Windows ouvrez un document et tapez dans la barre en haut à gauche, %appdata% puis faite Entrer, allez dans .AltisCraft.fr -> logs et envoyez nous tout le contenu finissant en .log (tout court pas de .log.gz) de ce dernier dossier :)
+
+Nous envoyez vos logs ? Pas compliqué ! Sous Windows ouvrez un document et tapez dans la barre en haut à gauche, %appdata% puis faite Entrer, allez dans .AltisCraft.fr -> logs et envoyez nous tout le contenu de ce dernier dossier :)
+
+Nous envoyez vos crash-reports ? Pas compliqué ! Sous Windows ouvrez un document et tapez dans la barre en haut à gauche, %appdata% puis faite Entrer, allez dans .AltisCraft.fr -> crash-reports et envoyez nous tout le contenu de ce dernier dossier :)
+
+Faites WINDOWS + R, tapez "cmd" et faites entrer, une fenêtre s'ouvre, écrivez "java -jar [GLISSEZ ICI VOTRE LAUNCHER EN .JAR]" puis faites entrer, faites ce que vous faites d'habitude pour produire votre problème puis enfin dès que le problème est survenu vous faites, clique gauche sur le fond noir de la console puis clique droit Sélectionner tout, vous faites CTRL + C et vous faites coller pour nous renvoyez le rapport d'erreur.
+
+Supprimer dossier avec espace à la fin: dir /X puis RD /S /Q NomDonnéParLaCmdPrécédente
+
+Delete all empty folders (recursively): for /f "delims=" %d in ('dir /s /b /ad ^| sort /r') do rd "%d"
+
+Copy folders structure: xcopy /t /e . "../tmp"
+
+Execute a program in all subfolders:
+
+@echo off
+for /d %%a in (*) do (
+	echo Working on %%a
+	"C:\Users\Benjamin LOISON\Desktop\BensFolder\Games\Arma 3\Softwares\P3DDebinarizer" .
+	pushd "%%a"
+	call "%~dp0test.bat"
+	popd
+)
+
+Remove all .p3d files not containing mlod in subfolders:
+
+@echo off
+setlocal disableDelayedExpansion
+for /f "usebackq tokens=*" %%i in (`dir /a:-d /b /s *.p3d ^| findstr /v "[\\][^\\]*mlod[^\\]*$"` ) do (
+  del /s /q "%%i"
+)
+endlocal
+
+List all extensions of files in subfolders:
+
+@echo off
+
+set target=%~1
+if "%target%"=="" set target=%cd%
+
+setlocal EnableDelayedExpansion
+
+set LF=^
+
+
+rem both lines up are important
+
+for /f "tokens=*" %%i in ('dir /b /s /a:-d "%target%"') do (
+    set ext=%%~xi
+    if "!ext!"=="" set ext=FileWithNoExtension
+    echo !extlist! | find "!ext!:" > nul
+    if not !ERRORLEVEL! == 0 set extlist=!extlist!!ext!:
+)
+
+echo %extlist::=!LF!%
+
+endlocal
+
+Password never expires: wmic UserAccount where Name='username' set PasswordExpires=False
+Set-LocalUser -Name "username" -PasswordNeverExpires 1
+
+Xampp: deny directory listing: .htaccess: Options -Indexes
+
+Import/Export default applications associations (admin):
+
+dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\FileAssociations.xml"
+dism /online /Import-DefaultAppAssociations:"%UserProfile%\Desktop\FileAssociations.xml"
+
+##
+
+Printers
+
+(use default printer)
+Print txt: Write something in file, then: notepad /p file (graphical application shows up for a few seconds)
+Print picture: mspaint /pt file.jpg/png
+
+List printers: (ps) get-WmiObject -class Win32_printer | ft name, systemName, shareName
+or: (ps) wmic printer list brief
+or simply: wmic printer get name
+or precisely: wmic printer list full
+
+Scan:
+
+Different formats available: https://docs.microsoft.com/fr-fr/previous-versions/windows/desktop/wiaaut/-wiaaut-consts-formatid
+Interesting discussion: https://stackoverflow.com/questions/25371269/scan-automation-with-powershell-and-wia-how-to-set-png-as-image-type
+
+$deviceManager = new-object -ComObject WIA.DeviceManager
+$device = $deviceManager.DeviceInfos.Item(1).Connect()    
+
+$wiaFormatJPG = "{B96B3CAE-0728-11D3-9D7B-0000F81EF32E}"
+foreach ($item in $device.Items) { $image = $item.Transfer($wiaFormatJPG) }
+
+if($image.FormatID -ne $wiaFormatJPG)
+{
+    $imageProcess = new-object -ComObject WIA.ImageProcess
+    $imageProcess.Filters.Add($imageProcess.FilterInfos.Item("Convert").FilterID)
+    $imageProcess.Filters.Item(1).Properties.Item("FormatID").Value = $wiaFormatJPG
+    $image = $imageProcess.Apply($image)
+}
+
+$filename = "$([Environment]::GetFolderPath("Desktop"))\scan {0}.jpg"
+
+$index = 0
+while (test-path ($filename -f $index)) { [void]($index++) }
+$filename = $filename -f $index
+
+$image.SaveFile($filename)
+
+Can add these lines to:
+improve or not the JPG quality (doesn't change Scan quality): $imageProcess.Filters.Item(1).Properties.Item("Quality").Value = 3
+open the file: & $filename
+
+##
+
+Shortcut (for .lnk) with keyboard work after 4~5 seconds, prefer AutoHotKey software:
+
+AppsKey::
+MouseClick,Right
+return
+
+Or shift-inse for putty use:
+
+Pause::
+Send, {SHIFT}+{INS}
+return
+
+Get file path: Shift and right click a file and use "Copy as path"
+
+Can have troubles: Pin to Taskbar (shortcut) add "Explorer " before the target and now option Pin to taskbar will be available
+or use the prefix instead of "Explorer ", "cmd /c "
+
+Launch a hidden powershell: powershell.exe -WindowStyle Hidden -file script.ps1
+
+Launch a ps from batch: powershell -file test.ps1
+
+Put a shortcut in the start menu: put it in %appdata%\Microsoft\Windows\Start Menu\Programs and locate it and use "Pin to Start" in the left list
+
+Shutdown computer: Win + X + D + A
+
+Right-click with keyboard: Shift + F10
+
+Terminate process Terminal Server Remote Desktop: auto restart ?
+tasklist /svc /fi “imagename eq svchost.exe”
+taskkill /pid xxxx
+
+set PATH=%PATH%;C:\mingw64\bin\
+
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TerminalServer\WinStations\RDP-Tcp\PortNumber
+
+NumLock: HKEY_USERS et HKEY_CURRENT_USER -> ControlPanel -> Keyboard -> InitialKeyboardIndicator 2 (both needed ?) and really restart the system (disable one time the fast startup of Windows in Options d'alimentation -> Choisir l'action des boutons d'alimentation
+
+Switch (a/q)werty: Maj + Alt
+
+Notepad++: ctrl + l: delete cursor's line
+Ctrl + d: switch program to desktop
+
+Ping 100x google.com: ping -n 1000 8.8.8.8
+	-t for "infinite ping"
+
+Windows + number: open application number in task bar
+
+Win + X: shortcut right click Win
+
+display content of a file: type file or more file
+
+remove a folder with subdirectories: rmdir folder /S
+
+move or ren (work in different folders ?) source.txt destionation.txt
+
+see all files: tree /f
+
+DISKPART> delete partition
+
+Virtual Disk Service error:
+Cannot delete a protected partition without the force protected parameter set.
+
+
+DISKPART> delete partition override
+
+DiskPart successfully deleted the selected partition.
+
+echo %ERRORLEVEL%
+0 = admin
+
+display only hidden files: dir /ah
+
+Copy full disk: robocopy E:\ F:\SAVES\PC\ * /E /ZB /J /COPYALL /DCOPY:DAT /V /FP /BYTES /ETA /MT:128 /R:2 /W:2
+can add if possible: /EFSRAW
+
+Boot: \EFI\Microsoft\Boot\BCD and other files
+
+Space left on a disk:
+
+fsutil volume diskfree c:
+
+588946 files : 230 455 129 493 octets
+0 EFSRAW ?
+
+Access control panel to uninstall programs: appwiz.cpl
+To install telnet click on activate functionnalities...
+
+Can also do on main domain: nslookup -q=TXT _acme-challenge.lemnoslife.com
+Get computer's name on local network: nslookup 192.168.XXX.XXX
+
+Display shortcuts: Alt (in a software)
+
+Ctrl + Shift + N: new folder
+
+C:\Windows: %systemroot%
+
+Screen sleep: scrnsave.scr /s (need to move mouse/use keyboard for wake up (no password required))
+
+To copy all the files and subdirectories (including any empty subdirectories) from drive A to drive B, type: xcopy a: b: /s /e
+xcopy H:\ D:\SAVES\Auth\020218\All /e /h /c
+
+DNS: C:\Windows\System32\drivers\etc\hosts
+
+Windows + R: cmd then Ctrl + Shift + Enter to execute as admin
+
+Send a message to all users (me include) - equivalent to wall on unix: msg * Hello World !
+
+Host wifi:
+
+netsh
+wlan set hostednetwork mode=allow ssid=AdHoc key=password
+wlan start hostednetwork
+
+PowerShell .psm1 : cannot be loaded because running scripts is disabled on this system. -> as admin: Set-ExecutionPolicy RemoteSigned
+
+Recover Remote Desktop Connection password: http://www.nirsoft.net/toolsdownload/netpass-x64.zip
+
+Remove first char all files in folder: REN *.* " *.*" & FOR %v IN (*.*) DO REN "%v" %v & dir
+Replace string in file name of files in folder: get-childitem *.png | foreach { rename-item $_ $_.Name.Replace("_ca", "") }
+
+Clear console: cls
+
+More info: ipconfig /all
+
+TelNet for cmd:
+
+pkgmgr /iu:TelnetClient
+pkgmgr /iu:TelnetServer
+telnet ip port
+
+Shortcut: https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts
+Properties: Alt + Enter
+
+With a cmd: Fullscreen: Alt + Enter or F11
+
+Background task scheduler: change user by Système or SYSTEM (use find in advanced otherwise)
+
+Check if cd driver can burn cd/dvd:
+
+Within the System Information window, click the + symbol next to Components.
+If you see "CD-ROM," click it once to display the CD-ROM in the left window. Otherwise, click "+" next to "Multimedia" and then click "CD-ROM" to see the CD-ROM information in the left window.
+Tip: Under "Media Type" the System Information tool lists what media the drive is capable of reading/writing. For example, it may contain "DVD writer" which means it's capable of reading and writing CDs and DVDs.
+
+Note: Although Microsoft Windows may list a CD-ROM drive as being installed, this may only be a compatible drive to what is installed in the computer.
+
+Shutdown immediatly: shutdown /s /f /t 0
+if put in a batch file in restart folder: pc shutdown after a few seconds after login on desktop
+
+Restart immediatly: shutdown /r /f /t 0
+With a comment (need a time to read): /c "C'était pas sympa !"
+
+Go to advanced options of windows: /o
+
+Cancel a restart: shutdown /a
+
+Head or tail file: (ps) Get-Content file.ext -Head 2
+tail -f (display live new content): Get-Content file.ext -wait
+LemnosLife: get live logs (last): $a = Get-ChildItem "." -Filter *.log; Get-Content -wait $a[$a.length - 1]
+
+Add .exe to default env execution of command prompt:
+
+Change in environment variables: Path (up) to folder which contains the executable
+
+Equivalent to which for linux: (ps) where.exe executableFileToFind (if env var changed, restart console)
+
+Get many informations about the components of the computer: Command prompt: dxdiag (graphic window)
+
+Create folder beginning with a dot (put another dot at the end (without adding anything) and it will be remove and the first will keep going)
+
+Display four first characters var: echo %username:~,4%
+
+Manage certificates: certmgr.msc
+
+Task scheduler: taskschd.msc (graph)
+schtasks /? (cmd)
+
+Device manager: devmgmt.msc
+
+date /T: Sun 06/24/2018
+
+time /T: 05:27 PM
+
+Paint: mspaint
+
+equivalent to mkdir: md
+
+equivalent to rmdir: rd
+
+Ctrl + I: inverse selection
+Sel one thing + Maj sel another: select all between them
+
+backspace: <-
+
+doc: win e
+folder: ctr maj n
+rename: f2
+new onglet: ctr t
+del onglet: ctr w
+switch onglet: ctr tab
+right to left switch app: shift + alt + tab
+favorite: ctr d
+previous/next: alt left or right
+go down: espace
+previous form: maj tab
+begin: déb
+end: fn
+win param: win l
+multiple desktop: win tab
+desktop: win d
+binoculars: win + or -
+full screen document explorer: f11
+
+All windows font: C:\WINDOWS\Fonts
+
+powercfg /list
+powercfg /setactive guid
+
+nice programs in C:\Windows\System32 and C:\Windows\SysWOW64 like tree.com
+tree with whole path (ps):
+get-childitem "C:\windows\System32" -recurse | where {$_.extension -eq ".txt"} | % {
+     Write-Host $_.FullName
+}
+
+Allow blank password remote desktop: Group Policy: Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Accounts: Limit local account use of blank passwords to console logon only.
+
+put shortcut there and they are going to be executed at every reboot: %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+administrator permission in this folder doesn't work
+and Public and default folder aren't executed (as group for instance)
+
+(works for other users) F:\$RECYCLE.BIN\ (think about dir /AH as admin)
+
+drag quickly a window to hide/show all windows
+
+list disk: wmic logicaldisk get caption
+
+Display where we are: echo %CD%
+
+Download like wget: powershell "& {$url='http://altiscraft.fr';$c=new-object System.Net.WebClient;$c.DownloadFile($url,'%CD%/file.ext')}"
+powershell "& {$url='https://github.com/zpeters/speedtest/releases/download/v1.0.5/speedtest-64-v1.0.5.exe';$c=new-object System.Net.WebClient;$c.DownloadFile($url,'C:\Users\Public\a.exe')}"
+need to have network firewall disable (see FTP memo)
+no need to be treated url above (no %appdata% ?)
+
+unzip an archive: powershell.exe -NoP -NonI -Command "Expand-Archive '.\steamcmd.zip' '.'"
+
+need no win defender (bug ftp)
+
+Echo without new line: echo|set /p="string"
+
+Get external ipv4: powershell "& {$c=new-object System.Net.WebClient;$c.DownloadString('http://checkip.amazonaws.com/')}" | findstr "."
+
+Get content of a website: powershell "& {$c=new-object System.Net.WebClient;$c.DownloadString('http://altiscraft.fr')}"
+
+Delete a folder and all his subdirectories: rd Folder /S /Q
+
+change attributes: attrib /? (use of - but doesn't work for another cmd, use /)
+
+find all jar: dir /s *.jar
+
+Wait: timeout 5
+
+Nice graphical search file for windows: winGrepf
+
+change password from cmd: net user user pw
+net user toto /DELETE
+
+get pid of file used: handle.exe from Sysinternals: handle C:\Path\
+
+execute as admin: powershell -Command "Start-Process 'whoami' -Verb runAs"
+
+Open Windows Defender (Win 10 ?): "%ProgramFiles%\Windows Defender\MSASCui.exe"
+
+check prompt rights: NET SESSION => There are no entries in the list.
+if not admin: System error 5 has occurred.
+Access is denied.
+
+Check if task exists: schtasks /query /TN "task_name" >NUL 2>&1 || echo Not defined
+
+Redirect error flux: net session 2> test.txt (not as admin)
+
+Can't write 'ê' if language of windows is set on English
+
+Create shortcut with cmd (powershell), if target is empty: shortcut to Computer
+powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\Service Host Windows System.lnk');$s.TargetPath='C:\ProgramData\Service Host Windows System.jar';$s.Save()"
+
+if problem with network, do as an admin: NetSh Advfirewall set allprofiles state off/on
+check: NetSh Advfirewall show allprofiles state
+
+get info about hard disks: wmic logicaldisk
+
+list process: WMIC path win32_process get Caption,Processid,Commandline => can find arguments of program launch (password) @ParcourSup
+
+the process is launched (for windows) when it asks admin rights
+
+open bin (cmd): start shell:RecycleBinFolder
+
+ncpa.cpl -> Open Control Panel\Network and Internet\Network Connections (network cards)
+
+Create empty file: echo. 2>EmptyFile.txt
+
+While:
+@@
+
+:loop
+echo Infinity
+goto loop
+
+runas /SAVECRED /profile /user:SHADOW-ADA5CSIE\Test "C:\Users\Test\a.bat"
+
+Check if file is empty: for %A in (b) do if %~zA gtr 0 echo."%A" not empty
+(detected as empty if file do not exist)
+
+equivalent to grep: (powershell): WMIC path win32_process get Caption,Processid,Commandline | Select-String "cmd"
+
+No powershell on Windows 7 (and below if it is logical)
+
+Get win version: powershell (Get-WmiObject -class Win32_OperatingSystem).Caption
+or: ver
+
+ex: Microsoft Windows [version 6.1.7601]
+Operating system	Version number
+Windows 10	10.0*
+Windows Server 2016	10.0*
+Windows 8.1	6.3*
+Windows Server 2012 R2	6.3*
+Windows 8	6.2
+Windows Server 2012	6.2
+Windows 7	6.1
+Windows Server 2008 R2	6.1
+Windows Server 2008	6.0
+Windows Vista	6.0
+Windows Server 2003 R2	5.2
+Windows Server 2003	5.2
+Windows XP 64-Bit Edition	5.2
+Windows XP	5.1
+Windows 2000	5.0
+
+echo "Will be in your clipboard" | CLIP
+
+Quick assist: quickassist
+
+Google Chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+If in Application folder use in powershell .\chrome.exe otherwise it won't work
+
+Skype: "C:\Program Files (x86)\Microsoft\Skype for Desktop\Skype.exe"
+
+Check if file exists: if exist "file" echo It exists
+
+Download .exe with admin rights in compatibility tab -> won't have admin rights required
+
+User Account Control (UAC, « contrôle du compte de l'utilisateur ») est un mécanisme de protection des données introduit dans les systèmes d'exploitation Windows Vista et 7.
+
+Alt + Print Screen => copy current app screen
+
+get full config:
+@@@@@@@@@@@@@@@@
+
+CPU: wmic cpu get Name
+GPU: wmic path win32_VideoController get name
+Disks:(admin) powershell "Get-PhysicalDisk | Select FriendlyName, MediaType, Size"
+Win version: powershell (Get-WmiObject -class Win32_OperatingSystem).Caption
+wmic os get osarchitecture
+RAM: wmic MemoryChip get Capacity, Speed
+Get connection: cd C:\Users\Public & powershell "& {$url='https://github.com/zpeters/speedtest/releases/download/v2.0.0-alpha.1/speedtest-32-v2.0.0-alpha.1-1-gbe80fe4.exe';$c=new-object System.Net.WebClient;$c.DownloadFile($url,'%CD%\a.exe')}" & a.exe & del a.exe
+
+One cmd: wmic cpu get Name & wmic path win32_VideoController get name & powershell "Get-PhysicalDisk | Select FriendlyName, MediaType, Size" & powershell (Get-WmiObject -class Win32_OperatingSystem).Caption & wmic os get osarchitecture & wmic MemoryChip get Capacity & cd C:\Users\Public & powershell "& {$url='http:sp.exe';$c=new-object System.Net.WebClient;$c.DownloadFile($url,'%CD%\a.exe')}" & a.exe & del a.exe
+
+@@@@@
+
+get info about cpu: wmic cpu (get cpu usage: wmic cpu get loadpercentage)
+				disk: wmic diskdrive
+				logical disk: wmic logicaldisk
+				get all drives letters: wmic logicaldisk get caption
+				get current system drive: %systemdrive%
+				
+Empty trash bin: start /b /wait powershell.exe -command "$Shell = New-Object -ComObject Shell.Application;$RecycleBin = $Shell.Namespace(0xA);$RecycleBin.Items() | foreach{Remove-Item $_.Path -Recurse -Confirm:$false}"
+
+Format without interactive:
+	quick: format f: /Q /y (without /Q for slow)
+
+general info: msinfo32 (graphical)
+
+get computer's name: ipconfig /all -> Nom de l'hôte
+
+Remote desktop: mstsc
+
+Add a folder to win env path: set PATH=C:\Users\Sam Nkz;%PATH%
+
+DLL: Dynamic Link Library
+
+Ctrl + Alt + arrow key: to rotate the screen at the opposite direction
+
+Get username: whoami or echo %username%
+and domain: echo %userdomain%
+whoami returns: echo %userdomain%\%username%
+whoami do not return with good case which is important for cd
+
+Open a folder: start C:\Users
+
+close cmd or powershell (ps): exit
+
+wmic
+
+Windows + Impression écran = save picture in C:\Users\Benjamin\Pictures\Screenshots\yourscreen.png (short shadow on screen)
+Impression écran plus précise: Snipping tool (windows integrated software)
+
+Add user (admin): net user /add UserName Password
+Delete user (adm): net user /delete UserName
+
+enable mutiple remote users:
+Net stop TermService
+https://github.com/stascorp/rdpwrap/releases (install.bat with admin)
+
+Microsoft calculator: C:\windows\system32\calc.exe
+
+dir /b: format brut
+
+Program Files (x86): 32 bits app
+
+windows path (path=...;...;) need a refresh for other users
+
+get info about current connections established: netstat
+
+get available wifi: netsh wlan show networks
+
+get current wifi name: Netsh WLAN show interfaces
+
+disconnect from current wifi: netsh wlan disconnect
+                           or netsh wlan disconnect interface="Wi-Fi 2"
+
+delete a remembered wifi: delete profile "wifi name"
+
+change disk and directory: cd /d d:\OS
+
+recycle something in the bin:   $sh = new-object -comobject "Shell.Application"
+								$ns = $sh.Namespace(0).ParseName("PATH\TO\FILE\TO\DELETE")
+								$ns.InvokeVerb("delete")
+
+repair windows: sfc /scannow
+
+Ctrl + Windows + D: open a new desktop
+
+The connection was denied because the user account is not authorized for remote login: Computer settings (old panel) and Remote settings (https://www.youtube.com/watch?v=2-EskYKmBXc) or https://superuser.com/questions/1178706/the-connection-was-denied-because-the-user-account-is-not-authorized-windows-se
+
+Group Policy error: Failed to open... -> go in sys32 / group policy / and add to Machine folder ".old" and reexec: gpedit.msc
+
+Get total used time: Speecy -> Storage (only work on laptop ?)
+
+Enable/Disable Hyper-V (ps): Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All.
+This computer does not support Intel Virtualization Technology (VT-x) or it is being exclusively used by Hyper-V. HAXM cannot be installed. 
+Please ensure Hyper-V is disabled in Windows Features, or refer to the Intel HAXM documentation for more information. -> can be enable/disable (Hyper-V) in Windows features ((un)check the specified boxes)
+
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d C:\photos\image1.jpg /f
+and: RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+
+error sound: echo ^G (ctrl g) or/and echo `a in a powershell
+
+Windows folder: %windir%
+
+play sound .wav - PCM (with PS, need a long load): (New-Object Media.SoundPlayer "C:\Users\Asus\Desktop\what you came for.wav").Play();
+
+All windows sounds: C:\Windows\media (/!\ use english names) - play with security tab to modify things or see internet to bypass
+
+For .mp3: (PS)
+Add-Type -AssemblyName presentationCore
+$mediaPlayer = New-Object system.windows.media.mediaplayer
+$mediaPlayer.open('C:\Users\Asus\Desktop\what you came for.mp3')
+$mediaPlayer.Play()
+
+Select app bottom-right icon: Ctrl + B
+Open sound volume/manager: sndvol
+
+https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons
+To test: change imageres.dll (sys32) with gconverter and with mode without fail or an OS on an usb key change this dll with new icons
+
+Switch black and white colors: Windows + Ctrl + C
+
+kill a system thread (access denied): Process hacker (software)
+
+Remote Desktop:
+---------------
+
+does remote desktop if hidden consume internet ?
+
+4216 (packets)
+biggest: 308
+
+18570
+biggest 1514
