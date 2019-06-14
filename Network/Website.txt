@@ -1,0 +1,13 @@
+Bug launcher altis, toucher .htaccess, apache, php5, symfony, conf apache mod rewrite attention autres sites (checkez toutes les logs) 
+AllowOverride All
+==> copy and paste /etc/apache (old to new) works ^^, why ?
+
+URL encoder/decoder: Notepad++ > Plugins > MIME Tools
+
+Get User-Agent with Google: https://www.google.fr/search?q=get+user+agent&rlz=1C1CHBF_frFR766FR766&oq=get+user+agent&aqs=chrome..69i57j0l5.2674j0j7&sourceid=chrome&ie=UTF-8
+
+fake text: https://www.lipsum.com
+
+.htaccess
+Options +Indexes (enable files/folders listing)
+

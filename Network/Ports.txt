@@ -1,0 +1,14 @@
+FTP Server - 20 - TCP/UDP
+FTP Data 0 - 21 - TCP/UDP
+SSH - 22 - TCP/UDP
+Telnet - 23 - UDP
+HTTP - 80 - TCP/UDP
+HTTPS - 443 - TCP/UDP
+RDP - 3389 - TCP/UDP
+FTP Data 1 - 5000-5050 - TCP/UDP
+TS - 9987 - UDP
+TS Query - 10011 - TCP/UDP
+MC - 25565 - TCP/UDP
+AC - 30033 - TCP/UDP
+TS img transfer - 30033 - TCP
+Auth ACJ - 59722 - TCP/UDP

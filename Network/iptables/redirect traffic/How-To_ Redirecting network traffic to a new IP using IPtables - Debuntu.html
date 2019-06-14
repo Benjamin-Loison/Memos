@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/ -->
+<html lang="en" class=" js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>How-To: Redirecting network traffic to a new IP using IPtables - Debuntu</title>
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Debuntu">
+<meta property="og:title" content="How-To: Redirecting network traffic to a new IP using IPtables">
+<link rel="canonical" href="https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/">
+<meta property="og:url" content="https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/">
+<meta property="og:description" content="While doing a server migration, it happens that some traffic still go to the old machine because the DNS servers are not yet synced or simply because some people are using the IP address instead of the domain name….">
+<meta name="twitter:site" content="@debuntu">
+<meta name="twitter:title" content="How-To: Redirecting network traffic to a new IP using IPtables">
+<meta name="twitter:description" content="While doing a server migration, it happens that some traffic still go to the old machine because the DNS servers are not yet synced or simply because some people are using the IP address instead of the domain name….">
+<meta name="twitter:url" content="https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@chantra">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2008-12-05T19:18:37-08:00">
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Debuntu",
+      "url" : "https://www.debuntu.org",
+      "sameAs" : null
+    }
+  </script>
+
+<link href="https://www.debuntu.org/feed.xml" type="application/atom+xml" rel="alternate" title="Debuntu Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<link rel="stylesheet" href="./How-To_ Redirecting network traffic to a new IP using IPtables - Debuntu_files/main.css">
+<meta http-equiv="cleartype" content="on">
+
+
+
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="layout--single" style="margin-bottom: 201px;">
+<!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+<div class="masthead">
+<div class="masthead__inner-wrap">
+<div class="masthead__menu">
+<nav id="site-nav" class="greedy-nav">
+<button class="hidden" count="0"><div class="navicon"></div></button>
+<ul class="visible-links">
+<li class="masthead__menu-item masthead__menu-item--lg"><a href="https://www.debuntu.org/">Debuntu</a></li>
+</ul>
+<ul class="hidden-links hidden"></ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="main" role="main">
+<article class="page" itemscope="" itemtype="http://schema.org/CreativeWork">
+<meta itemprop="headline" content="How-To: Redirecting network traffic to a new IP using IPtables">
+<meta itemprop="description" content="While doing a server migration, it happens that some traffic still go to the old machine because the DNS servers are not yet synced or simply because some people are using the IP address instead of the domain name….">
+<meta itemprop="datePublished" content="December 05, 2008">
+<div class="page__inner-wrap">
+<header>
+<h1 class="page__title" itemprop="headline">How-To: Redirecting network traffic to a new IP using IPtables
+</h1>
+<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i>
+1 minute read
+</p>
+</header>
+<section class="page__content" itemprop="text">
+<p>While doing a server migration, it happens that some traffic still go to the old machine because the DNS servers are not yet synced or simply because some people are using the IP address instead of the domain name….</p>
+<p>By using <strong>iptables</strong> and its <strong>masquerade</strong> feature, it is possible to forward all traffic to the old server to the new IP.</p>
+<p>This tutorial will show which command lines are required to make this possible.</p>
+
+<p>In this article, it is assumed that you do not have <strong>iptables</strong> running, or at least no <strong>nat</strong> table rules for chain <strong>PREROUTING</strong> and <strong>POSTROUTING</strong>.</p>
+<p>The first thing to do is do enable <em>IP forwarding</em>. This is done either by using:</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># echo "1" &gt; /proc/sys/net/ipv4/ip_forward</span>
+</code></pre>
+</div>
+<p>or</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># sysctl net.ipv4.ip_forward=1</span>
+</code></pre>
+</div>
+<p>Then, we will add a rule telling to forward the traffic on port 1111 to ip 2.2.2.2 on port 1111:</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># iptables -t nat -A PREROUTING -p tcp --dport 1111 -j DNAT --to-destination 2.2.2.2:1111</span>
+</code></pre>
+</div>
+<p>and finally, we ask IPtables to masquerade:</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>iptables -t nat -A POSTROUTING -j MASQUERADE
+</code></pre>
+</div>
+<p>Optionally, you could only redirect the traffic from a specific source/network with, for a host only:</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># iptables -t nat -A PREROUTING -s 192.168.1.1 -p tcp --dport 1111 -j DNAT --to-destination 2.2.2.2:1111</span>
+</code></pre>
+</div>
+<p>or for a whole network</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># iptables -t nat -A PREROUTING -s 192.168.1.0/24 -p tcp --dport 1111 -j DNAT --to-destination 2.2.2.2:1111</span>
+</code></pre>
+</div>
+<p>that’s it, now the traffic to port 1111 will be redirected to IP 2.2.2.2 .</p>
+<p>If you go on host 2.2.2.2, you should see a lot of traffic coming from the host doing the redirection.</p>
+</section>
+<footer class="page__meta">
+<p class="page__taxonomy">
+<strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+<span itemprop="keywords">
+<a href="https://www.debuntu.org/tags/iptables" class="page__taxonomy-item" rel="tag">iptables</a><span class="sep">, </span>
+<a href="https://www.debuntu.org/tags/network" class="page__taxonomy-item" rel="tag">network</a><span class="sep">, </span>
+<a href="https://www.debuntu.org/tags/system" class="page__taxonomy-item" rel="tag">system</a>
+</span>
+</p>
+<p class="page__taxonomy">
+<strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+<span itemprop="keywords">
+<a href="https://www.debuntu.org/categories/administration" class="page__taxonomy-item" rel="tag">Administration</a><span class="sep">, </span>
+<a href="https://www.debuntu.org/categories/howto" class="page__taxonomy-item" rel="tag">HowTo</a><span class="sep">, </span>
+<a href="https://www.debuntu.org/categories/networking" class="page__taxonomy-item" rel="tag">Networking</a>
+</span>
+</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2008-12-05T19:18:37-08:00">December 05, 2008</time></p>
+</footer>
+<section class="page__share">
+<h4 class="page__share-title">Share on</h4>
+<a href="https://twitter.com/intent/tweet?via=debuntu&amp;text=How-To:%20Redirecting%20network%20traffic%20to%20a%20new%20IP%20using%20IPtables%20https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://plus.google.com/share?url=https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+<nav class="pagination">
+<a href="https://www.debuntu.org/how-to-setting-up-bgp-on-vyatta-page-3-setting-bgp/" class="pagination--pager" title="How-To: Setting up BGP on Vyatta — page 3 — Setting BGP
+">Previous</a>
+<a href="https://www.debuntu.org/how-to-apache2-authentication-using-mysql-backend/" class="pagination--pager" title="How-To: Apache2 authentication using MySQL backend
+">Next</a>
+</nav>
+</div>
+</article>
+</div>
+<div class="page__footer">
+<footer>
+
+
+<div class="page__footer-follow">
+<ul class="social-icons">
+<li><strong>Follow:</strong></li>
+<li><a href="https://twitter.com/debuntu"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://facebook.com/debuntu.org"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+<li><a href="https://github.com/chantra"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+<li><a href="https://www.debuntu.org/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+</ul>
+</div>
+<div class="page__footer-copyright">© 2017 Debuntu. Powered by <a href="https://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+</footer>
+</div>
+<script src="./How-To_ Redirecting network traffic to a new IP using IPtables - Debuntu_files/main.min.js.téléchargement"></script>
+
+
+</body></html>

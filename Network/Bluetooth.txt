@@ -1,0 +1,1 @@
+Forget completely a bluetooth device (bug win 10 bluetooth's window for removing or modifying properties) : Device Manager -> Display hidden devices -> Bluetooth devices -> Deinstall the device

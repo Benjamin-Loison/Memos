@@ -1,0 +1,3 @@
+relais web: affiche la valeur de redirection dans le navigateur et pas de frame
+cname: affiche le dns initial dans le navigateur et pas de frame
+alias web: identique au cname

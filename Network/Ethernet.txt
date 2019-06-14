@@ -1,0 +1,16 @@
+Win:
+----
+
+Troubleshoot windows tool
+
+if gateway...
+	uninstall in Device Manager the network device called Intel...
+	restart
+
+@@@
+
+Cmd as administrator:
+
+netsh
+winsock reset
+int ip reset

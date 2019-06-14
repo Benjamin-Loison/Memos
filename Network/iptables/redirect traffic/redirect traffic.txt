@@ -1,0 +1,7 @@
+list nat rules: iptables -t nat -L
+reset nat rules: iptables -t nat -F
+
+remove line X: iptables -t nat -D PREROUTING X
+(counting from 1 (not 0)), don't count, use: --line-numbers when listing rules
+
+/!\ WARNING /!\ DO NOT REDIRECT ALL THE TRAFFIC OTHERWISE YOU WON'T BE ABLE TO ACCESS TO THE SERVER /!\

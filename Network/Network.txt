@@ -1,0 +1,37 @@
+RX / TX: Réception / Envoi
+DDOS himself: https://ae01.alicdn.com/
+
+nslookup 90.91.64.125
+-> Nom : LFbn-1-12506-125.w90-91.abo.wanadoo.fr
+
+Network Address Translation (NAT)
+Mandatory Access Control (MAC)
+Internet Control Message Protocol (ICMP)
+
+Un réseau de diffusion de contenu (RDC) ou en anglais content delivery network (CDN)
+
+Le Time to Live (« temps de vie » ou « durée de vie »), abrégé TTL, indique le temps pendant lequel une information doit être conservée, ou le temps pendant lequel une information doit être gardée en cache.
+Dans le protocole utilisé par les serveurs DNS, une donnée Time to Live est présente et indique le temps, en secondes, pendant lequel l'information donnée par le serveur (le plus souvent un nom de domaine ou un autre serveur DNS) peut être conservée en cache. Passé ce délai, l'information doit être considérée comme obsolète et être mise à jour.
+
+Le TTL est en général de l'ordre d'un jour (TTL = 86400), il peut être réduit jusqu'à 0 pour des informations variant fréquemment.
+
+Some protocols may be found in: /etc/protocols
+
+Les requests for comments (RFC), littéralement « demande de commentaires », sont une série numérotée de documents officiels décrivant les aspects techniques d'Internet, ou de différents matériels informatiques (routeurs, serveur DHCP). Peu de RFC sont des standards, mais tous les documents publiés par l'IETF sont des RFC.
+
+HTTP Strict Transport Security (HSTS)
+
+Can choose another port than 443 for HTTPS (need the client to connect on the specified port)
+
+DDOS softwares: LOIC/HOIC 
+
+Internetwork Packet Exchange (IPX), est l’implémentation Novell du Internet Datagram Protocol (IDP) développé par Xerox. IPX est un protocole datagramme sans connexion qui transmet des paquets à travers un réseau local (LAN) et fournit aux stations Netware et aux serveurs de fichiers des services d’adressage et de routage inter-réseaux.
+
+localhost = 127.0.0.1
+
+livebox: 192.168.1.1 (orange ?)
+
+UDP Client C++ works with UDP Server Java
+
+www.defense.gov = 184.25.56.139, www.whitehouse.gov = 184.27.36.110, www.kremlin.ru = 95.173.136.72
+

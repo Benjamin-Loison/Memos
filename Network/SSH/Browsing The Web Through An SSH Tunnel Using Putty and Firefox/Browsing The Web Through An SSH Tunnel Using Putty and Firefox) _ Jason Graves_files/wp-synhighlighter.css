@@ -1,0 +1,132 @@
+a.wp-synhighlighter-title {
+    text-decoration: none;    
+    position: relative;
+    left: 10px;
+    top: -8px;
+}
+
+div.wp-synhighlighter-inner {
+	height: auto;
+	max-height: 600px;
+	overflow: auto;
+	background: #fff none repeat scroll 0 0;
+	padding: 10px;
+	border: solid 1px #ddd;
+        border-top: none;
+	clear: both;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 8px;
+	margin-left: 0;
+	display: block;
+	line-height: normal;
+	text-align: left;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+        
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+div.wp-synhighlighter-outer div table {
+        margin: 0;
+        border: none;
+}   
+
+div.wp-synhighlighter-outer div table td {
+    border: none;
+}
+
+div.wp-synhighlighter-outer div table .wpsn-link {
+        display: block;
+        float: right;
+        clear: none;
+        margin-left: 2px;
+        border: solid 1px #ddd;
+        background: #fff;
+        border-radius: 3px 3px 3px 3px;
+        width: 30px;
+        text-align: center;
+        white-space: nowrap;
+}
+
+div.wp-synhighlighter-outer div table .wpsn-link a {
+    font-size: 14px;
+    color: #ccc;
+    
+}
+
+div.wp-synhighlighter-collapsed {
+	border: solid 1px #ddd;
+	clear: both;
+	background: #dedede url(images/icon_plus.gif) no-repeat scroll 10px center;
+	display: block;
+	padding-left: 14px;
+	margin-top: 8px;
+	margin-right: 0;
+	margin-bottom: 8px;
+	margin-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	line-height: normal;
+	text-align: left;	
+        height: 38px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+        
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+div.wp-synhighlighter-expanded {
+	border: solid 1px #ddd;
+	clear: both;
+	background: #dedede url(images/icon_minus.gif) no-repeat scroll 10px center;
+	display: block;
+	padding-left: 14px;
+	margin-top: 8px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	line-height: normal;
+	text-align: left;
+        height: 38px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+}
+
+
+a.wp-synhighlighter-title {
+	cursor: pointer;
+	font-size: small;
+}
+
+div.wp-synhighlighter-inner pre {
+	background: #fff;
+	border: none;
+	margin: auto;
+	padding: inherit;
+	line-height: normal;
+        font-size: 14px;
+}
+
+div.wp-synhighlighter-inner ol {
+	list-style-position: outside !important;
+	padding: 0;
+}
+
+div.wp-synhighlighter-inner li {
+	list-style-position: outside !important
+}
