@@ -1,0 +1,8 @@
+enable gpio:
+------------
+
+raspi-config -> interface option
+reboot
+to check: lsmod | grep i2c_
+
+do the same with spi and uart

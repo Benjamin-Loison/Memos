@@ -1,0 +1,57 @@
+Even if your phone is stuck on KitKat, you can download and flash a ROM based on Lollipop.
+
+@@
+
+Reinstall official ROM: https://www.phonandroid.com/forum/threads/roms-liste-des-roms-officielles-pour-samsung-galaxy-j5-2017-sm-j530f.173304/
+
+@@
+
+https://android.stackexchange.com/questions/160417/samsung-j5-use-sd-card-as-internal-memory
+
+This is how I achieved this on a Samsung Galaxy J5 with Marshmallow 6.0.1. It requires a computer running Windows vista/7/8/10:
+
+Install the official Samsung drivers on your computer - some other driver variants can cause this process not to work: http://developer.samsung.com/galaxy/others/android-usb-driver-for-windows
+Install Odin on your computer: https://odindownload.com/download/
+Enable Developer Options on your phone.
+In settings->Developer Options, turn on 'Oem Unlock' and 'USB Debugging'.
+
+Download this zip package: https://download.chainfire.eu/1021/SuperSU/SR3-SuperSU-v2.79-SR3-20170114223742.zip -- and save it to a known location on your phone eg. downloads.
+
+Install TWRP -- this particular one -- others do not work on Marshmallow: https://forum.xda-developers.com/galaxy-j5/development/recovery-samsung-galaxy-j500f-t3416960 . Follow the instructions on the page to install, however be aware that for this to work, the First Time the phone resets after the flashing process, you must hold Vol Up + Home + Power key to boot into TWRP. The timing on this is reasonably quick, so keep an eye and your hands on your phone during the flashing process. If you don't do it the first time, you will need to repeat this step, as on subsequent reboots you will not be able to get it to boot into TWRP if you didn't do it the first time.
+
+Now download and install Root Essentials from Google Play Store. Run it, go to Adoptable Storage and follow the instructions. Root Essentials will ask you to download a specific zip package (do so). Then go through the process again, and follow the prompts to reboot into TWRP mode and install the package from the Install menu. Once you've done this, and the phone reboots (it will reboot loop several times, don't worry) it should boot up properly, and may go through an 'App optimizing' process.
+
+Once booted, you should go into settings->storage, and you should see that your overall storage has increased. Click on the SD card, click on the '...' button in the top left and click on 'Migrate Data'. This should move existing app data (that can be moved) and photos/music to the SD card, and change the default photo storage location to the SD card.
+
+Lastly, go into settings->Apps->Application Manager. Some existing Apps can be moved entirely to the SD card eg. messenger. To do so, click on the app, then storage. If an option to move it is available for that App, the 'Change' button should be available. Click on it and follow the process.
+
+Voila! Enjoy!
+
+Do not mess with adb's, Link2SD's or anything else -- I have wasted too much time on those before I figured out a way that works!
+
+Ben's briefing: Odin is used to install TWRP instead of the default bootloader (Volume up + Home + Power)
+TWRP is used with SuperSU to get Root Access then with an SD Card and the root-required application Roots Essentials from Play Store we can migrate everything on the SD card
+
+@@
+
+Magisk/KingoRoot can also root the phone, Magisk looks good
+SuperSU/Super KingoRoot/Magisk manager only manage root access (so is required but after rooted)
+Root checker can check whether or not root is effective (need root manager installed and phone rooted)
+
+@@
+
+SideSync (Play Store app): remotly control phone
+
+@@
+
+To use ADB, enable USB Debugging (C:\Users\Asus\AppData\Local\Android\sdk\platform-tools\adb.exe devices)
+
+Screenrecording (without sound):
+adb shell
+
+@@
+
+Vysor good app to record in live screen of the phone on the pc but without sound (free) and possibility to force with ADB to install the app on a broken-screen phone
+
+
+screenrecord /sdcard/video.mp4

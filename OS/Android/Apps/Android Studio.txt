@@ -1,0 +1,5 @@
+Import external library:
+
+File > Project Structure > Dependencies Tab > Add module dependency (scope = compile)
+Where the module dependency is the project library android folder
+

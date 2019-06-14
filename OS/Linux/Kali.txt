@@ -1,0 +1,11 @@
+rdesktop (control rdp win ?)
+
+Hydra: brute force rdp ? https://www.youtube.com/watch?v=PK4NlDDNUak
+
+default kali password for root: toor
+
+network:
+--------
+
+get some info about connected devices: nmap -sn 192.168.1.0/24
+more info: nmap -O 192.168.1.0/24

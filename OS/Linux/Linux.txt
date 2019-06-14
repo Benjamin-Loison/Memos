@@ -1,0 +1,707 @@
+Todo:
+@@@@
+
+Know how to change pager for man command
+
+@@@@
+
+Droit
+r 4
+w 2
+x 1
+
+chown nouveau_propriétaire:nouveau_groupe_propriétaire nom_du.fichier
+chown :new_group file
+
+Export partition to file ? testdisk
+Recover files in a partition: photorec
+
+if error "deny access because can't read htaccess", chmod 775 /var/www/html/
+
+FTPS Connection (Port: 22) with user SSH creditentials
+
+live version doesn't save files on restart, is it possible to do so ?
+
+curl with authentification header http: curl -u user:password http://website.com
+with POST request (php): curl --data "var0=-1&var1=-1" http://website.com/specifiedFile.php
+
+user password seem to be obfusated in /etc/shadow and unencryptable
+
+/home/user or /root: $HOME
+
+With password files of course think about the least permission as possible
+
+mount SSH folder:
+apt install sshfs
+sshfs root@localhost:/ /Folder -p 2222
+cat /root/.password | sshfs root@localhost:/ /Folder -p 2222 -o password_stdin
+
+umount or use fusermount -u Linux/
+
+Find largest file in subdirectories: find . -type f -printf "%s\t%p\n" | sort -n | tail -1
+
+SSH keys allow to login without password so if client computer has a steal access, the keys can be used localy (or not ?) so we can use every time a password for ssh keys... (kind of useless so ?)
+
+even if folder is once empty rsnapshot won't copy all previous empty data as if there wasn't any data before @Optimized
+
+create in live a swap space:
+
+fallocate -l 1G /swapfile
+dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+/etc/fstab add: /swapfile swap swap defaults 0 0
+check swap: swapon --show
+check memory: free -h
+
+with folders:
+cp folder to -R
+mv folder to
+
+password field: stay on delete key -> delete multiple chars
+
+create link: ln -s destination source
+link a directory (symbolic ?): ln -s /media/disk/root .
+remove: unlink root
+
+umount: /root/saves: target is busy -> check if not in the folder or proccess otherwise -l if sure it's not gonna break
+
+2FA/google authenticator for SSH:
+
+apt install libpam-google-authenticator
+add in /etc/pam.d/sshd: auth required pam_google_authenticator.so
+change in /etc/ssh/sshd_config: ChallengeResponseAuthentication to yes
+service sshd restart
+configure: google-authenticator
+
+Display X first ligns of a file: head -n file
+		// last: tail -n file
+
+delete mail (/var/mail/user): > /var/mail/username
+
+Delete files containing in subfolders: find -type f -name '*\.bisurf' -delete
+Remove empty folders in subfolders: find . -type d -empty -print
+(print only display which files are found)
+
+change user's pw: passwd user
+
+No logs:     - nohup php Main.php /dev/null 2>&1 &
+cmd > /dev/null
+
+ssh logs: /var/log/auth.log
+          cat /var/log/messages | grep ssh
+		  cat /var/logauth.log
+
+watch -n 5 df -h
+
+repair: /sbin/fsck.ext4 -fcyv /dev/sd
+
+Computer's name: hostname
+hostname -f (full)
+
+Clear screen on login: add clear at the end of vi ~/.bash_profile
+Start screen session without having to press enter: (screen), just do screen -q
+
+Change reading program for man: .bashrc: export MANPAGER=cat
+
+cat from the end: tac file.ext
+
+Cat with filename:     - tail -n +1 File.ext
+Search filename (recursively):    - find . -name '*\!128.79.238.165.txt'
+Search for text in a folder/file: grep -rnw '/folder/' -e 'pattern' (recursive)
+
+Write to stdout wget: wget -O - example.com
+
+List java program: - pgrep -if 'java .*-jar'
+
+Force kill: - kill -9 id
+-bash: kill: (128) - Operation not permitted
+=> run as root
+
+Change welcome message: vi /etc/motd
+
+SSH: (and reload) PermitRootLogin yes
+
+RUN AS ROOT OTHERWISE NO PID SHOWED
+netstat -tulpn | grep :::$PORT
+or ss -lptn 'sport = :25565'
+Recv-Q Send-Q => kill proccesses
+
+install xfce4
+graphic desktop: startx
+
+Use one terminal for some users
+screen -S toto
+screen -x toto
+
+How to split screen within only one session (and one window): http://www.pixelbeat.org/lkdb/screen.html
+
+DiskUsage:  - df -h
+List disks: - lsblk
+
+Don't mount . otherwise need to relogin to access the folder, just mount FOLDER/
+
+host domain
+
+quick shutdown followed with a restart: shutdown -r now -f
+
+check actual network: tcpdump -l | grep "9987"
+
+Redirect port with iptables (example to bypass 25 refuse):
+
+sysctl net.ipv4.ip_forward
+echo 1 > /proc/sys/net/ipv4/ip_forward
+sysctl -p
+iptables -t nat -L -n
+iptables -t nat -A PREROUTING -i enp2s0 -p tcp --dport 26 -j REDIRECT --to-port 25
+iptables -t nat -A PREROUTING -i enp2s0 -p udp --dport 26 -j REDIRECT --to-port 25
+iptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination destinationIp:80
+iptables -t nat -A POSTROUTING -p tcp -d destinationIp --dport 80 -j SNAT --to-source relayIp
+
+Clear all IPTABLES:
+
+iptables -F
+iptables -X
+iptables -t nat -F
+iptables -t nat -X
+iptables -t mangle -F
+iptables -t mangle -X
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+IPTABLES: list: iptables -L
+          reset: iptables -F
+		  
+		  get computer's name on local network (or list them): arp -a
+		  
+		  /etc/apache2/apache2.conf
+		  apache2: add conf and a2ensite newhostname
+				   rem: a2dissite host
+					invalid cmd: ssl engine: a2enmod ssl
+		  
+Execute indep process: setsid sleep 30 (can log off and come back later contrary: to sleep 30 &)
+
+ipconfig /flushdns
+
+Comment shell: # do nothing
+
+execute many cmds one after the other:
+echo 0
+echo 1
+
+if want to execute echo 1 too without "enter", select
+ECHO 0X (X: \n)
+ECHO 1X
+X (do not need to select \n here but we need to set the cursor here to select the second \n)
+
+Copy with more info (file): pv
+folder: rsync --progress src dst -r
+
+Screen:     - screen -X -S id kill
+			or screen -XS id kill
+            resume attached - screen -rd screen
+
+gedit: graphical text editor
+
+run command as another user: runuser -l www-data -c 'whoami'
+
+mount all filesystems of fstab: mount -a (instead of restarting the machine)
+
+Share Linux folders to a Windows: https://www.youtube.com/watch?v=p2r0kIB_ItE
+
+rar: apt install rar
+     rar -e FileToExtract.rar (extract ALL FILES in the directory)
+			
+			while [ 1 ]; do sh check.sh; done
+			for i in `seq 1 10000`; do echo $i > date.txt; done
+
+			beep: ...
+
+			groups pi
+
+			vi /etc/sudoers
+
+			/etc/sudoers.d/
+
+			chg group of a user: usermod -g amis patrick
+			to multiple groups: usermod -a -G mygroup website
+			remove: gpasswd -d website adm
+			/var/log/apache2/error.log
+			
+			Ext2Fsd win software to access to linux disk
+
+test smb server (with patch): smbclient -L server_ip -U username -m SMB2
+mount Windows C drive on a Linux host with SMB patch: mount -t cifs //192.168.1.39/c folder/ -o username=benja -o vers=2.0
+video: Share Windows folders to a Linux: https://www.youtube.com/watch?v=iPnVzyMBlAI
+			
+AddUserFTP: - adduser All --ingroup ftpusers --home / --force-badname (--shell /bin/false usefull ?) check security
+			verify permission all arborescence
+            without sheel /bin... if login failed
+            - chmod 777 / -R
+    remove: - nano /etc/passwd
+            find at the end the users and delete the lines
+			
+Change user's home folder: usermod -m -d /newhome/username username
+			
+passwords encrypted:
+	/etc/shadow
+	
+ifconfig: command not found -> apt install net-tools
+kind of equivalent to ifconfig: ip addr
+
+Crontab path/file user/root configuration: /var/spool/cron/crontabs/
+
+Echo with colors (SSH/Putty): https://www.admin-linux.fr/personnaliser-le-prompt/
+
+Echo/display time/date at every/each command:
+add in ~/.bash_profile: export PS1="\033[0;37m\$(date +%H:%M:%S) $PS1"
+refresh with (or reconnect): . ~/.bash_profile
+
+Execute a command everytime a command is input:
+add in ~/.bash_profile: PROMPT_COMMAND="date"
+refresh with (or reconnect): . ~/.bash_profile
+
+Display time for each command: PS1='[$(date +"%T")] \u@\h \w\$ '
+
+Display date in history:
+
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
+refresh with (or reconnect): . ~/.bash_profile
+history
+
+History file location: ~/.bash_history
+
+History of commands: history
+				clear: history -c
+
+Multiple cmd: cmd0 & cmd1: for launch in different thread the different cmd
+			  cmd0 && cmd1: for launching cmd1 after cmd0 (cmd0 need to return a good exit status ?)
+			  cmd0; cmd1: for launching cmd0 then cmd1 with the original environment cmd process
+			  
+Grep: Binary file matches -> cat Log.log | tr -d '\000' | grep ""
+
+Remove last empty line: sed - i '1s/^[^0-9]*//' file
+             
+Man pages are store in: /usr/share/man/ (man1 ?)
+
+List files installed with a package: dpkg -L libgmp-dev
+
+Install gmp library (RSA): apt install libgmp3-dev
+and use with g++: -lgmpxx -lgmp
+
+Archive:     Create - tar zcvf Archive.tar.gz Files
+            Decompress - tar zxvf Archive.tar.gz
+							 xfvj .tar.bz2
+			
+			Decompress .gz archive: gunzip file.gz (delete the archive)
+			See content without deleting the archive: gunzip -c file.gz
+							 
+			tar (child): bzip2: Cannot exec: No such file or directory => apt install bzip2
+             
+DDOS:       - nmap -p 1-30000 ip
+            - hping3 --flood -p 80 -S ip
+
+Folder: mkdir DONOTEXIST/TOO -p
+
+ROT13: echo "Chiffre moi" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+CPUInfo: cat /proc/cpuinfo
+
+wget to download from url
+curl to get content
+
+get ipv4 ext: curl checkip.amazonaws.com
+
+difference between several files ? diff file1 file2
+
+ZIP:        - zip -r Name *
+zip -r myarchive.zip dir1 -x dir1/ignoreDir1/**\*
+unzip: command not found -> apt install unzip
+(p)7z(ip) a/x 180517 *
+
+Connection: - speedtest-cli
+
+USB Key:    - fdisk -l
+            - mount /dev/sde /media/usb
+            - umount /dev/sde /media/usb
+
+Get size of every different folder: du -sh *
+			
+Network:    - bmon
+            - tcptrack
+			- netstat, command not found: install package net-tools
+			
+Folder's size: du -sh /folder/path
+
+Chg specified line: sed -i '34s/AAA/BBB/' file_name
+Print specified line: sed '5!d' file
+			
+No MTA installed, discarding output => apt install postfix
+			
+while [ 1 ]; do sleep 1; sh script.sh; echo hey; done
+			
+------
+SETUP:
+------
+
+SSH: vi /etc/ssh/sshd_config
+
+info about a file: stat file
+
+VPN: http://debian-facile.org/doc:reseau:openvpn
+/etc/init.d/openvpn restart
+
+install .deb: dpkg -i *.deb
+
+/usr/bin/x86_64-w64-mingw32-windres Extensions/Program/ressources.rc -O coff -o Extensions/Program/ressources.res
+windres my.rc -O coff -o my.res
+
+cp with rights: cp -rp ...
+
+Count files in a folder: ls . | wc -l (last cmd count lines, can be used like this: wc -l file.ext)
+	get number of lines in a file: wc -l LogZB.log
+
+Access a txt record of a subdomain: host -t txt _acme-challenge.lemnoslife.com
+Or all of the main domain: host -t txt lemnoslife.com
+
+Info on the domain: host lemnoslife.com
+or more data: host -v lemnoslife.com
+
+dig command: apt install dnsutils (install too nslookup)
+dig altis-of-life.fr MX (to get mail servers)
+dig altis-of-life.fr NS (to get NS servers)
+dig altis-of-life.fr TXT (to get TXT servers)
+dig -x 62.4.19.110 (to get domain name)
+dig +multiline +noall +answer +nocmd altis-of-life.fr ANY
+
+g++ main.cpp -o serveur.exe -w -Wall -pedantic -std=c++11 -lpthread (do not provide .h file in this list of files)
+x86_64-w64-mingw32-g++ -W -o essai.exe test.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -mwindows
+
+info ram: cat/less /proc/meminfo
+
+update-alternatives --config java
+
+hdparm -I /dev/sda
+
+wall Message pour tous !
+
+shutdown -h now
+
+$: user
+#: root
+
+make sure the lockfile directory is not world writable <-- nice vocab
+
+keyboard: localectl status
+		  for french (work on kali): setxkbmap fr
+		  
+if sure can't apt upgrade because of already used: rm /var/lib/apt/lists/lock
+												   rm /var/cache/apt/archives/lock
+												   rm /var/lib/dpkg/lock
+
+Time: dpkg-reconfigure tzdata
+      date --set 2017-05-19
+      date --set 23:53:00
+      hwclock --systohc
+      modifier /etc/adjtime au lieu de UTC mettre LOCAL
+	  
+	  ifconfig or route -n
+      
+SCP var www: usermod -a -G www-data altiscraft
+verif: groups altiscraft
+
+
+Proc: ps aux | grep ts3server
+
+cfdisk /dev/sdc (write after delete)
+
+mkfs.ext4 /dev/sdd1
+mkfs.ext4 change UUID
+e2label /dev/sdd1 "BACKUP"
+
+g (graphics) gparted
+or parted
+
+or fdisk /dev/sdx (don't forget to write changes to disk: w)
+
+get id of a hard disk: blkid
+
+/etc/fstab UUID=a835580e-c2af-4439-a914-41e283fa9cf5 /home/AltisCraft.fr/Saves     ext4    defaults        0       1
+
+av exit: /etc/rc.local su - AltisCraft.fr -c /home/AltisCraft.fr/startup.sh
+sh /root/startup.sh
+
+stdio.h not found (gcc) -> apt install build-essential
+
+make a code to run rsync as fastest as possible (use 100 % of the hard disk not the case by default) by using threads: https://unix.stackexchange.com/questions/189878/parallelise-rsync-using-gnu-parallel
+
+Windows:    - /etc/default/grub -> replace GRUB_DEFAULT=0 with GRUB_DEFAULT=saved
+            - script: sudo grub-reboot "$(grep -i 'windows' /boot/grub/grub.cfg|cut -d"'" -f2)" && sudo reboot
+
+User:       Add - sudo adduser tom --force-badname
+			adduser serveur --home /home/mail/serveur/
+			adduser tom --force-badname --no-create-home
+            Del - sudo deluser tom
+			deluser tom --remove-home
+			deluser kevin --remove-all-files --force
+
+Nano:       - :q! <- not :!q
+			ctrl + o -> save
+			~/.bashrc:
+				set tabsize 4
+				set tabstospaces
+			ctrl k delete lign
+
+apt is equivalent to apt-get
+			
+Zip:        - sudo apt install zip
+
+Screen:     - sudo apt install screen
+
+Xampp:        - http://apachefriends.org/fr/download.html
+            - sudo chmod 755 xampp-linux-*-installer.run
+            - sudo ./xampp-linux-*-installer.run
+
+Java:         - sudo apt install openjdk-8-jre
+			to compile: openjdk-8-jdk
+			jar cvfm Test.jar manifest -C fr/mclaunchergenerator/benjaminloison/common/ .
+			
+			javac -cp "/home/altiscraft/DEV/Java/MCLauncherGenerator/Libs/*" DCCBootstrap.java
+			to convert to exe: apt install gcj-jdk
+
+Execute php in command line: php -r "phpinfo();"
+			
+Lang FR:     - sudo apt install language-env
+            - sudo nano /etc/environment : au lieu du contenu existant
+LANGUAGE="fr_FR:fr"
+LANG=fr_FR
+            - sudo nano /etc/locale.gen : au lieu du contenu existant
+fr_FR.UTF-8 UTF-8
+fr_FR ISO-8859-1
+fr_FR@euro ISO-8859-15
+            - sudo locale-gen
+            - sudo apt install manpages-fr
+            - sudo nano /etc/fstab : si utf-8 -> check: https://forum.ubuntu-fr.org/viewtopic.php?id=6446
+
+FTP:        - apt install proftpd
+            standalone
+            - vi /etc/proftpd/proftpd.conf
+            Default root (locked in root)
+            - addgroup ftpusers
+			for passive: 5000 5000-5100 and open port
+			no required shell
+            - /etc/init.d/proftpd reload
+			logs path: /var/log/proftpd (proftpd.log for general purpose)
+			
+			Get list of connected users: ftpwho
+			Get stats: ftpstats
+			
+			Allow root connection:
+			add in /etc/proftpd/proftpd.conf: RootLogin               on 
+			remove root in: /etc/ftpusers
+
+Failed to restart courier-imap.service: Unit courier-imap.service is masked. => /etc/init.d/courier-imap restart
+			
+@@
+
+Microsoft Remote Desktop by using Debian:
+
+echo 'deb http://ftp.debian.org/debian stretch-backports main' | tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
+apt update
+apt install -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret
+
+remmina
+
+@@
+
+Bitlocker on Linux: https://www.leshirondellesdunet.com/dislocker-recuperer-les-donnes-chiffres-avec-bitlocker
+			
+who -r: get current run level or use: runlevel
+https://fr.wikipedia.org/wiki/Run_level
+
+Several interesting folders with starting/ending scripts: /etc/rc*.d/ (eg: 5), /etc/init.d/
+
+Remove execution of starting script: update-rc.d -f foo remove
+	
+@@
+	
+Command's path: which cmd
+
+equivalent to tree (recursive): ls -R folder
+
+Programmed actions:    dans dossier de connexion puis relancer client - echo "export EDITOR=nano" >>  ~/.bashrc
+                    voir - crontab -l
+                    modifier - crontab -e
+                    when boot up (root - crontab -e) - @reboot sh /root/script.sh
+
+Best for OpenVPN: https://www.youtube.com/watch?v=jm1QoYAPbkU
+system var (stay after disconnect ?): export KEY_DIR="/etc/openvpn/server/easy-rsa"
+			echo $KEY_DIR
+
+sleep seconds
+
+Clean login without root access: touch $HOME/.hushlogin
+
+Remove "Last login:" welcome message: PrintLastLog no in /etc/ssh/sshd_config and then service ssh(d ?) restart
+
+login history: last
+
+last reboot(s):
+
+who -b
+last reboot
+
+Forum:        - https://melinyel.net/topic/860-cr%C3%A9er-un-forum-mybb-en-fran%C3%A7ais/
+
+SQL: Active PDO: - /opt/lampp/etc/php.ini: pdo_mysql.defaut_socket= -> pdo_mysql.defaut_socket=/opt/lampp/var/mysql/mysql.sock -> restart
+dpkg-reconfigure mysql-server-5.5
+
+List installed package: apt list --installed
+or: dpkg-query -l | less
+
+Mail:       - /var/mail/username
+
+Remove packet: - apt remove --purge name
+
+TS: sh ts3server_startscript.sh start serveradmin_password=NewPW
+    telnet 10011 | servercreate virtualserver_name=My\sSecond\sServer virtualserver_port=1337 virtualserver_maxclients=128
+
+Delete all files in the current directory with two characters: rm ??
+	
+Clear console: clear or ctrl + l
+
+shutdown -r and reboot do the same (reboot)
+
+cat live log: tail -f file
+
+/etc/apt/sources.list
+
+mkdir -p: to create parent
+
+apt -y: no yes needed
+
+Directory not empty: rm -R -> rm -Rf
+
+systemctl restart service
+or /etc/init.d/apache2 restart
+
+sudoers:
+
+www-data ALL=(ALL) NOPASSWD: /bin/sh /home/mclaunchergenerator/a.sh
+<?php system('sudo -u mclaunchergenerator sh /home/mclaunchergenerator/a.sh'); ?>
+
+Echo without new line: echo -n "1">54.38.241.7.txt
+
+crontab as altiscraft (whoami return altiscraft with crontab) doesn't work forcescript (screen not link to altiscraft ??)
+
+Check if user exists: id root
+
+Crack passwords: hashcat (and rockyou word list)
+
+PIP (python): apt install python-pip
+
+Graphical desktops:
+@@@@@@@@@@@@@@@@@@@
+
+(install and reboot)
+
+Gnome:
+------
+
+Full: apt install gnome
+Without app from debian: apt install gnome-desktop-environment
+Minimal: apt install gnome-core
+
+KDE:
+----
+
+With app select by debian: apt install kde-standard
+Official: apt install kde-full
+Minimal for computer: apt install kde-plasma-desktop
+Minimal for laptop: apt install kde-plasma-netbook
+
+LXDE:
+-----
+
+apt install lxde
+
+------
+- VM -
+------
+
+/etc/init.d/vm.sh
+
+/!\ Beginning
+
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:       vmboot
+# Required-Start: vboxdrv
+# Required-Stop:
+# Default-Start:  2 3 4 5
+# Default-Stop:   0 1 6
+# Short-Description: Stop/Start VMs on System shutdown
+### END INIT INFO
+
+VBOXUSER=vboxuser
+SU="sudo -H -u $VBOXUSER"
+VBOXMANAGE=/usr/bin/VBoxManage
+VBOXHEADLESS=/usr/bin/VBoxHeadless
+RUNNINGVMS=$($SU $VBOXMANAGE --nologo list runningvms | sed -e 's/^".*".*{\(.*\)}/\1/')
+ALLVMS=$($SU $VBOXMANAGE --nologo list vms | sed -e 's/^".*".*{\(.*\)}/\1/')
+
+case $1 in
+stop)
+if [[ -n $RUNNINGVMS ]]; then
+echo "Saving the state of all running VMs..."
+for v in $RUNNINGVMS; do
+    $SU $VBOXMANAGE --nologo controlvm $v savestate
+done
+fi
+;;
+start)
+for v in $ALLVMS; do
+if [[ -n $($SU $VBOXMANAGE --nologo showvminfo $v | grep saved) ]]; then
+    echo "Restoring VMs..." && $SU $VBOXHEADLESS -s $v & > /dev/null
+fi
+done
+;;
+*)
+echo "Usage: /etc/init.d/vmboot start | stop"; exit 1
+;;
+esac
+
+/!\ End
+
+update-rc.d <script name> defaults
+
+----
+MAIL:
+-----
+
+apt install ssmtp
+
+vi /etc/ssmtp/ssmtp.conf
+chown 700 /etc/ssmtp/ssmtp.conf
+
+AuthUser=altiscraft.no.reply@gmail.com
+AuthPass=PASSWORD
+mailhub=smtp.gmail.com:465
+FromLineOverride=YES
+UseTLS=YES
+
+apt install bsd-mailx mailutils (to use mail)
+mail -s "Subject" receiver@smth.com <<< 'Message'
+
+SCRIPT: #!/bin/sh
+
+bash script.sh to support <<<
+bash: exit 1
+
+/etc/apt/sources.list
+
+>> append
+
+get number of threads: top and the type H (top)

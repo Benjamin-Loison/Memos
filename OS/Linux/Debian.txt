@@ -1,0 +1,23 @@
+can login directly as root
+mount need reconnect to see files
+
+fsck from util-linux 2.26.2
+/dev/sda6 contains a file system with errors, check forced.
+/dev/sda6: Inodes that were part of a corrupted orphan linked list found.
+
+/dev/sda6: UNEXPECTED INCONSISTENCY; RUN fsck MANUALLY.
+        (i.e., without -a or -p options)
+fsck exited with status code 4
+The root filesystem on /dev/sda6 requires a manual fsck
+
+Busybox v1.22.1 (Ubuntu 1:1.22.0-15ubuntu1) built in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+(initramfs) _
+
+fsck /dev/sda6 -fy
+
+Get version: cat /etc/os-release
+
+if dpkg -i requires dependencies, do after: apt-get install -f
+
