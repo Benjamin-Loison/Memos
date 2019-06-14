@@ -1,0 +1,88 @@
+https://www.sendblaster.com/utf8-email-subject-encoder/
+
+#
+
+From: "Serveur AltisCraft.fr" <serveur@altiscraft.fr>
+To: THIS GETS REPLACED
+Subject: =?UTF-8?B?Q29uZmlybWF0aW9uIGRlIHLDqWNlcHRpb24=?=
+Content-Type: text/plain; charset=utf-8
+
+Bonjour,
+
+Nous vous confirmons la réception de votre email.
+
+Cet email a été envoyé automatiquement.
+
+Cordialement
+
+# AUTORESPONDER:
+
+From: "Serveur AltisCraft" <serveur@altiscraft.fr>
+To: THIS GETS REPLACED
+Subject: =?UTF-8?B?Q29uZmlybWF0aW9uIGRlIHLDqWNlcHRpb24=?=
+Content-Type: text/html; charset=utf-8
+
+<style type="text/css">
+
+    #center
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+    }
+
+</style>
+
+<img src="https://altiscraft.fr/Website/Media/Pictures/logo.jpg" id="center">
+
+Bonjour,<br/><br/>
+
+Nous vous confirmons la réception de votre email.<br/><br/>
+
+Cet email a été envoyé automatiquement.<br/><br/>
+
+Cordialement
+
+# CUSTOM FONT DOESN'T SEEM TO WORK (DEPEND ON CLIENT ?)
+
+From: "Serveur AltisCraft" <serveur@altiscraft.fr>
+To: THIS GETS REPLACED
+Subject: =?UTF-8?B?Q29uZmlybWF0aW9uIGRlIHLDqWNlcHRpb24=?=
+Content-Type: text/html; charset=utf-8
+
+<style type="text/css">
+
+    @font-face
+    {
+        font-family : 'AltisCraft';
+        src : url("https://altiscraft.fr/Website/Media/Style/AltisCraft.ttf");
+    }
+
+    #center
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+    }
+
+    #title
+    {
+        font-family: 'AltisCraft';
+        text-align: center;
+        color: blue;
+    }
+
+</style>
+
+<img src="https://altiscraft.fr/Website/Media/Pictures/logo.jpg" id="center">
+<h1 id="title">AltisCraft</h1>
+
+Bonjour,<br/><br/>
+
+Nous vous confirmons la réception de votre email.<br/><br/>
+
+Cet email a été envoyé automatiquement.<br/><br/>
+
+Cordialement

@@ -1,0 +1,30 @@
+Check config again if you need to buy it:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Case | https://www.ldlc.com/fiche/PB00211813.html | be quiet! Dark Base Pro 900 (Argent) | 259.95
+2x | Carte graphique | https://www.nvidia.fr/titan/titan-v/ | Titan V | 3 100 => 6 200
+SLI | https://www.ldlc.com/fiche/PB00212695.html | Pont SLI (Bridge short) | 49.96
+SSD | https://www.ldlc.com/fiche/PB00247859.html | Kingston DCP1000 3.2 To | 3 179.95
+Bluetooth | https://www.ldlc.com/fiche/PB00159945.html | Gigabyte GC-WB867D-I | 34.95
+Wifi | https://www.ldlc.com/fiche/PB00214754.html | ASUS PCE-AC88 | 114.95
+HDD (internal) | https://www.ldlc.com/fiche/PB00236925.html | Seagate IronWolf Pro 12 To (ST12000NE0007) | 549.95
++ another for stream (4K, 60 FPS, 20 hours per week => 17 months of use)
+SSD (external) | https://www.ldlc.com/fiche/PB00237880.html | Samsung SSD Portable T5 2 To | 799.96
+SSD (internal - Save) | https://www.ldlc.com/fiche/PB00243247.html | Samsung SSD 860 EVO 4 To | 1 279.96
+Power supply | https://www.ldlc.com/fiche/PB00225283.html | Cooler Master MasterWatt Maker 1200 MIJ | 999.95
+Disk (reader and writer: DVD/Blu-ray) | https://www.ldlc.com/fiche/PB00200504.html | ASUS Impresario SBW-S1 PRO | 205.95
+Processor | https://www.ldlc.com/fiche/PB00235843.html | Intel Core i9-7980XE Extreme Edition (2.6 GHz) | 2 049.95
+Watercooling for processor | https://www.ldlc.com/fiche/PB00239943.html | be quiet! Silent Loop 360mm | 159.95
+Motherboard | https://www.ldlc.com/fiche/PB00245283.html | Gigabyte X299 DESIGNARE EX | 529.95
+2x | RAM | https://www.ldlc.com/fiche/PB00229454.html | Ballistix Sport LT 64 Go (4 x 16 Go) DDR4 2666 MHz CL16 | 739.95 => 1479.9
+8x (or 6x ?) | Screen 5K | https://www.ldlc.com/fiche/PB00242207.html | iiyama 27" LED - ProLite XB2779QQS-S1 | 869.95 => 6959.6
+Keyboard and mouse | https://www.ldlc.com/fiche/PB00240371.html | Razer BlackWidow Chroma + Razer Naga Epic (Wireless) Chroma | 269.95
+Gaming mousepad (for gaming) | https://www.roccat.org/fr-FR/Products/Gaming-Mousepads/ | Roccat Alumic | 49.99
+Headset (to find: with microphone wireless ?) | https://www.roccat.org/fr-FR/Products/Gaming-Sound/Kave-Series/Kave-XTD-Stereo/ | Roccat Kave XTD Stereo | 79.95
+Headset to USB | https://www.roccat.org/fr-FR/Products/Gaming-Sound/Juke/ | Roccat Juke | 19.99
+Webcam 4K | https://www.ldlc.com/fiche/PB00235809.html | Logitech BRIO 4K Stream Edition | 239.95
+
+Adjustable height desk | https://www.amazon.fr/gp/product/B077JNSJD1 | FLEXISPOT E5S Bureau électrique réglable en hauteur Cadre seul en acier inoxydable avec un clavier automatique (Gris) | 429.99
+Gamer seat | https://www.ldlc.com/fiche/PB00171302.html | AKRacing Gaming Chair (bleu) | 249.95
+
+Total: 26 744.6

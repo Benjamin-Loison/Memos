@@ -1,0 +1,3 @@
+intercommunicate java TCP/UDP with C++ UDP/TCP (common virus on both languages)
+hack little host minecraft (java)
+does fb really delete old conversation ? try to access a url picture of a deleted one, it works...

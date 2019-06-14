@@ -1,0 +1,6 @@
+binary for pictures
+
+binary work for text files too (does it work for everything and need to be prefered ?)
+
+if file size 0 (on FTP server), do as an admin: NetSh Advfirewall set allprofiles state off/on // is noticed if off for user on Windows 10 (and 8 ... ?)
+check: NetSh Advfirewall show allprofiles state
