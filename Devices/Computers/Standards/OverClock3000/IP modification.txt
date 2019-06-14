@@ -1,0 +1,4 @@
+If IP modification --> need DNS modification with new IP :P
+	Can connect with putty with ip: overclock3000 but not altiscraft.fr
+	(servers are not available while I do not have the DNS modification ? #Minecraft)
+	change host in folder etc ? linux to patch faster

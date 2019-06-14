@@ -1,0 +1,6 @@
+Recover saved passwords Remot Desktop Connection (Windows default software) and users local passwords
+
+http://www.nirsoft.net/utils/network_password_recovery.html
+
+Require Admin access
+

@@ -1,0 +1,35 @@
+Technologies:
+-------------
+
+Arma 3: can't use anything for commercial purposes and for other games (are vehicles made by Bohemia ?)
+
+OpenGL: clean for softwares dev: is free to use for developers. Only venders who make hardware and want to distribute software with it proving that their hardware (such as video cards) are compatible with OpenGL will need to buy a license. During game creation, even though the OpenGL license is free for developers, some of the custom libraries of effects and the designer and graphics tools created by third parties may cost you a bit.
+
+OpenAL: no problem: https://fr.wikipedia.org/wiki/OpenAL & http://openal.org/pipermail/openal/2017-June/000652.html
+
+Curl: no problem: https://curl.haxx.se/docs/copyright.html
+
+SDL: no problem: https://www.libsdl.org/license.php
+
+SDL extensions: no problem: no text about a license (furthermore SDL is basically free of use so in theory extensions are too)
+
+MP3: no problem: open format: https://en.wikipedia.org/wiki/MP3 & https://ccm.net/news/28136-mp3-format-is-now-license-free
+
+JPG: no problem: no info about a license
+
+PNG: no problem: https://fr.wikipedia.org/wiki/Licence_zlib
+
+C++: no problem: Personne ne possède le langage C++. Il est libre de droits ; cependant, le document de standardisation n'est quant à lui pas disponible gratuitement.
+
+Components:
+-----------
+
+Fonts: remove from AltisCraft.ttf (if is present, things not needed (other letters than AltisCraft.fr))
+       arial.ttf is pre-installed on all windows but we can't distribute this font, (for Windows we can just notice that it comes from Windows but for the other OS we need another font) -> change with another font in the future
+
+Notice:
+-------
+
+Provide in every version ? or online (link in every folder version of the game) to the official websites and copyrights of each technologies...
+Making it clear which third-party technologies we use.
+

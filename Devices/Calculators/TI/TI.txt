@@ -1,0 +1,9 @@
+Add a program on SmartView: use the magnifier icon
+
+Copy and paste code of a program:
+
+Put the cursor where you want the code to be inserted, 
+press 2nd STO (which is RCL), 
+press PRGM, 
+cursor over to Exec and press Enter, and select the program and press Enter.
+

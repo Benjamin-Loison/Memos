@@ -1,0 +1,22 @@
+can't login directly as root
+
+Pi 1 to 3, zero ?
+
+Boot on usb key: http://www.framboise314.fr/boot-simplifie-sur-usb-avec-les-raspberry-pi-1-2-et-3/
+
+login:
+pi raspberry
+
+rpi-update
+
+Remove wifi or bluetooth: add in /etc/modprobe.d/raspi-blacklist.conf:
+
+#wifi
+blacklist brcmfmac
+blacklist brcmutil
+
+#bt
+blacklist btbcm
+blacklist hci_uart
+
+and reboot

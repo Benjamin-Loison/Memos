@@ -1,0 +1,1 @@
+Protocole SMB (Windows WannaCry) blocked by default, isn't specified when adding a folder to Sonos, need to search on Sonos' forums after several pages -> add this enormous problem to a dedicated webpage or use another protocol

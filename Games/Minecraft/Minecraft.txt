@@ -1,0 +1,31 @@
+Mod forge:
+----------
+
+after unzip forge
+gradlew setupDecompWorkspace
+gradlew eclipse
+
+-----
+
+For Supdate: a2enmod rewrite
+
+-----------
+
+server.properties: type FLAT for flat map
+
+-------------
+
+Select an mcp conf dir for the deobfuscator: C:\Users\Benjamin\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1558-1.7.10\unpacked\conf
+
+----------------
+
+NBTExplorer: to edit map or data
+
+----------------
+
+-Xmx8192M (max memory)
+
+-------
+
+NBTExploit: works for Minecraft 1.7.10 vanilla (patched on AltisOfLife)
+

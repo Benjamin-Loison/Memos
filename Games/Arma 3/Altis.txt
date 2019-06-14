@@ -1,0 +1,64 @@
+gentillé: altos
+
+Link for Google Map to data (map) search TeamSpeak logs about SQF and other
+
+820 object types, 4.796.462 objects
+
+30720x30720m size (maybe satmap as well), 4096x4096 x 7.5 heightmap, texture layer 30x30m, Satellite Grid 64
+
+-231,350 <- in one point nowhere x)
+(-185.97) to infinity
+
+max height: 349.13 m
+
+print clean 238.3 cm
+-185 	
+
+miss info direction roads (don't need for grass, sand...)
+
+Roads:
+@@@@@@
+
+Autoroute (trait milieu et extrimité ~ 14 m largeur) detect isonroad
+Aéroport (runway and tarmac): detect runway object and difference between runway and tarmac DO NOT DETECT ISONROAD (BOTH)
+Roads ~ 10 m gravillon et trait extrémité route (2 type de routes) detect isonroad
+little road (trace of 2 wheels): ~ 5,6 meters wide detect isonroad
+
+surfacetype doesnt have any link with road type
+
+Algo
+@@@@
+
+precision = or 1 dm (or 1 cm ?!)
+
+def getTypeOfRoad()
+{
+	incrementalRange = 1
+	do
+	{
+		_roads = pos nearRoads incrementalRange;
+		incrementalRange++
+	}
+	while(_roads == null)
+	_roads select 0
+	get size road and determine which
+}
+
+get alt (check water / surface)
+if(isOnRoad)
+	getTypeOfRoad()
+getSurfaceType() usefull for instance for tarmac (texture tarmac ligne jaune centre and otherwise concrete under)
+
+get means write in log too
+
+@@
+
+texture road turn: apply texture size ( -- : ~ 4x10 meters for highway)
+=> optimiz rectangle, texture and forget only one info on two (A3) and easier
+
+@@
+
+https://hgg-life-mod.fandom.com/wiki/Shops
+
+@@
+

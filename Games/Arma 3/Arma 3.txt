@@ -1,0 +1,189 @@
+https://www.instant-gaming.com/igr/mrratsuper/
+
+BIs: Bohemia Interactive Studio
+
+./arma3server > server_log.log 2>&1
+
+Arma 3 engine (internally refered to as the Real Virtuality or RV engine)
+
+Server linux: 5.5G (same Win)
+
+_64.dll for 64-bits dll (obliged ?)
+32 only work with 32 program and same for 64
+
+#login to become admin
+
+// TODO: alléger NMD Altis pour optimiser minage ? sqf en fond fait par eux ?
+
+Tuto dedicated server: https://community.bistudio.com/wiki/Arma_3_Dedicated_Server#Instructions_.28Linux_o.2Fs.29 // windows zombies ? // bitcoin
+@@@@@@@@@@@@@@@@@@@@@@ (remettre certaines étapes en question ?)
+
+folder: /root/.steam/... /!\ depends ?
+
+echo "deb http://deb.debian.org/debian stretch main contrib non-free
+deb-src http://deb.debian.org/debian stretch main contrib non-free
+
+deb http://deb.debian.org/debian stretch-updates main contrib non-free
+deb-src http://deb.debian.org/debian stretch-updates main contrib non-free
+
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main contrib non-free" >> /etc/apt/sources.list
+
+dpkg --add-architecture i386
+apt update
+apt install steamcmd
+
+mkdir ~/steamcmd && cd ~/steamcmd
+wget http://media.steampowered.com/client/steamcmd_linux.tar.gz
+tar -xvzf steamcmd_linux.tar.gz
+./steamcmd.sh
+
+login Merci_AltisCraft altiscraft123
+
+force_install_dir ./arma3/
+app_update 233780 validate
+
+exit
+
+#=> got a simple Arma 3 choose Mission server
+
+cd arma3/
+
+Download NMD Map from WorkShop:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+put NMDALTIS.Altis.pbo (download from workshop, http://steamworkshopdownloader.com to get url for content from WorkShop /!\ can't wget) in mpmissions and restart server and select mission in the ingame menu
+
+@@
+
+Launch server with a specific mission:
+
+./arma3server -config=server.cfg
+
+server.cfg:
+
+class Missions
+{
+    class Mission_2
+    {
+        template="NMDALTIS.Altis";
+        difficult = "regular";
+    };
+}
+
+mpmissions (folder):
+
+NMDALTIS.Altis.pbo
+
+@@
+
+Auto nit mission:
+
+server.cfg: Persistent=1;
+
+and start with: ./arma3server -config=server.cfg -autoInit
+
+@@
+
+Mine guide for Linux:
+---------------------
+
+dpkg --add-architecture i386
+apt update
+apt install steamcmd
+
+mkdir ~/steamcmd && cd ~/steamcmd
+wget http://media.steampowered.com/client/steamcmd_linux.tar.gz
+tar -xvzf steamcmd_linux.tar.gz
+./steamcmd.sh
+
+# need anyway manual ?
+
+login Merci_AltisCraft altiscraft123
+
+force_install_dir ./arma3/
+app_update 233780 validate
+
+exit
+
+cd arma3/
+
+echo "class Missions { class Mission_2 { template=\"test.Altis\"; difficult = \"regular\"; }; } Persistent=1;">server.cfg
+mkdir mpmissions/test.Altis
+echo "_xchkstart=0; _xchkend=30; _ychkstart=0; _ychkend=0; _precision2D = 0.1; _chk = 1000; print = { diag_log(text(\"[CPAGH] \" + _this)); }; for \"_ychk\" from _ychkstart to _ychkend step -1 do { for \"_xchk\" from _xchkstart to _xchkend step 1 do { (str _ychk + \"*\" + str _xchk) call print; _ymax = _chk * _ychk; for \"_y\" from _chk * (_ychk + 1) to _ymax step -_precision2D do { for \"_i\" from 1 to 100 step 1 do { _sy = \"\"; for \"_x\" from (_i - 1) * 10 to _i * 10 step _precision2D do { _sy = _sy + ((ATLToASL([_x, _y, 0]) select 2) toFixed 2); _sy = _sy + \"#\"; if(isOnRoad[_x, _y]) then { _sy = _sy + \"0\"; } else { _sur = surfaceType[_x, _y]; switch (_sur) do { case \"#GdtDirt\": { _sy = _sy + \"1\" }; case \"#GdtGrassDry\": { _sy = _sy + \"2\" }; case \"#GdtGrassGreen\": { _sy = _sy + \"3\" }; case \"#GdtConcrete\": { _sy = _sy + \"4\" }; case \"#GdtSoil\": { _sy = _sy + \"5\" }; case \"#GdtBeach\": { _sy = _sy + \"6\" }; case \"#GdtSeabed\": { _sy = _sy + \"7\" }; case \"#GdtThorn\": { _sy = _sy + \"8\" }; case \"#GdtWildField\": { _sy = _sy + \"9\" }; case \"#GdtRock\": { _sy = _sy + \"A\" }; case \"#GdtGrassWild\": { _sy = _sy + \"B\" }; case \"#GdtStony\": { _sy = _sy + \"C\" }; case \"#GdtForestPine\": { _sy = _sy + \"D\" }; case \"#GdtMud\": { _sy = _sy + \"E\" }; case \"#GdtStonyThistle\": { _sy = _sy + \"F\" }; case \"#GdtMarsh\": { _sy = _sy + \"G\" }; case \"#GdtDead\": { _sy = _sy + \"H\" }; case \"#GdtDesert\": { _sy = _sy + \"I\" }; default { _sy = _sy + _sur }; } }; _sy = _sy + \"@\"; }; _sy call print; }; }; }; }; \"mining\" serverCommand \"#shutdown\";" > mpmissions/test.Altis/init.sqf
+echo "version=53; randomSeed=3682513; serverCommandPassword=\"mining\";" > mpmissions/test.Altis/mission.sqm
+nohup setsid ./arma3server -config=server.cfg -autoInit &> server_mining.log
+
+Avancement: cat server_mining.log | grep "*" (first y, then x)
+
+Mine guide for Windows:
+---------------------
+
+mkdir C:\Apps\Steam
+cd C:\Apps\Steam
+powershell "& {$url='https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip';$c=new-object System.Net.WebClient;$c.DownloadFile($url,'%CD%\steamcmd.zip')}"
+powershell.exe -NoP -NonI -Command "Expand-Archive '.\steamcmd.zip' '.'"
+del steamcmd.zip
+steamcmd.exe
+exit
+mkdir C:\Games\ArmA3\A3Files
+steamcmd.exe +login Merci_AltisCraft altiscraft123 +force_install_dir C:\Games\ArmA3\A3Master +"app_update 233780 -beta" validate +quit 
+cd C:\Games\ArmA3\A3Master
+echo class Missions { class Mission_2 { template="test.Altis"; difficult = "regular"; }; } Persistent=1; serverCommandPassword="mining";>server.cfg
+mkdir mpmissions\test.Altis
+echo _xchkstart=0; _xchkend=30; _ychkstart=7; _ychkend=7; _precision2D = 0.1; _chk = 1000; print = { diag_log(text("[CPAGH] " + _this)); }; for "_ychk" from _ychkstart to _ychkend step -1 do { for "_xchk" from _xchkstart to _xchkend step 1 do { (str _ychk + "*" + str _xchk) call print; _ymax = _chk * _ychk; for "_y" from _chk * (_ychk + 1) to _ymax step -_precision2D do { for "_i" from 1 to 100 step 1 do { _sy = ""; for "_x" from (_i - 1) * 10 to _i * 10 step _precision2D do { _sy = _sy + ((ATLToASL([_x, _y, 0]) select 2) toFixed 2); _sy = _sy + "#"; if(isOnRoad[_x, _y]) then { _sy = _sy + "0"; } else { _sur = surfaceType[_x, _y]; switch (_sur) do { case "#GdtDirt": { _sy = _sy + "1" }; case "#GdtGrassDry": { _sy = _sy + "2" }; case "#GdtGrassGreen": { _sy = _sy + "3" }; case "#GdtConcrete": { _sy = _sy + "4" }; case "#GdtSoil": { _sy = _sy + "5" }; case "#GdtBeach": { _sy = _sy + "6" }; case "#GdtSeabed": { _sy = _sy + "7" }; case "#GdtThorn": { _sy = _sy + "8" }; case "#GdtWildField": { _sy = _sy + "9" }; case "#GdtRock": { _sy = _sy + "A" }; case "#GdtGrassWild": { _sy = _sy + "B" }; case "#GdtStony": { _sy = _sy + "C" }; case "#GdtForestPine": { _sy = _sy + "D" }; case "#GdtMud": { _sy = _sy + "E" }; case "#GdtStonyThistle": { _sy = _sy + "F" }; case "#GdtMarsh": { _sy = _sy + "G" }; case "#GdtDead": { _sy = _sy + "H" }; case "#GdtDesert": { _sy = _sy + "I" }; default { _sy = _sy + _sur }; } }; _sy = _sy + "@"; }; _sy call print; }; }; }; }; "mining" serverCommand "#shutdown"; > mpmissions/test.Altis/init.sqf
+echo version=53; randomSeed=3682513; > mpmissions/test.Altis/mission.sqm
+
+arma3server_x64.exe -config=server.cfg -autoInit (do not use PS otherwise arguments aren't used !)
+
+logs (.rpt): C:\Users\USER\AppData\Local\Arma 3\
+
+@@
+
+Set a password to the server: server.cfg: password="passowrd";
+
+@@
+
+Nice to config server: https://community.bistudio.com/wiki/server.cfg
+
+@@
+
+Shut down server with sqf:
+
+"mining" serverCommand "#shutdown";
+server.cfg: serverCommandPassword="mining";
+
+@@
+
+Define a specific port (running multiple instances): exec.exe -port=2302
+
+@@
+
+Define a hostname: hostname="truc"
+
+@@
+
+Many mods and extensions with sqf and c++: KK Arma 3 blog (will close)
+
+@@
+
+Export .paa to picture format (here .png)
+
+Open the paa you want to convert in TexView 2 open the file menu and select Save As
+Save the paa as png (make sure to select All Files (.) ).
+
+@@
+
+= accelerate time
+) decelerrate time
+
+@@
+
+Unbinarize .p3d files from Arma 3: https://github.com/JimBob0121/P3D-Debinarizer-Arma-3/releases
+
+@@
+
+Roads to json: https://mapshaper.org/
+
+@@
+

@@ -1,0 +1,1 @@
+Get IP if user is streaming and trying to access to: https://www.mediafire.com/file/null/fakefile.ext/file

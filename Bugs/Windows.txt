@@ -1,0 +1,5 @@
+Graphical windows 10 windows are slow (open with the splash picture) and do not work (click multiple times on a button and it doesn't work)
+Kind of initialization, when right-clicking a folder to use Windows Media Player on multiple folders, some folders are available to be used likewise or not
+
+Please prefer using an identical Wifi with a better reception than the current or ask the user anyway. (add a dev mode to windows ? which ables the dev not to be disturb with this kind of "user improvement") @Dlink
+

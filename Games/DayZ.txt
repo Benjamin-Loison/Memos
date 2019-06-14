@@ -1,0 +1,3 @@
+Host server: steam://rungameid/223350
+
+instanceid 32-bit error: DayZServer_x64 "-config=serverDZ.cfg"

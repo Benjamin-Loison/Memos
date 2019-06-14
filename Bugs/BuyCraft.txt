@@ -1,0 +1,2 @@
+Copy a package -> Statistics the pasted package will have the history of the old one and the copied won't have any history
+

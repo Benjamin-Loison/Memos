@@ -1,0 +1,3 @@
+add in env var: path (up): path to MinGW bin folder (+ remove "GL/" include part in glu.h) 
+change GL include of MinGW to the folder include
+put everything (include, lib, bin) in MinGW folder

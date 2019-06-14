@@ -1,0 +1,19 @@
+MIT:
+----
+
+CPU (max otherwise crash Win): 4.3 Ghz
+Ram (max otherwise boot loader refuse): 4.0 Ghz
+Fan: Silent (All)
+
+BIOS:
+-----
+
+Num Lock: On/Off (balek)
+Full Screen Logo: Disabled
+Fast Boot: Ultra Fast
+
+PERI:
+-----
+
+RGB Fusion: Blue (static)
+Wake up on use of the keyboard or the mouse: balek

@@ -1,0 +1,4 @@
+bug when search the following (twice StackOverflow): error=5 as admin schtasks java
+
+Google chrome bullshit for developping (need to reset cache data if change in a css)
+

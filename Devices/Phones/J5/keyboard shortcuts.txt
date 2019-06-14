@@ -1,0 +1,13 @@
+meta + enter: home
+meta + delete (arrow): back
+alt + tab: recent
+meta + n: notification
+meta + /: keyboard shortcuts
+shift + space: switch language
+
+meta + b: Browser
+meta + c: contacts
+meta + e: email
+meta + s: messages
+meta + l: calendar
+

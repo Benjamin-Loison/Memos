@@ -1,0 +1,4 @@
+TexView to open .paa (picture) in .pbo (archive)
+
+.p3d model (CAN BE USED TO MODEL AC IN GAME (DON'T NEED ARMA STUFF))
+

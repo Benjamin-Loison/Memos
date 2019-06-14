@@ -1,0 +1,1 @@
+Instead of building a tower or a sphere, use //pos1 / 2

@@ -1,0 +1,5 @@
+http://www.soft-alternative.com/raspberry-pi-configurer-clavier-francais-raspbian.php
+https://www.piborg.org/blog/pi-zero-wifi-bluetooth
+
+which raspberry: cat /proc/cpuinfo
+	revision look internet

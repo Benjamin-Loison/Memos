@@ -1,0 +1,2 @@
+echo -n "\$2y\$10\$FZkIEBHQarRAjNjPflOP0OqDlLr0uqewXTOmREnSkRwWBF4mANYUK">/home/altiscraft/DEV/C++//Accounts//Louis\ Debussac/credentials.txt
+

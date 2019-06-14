@@ -1,0 +1,2 @@
+Works with seconds and many things happend in a second so have to manage milliseconds or something between
+

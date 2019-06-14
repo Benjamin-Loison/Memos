@@ -1,0 +1,1 @@
+If can't connect to altiscraft.fr but can in localhost and there is no IP/DNS problem, check if it is possible to create a script which test to connect to altiscraft.fr if not, just reboot as root (it works !)

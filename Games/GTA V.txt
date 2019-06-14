@@ -1,0 +1,8 @@
+Server for friends: https://www.youtube.com/watch?v=E8Dq8Y-aJFU
+
+Molette up when right clicking with a gun in first person (to switch to gun sight)
+
+Display -> Subtitles
+
+Alt + Enter: switch fullscreen and not
+
