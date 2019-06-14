@@ -1,1 +1,1615 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/ -->
+<html lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/IwNLJc7X.js.téléchargement"></script><script async="" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/widgets.js.téléchargement"></script>
 
+	
+	
+
+	
+
+	<link rel="shortcut icon" href="https://cdn7.digitaltrends.com/favicon.ico?ver=2">
+	<link rel="apple-touch-icon" href="https://cdn7.digitaltrends.com/touch-icon-iphone.png?ver=2">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://cdn7.digitaltrends.com/touch-icon-ipad.png?ver=2">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://cdn7.digitaltrends.com/touch-icon-iphone4.png?ver=2">
+
+	<style>
+		@-ms-viewport {
+		    width: extend-to-zoom;
+		    zoom: 1.0;
+		}
+	</style>
+	<meta name="viewport" content="initial-scale=1">
+
+	
+					<meta name="tags" content="Computing,How-To,PC,windows,windows 10">
+				
+<!-- This site is optimized with the Yoast SEO plugin v5.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning | Digital Trends</title>
+<meta name="description" content="Migrating a Windows installation can be a tricky. Thankfully, our guide will show you how to properly move files and settings with ease.">
+<link rel="canonical" href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Want to move your Windows 10 install to a new hard drive? Here’s how">
+<meta property="og:description" content="Migrating a Windows installation can be a tricky. Thankfully, our guide will show you how to properly move files and settings with ease.">
+<meta property="og:url" content="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/">
+<meta property="og:site_name" content="Digital Trends">
+<meta property="article:publisher" content="https://www.facebook.com/digitaltrends">
+<meta property="article:author" content="https://www.facebook.com/brendan.hesse.5">
+<meta property="article:tag" content="Computing">
+<meta property="article:tag" content="How-To">
+<meta property="article:tag" content="PC">
+<meta property="article:tag" content="windows">
+<meta property="article:tag" content="windows 10">
+<meta property="article:section" content="Computing">
+<meta property="article:published_time" content="2017-04-28T10:00:49-08:00">
+<meta property="article:modified_time" content="2017-04-28T10:50:37-08:00">
+<meta property="og:updated_time" content="2017-04-28T10:50:37-08:00">
+<meta property="og:image" content="https://icdn3.digitaltrends.com/image/windows-10-upgrade-popup-2-1200x630-c-ar1.91.jpg?ver=1">
+<meta property="og:image:secure_url" content="https://icdn3.digitaltrends.com/image/windows-10-upgrade-popup-2-1200x630-c-ar1.91.jpg?ver=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+		<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Migrating a Windows installation can be a tricky. Thankfully, our guide will show you how to properly move files and settings with ease.">
+<meta name="twitter:title" content="Want to move your Windows 10 install to a new hard drive? Here’s how">
+<meta name="twitter:site" content="@digitaltrends">
+<meta name="twitter:image" content="https://icdn4.digitaltrends.com/image/windows-10-upgrade-popup-2-510x0.jpg?ver=1">
+<meta name="twitter:creator" content="@Brendan_LH">
+<script id="facebook-jssdk" async="" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/sdk.js.téléchargement"></script><script async="" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/gtm.js.téléchargement"></script><script async="" type="text/javascript" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/gpt.js.téléchargement"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.digitaltrends.com\/","name":"Digital Trends","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.digitaltrends.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+            <link rel="amphtml" href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/amp/">
+        <link rel="dns-prefetch" href="https://ajax.googleapis.com/">
+<link rel="dns-prefetch" href="https://mtrx.go.sonobi.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Digital Trends | Feed" href="https://www.digitaltrends.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Digital Trends | Want to move your Windows 10 install to a new hard drive? Here’s how Comments Feed" href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/feed/">
+<style id="dt-single-head-style">.m-title-block,.m-title-block_big,.m-title-block_cramped{padding:17px 0 28px;font-size:.8125rem;color:#555}.m-title-block .crumbs,.m-title-block_big .crumbs,.m-title-block_cramped .crumbs{font-size:.8125rem;color:gray;line-height:1.33;margin-bottom:34px}.m-title-block .crumbs a,.m-title-block .crumbs a:hover,.m-title-block_big .crumbs a,.m-title-block_big .crumbs a:hover,.m-title-block_cramped .crumbs a,.m-title-block_cramped .crumbs a:hover{color:#0095da}.m-title-block .crumbs a:active,.m-title-block_big .crumbs a:active,.m-title-block_cramped .crumbs a:active{color:#002c41}.m-title-block .crumbs em,.m-title-block_big .crumbs em,.m-title-block_cramped .crumbs em{padding:0 .5em;position:relative;top:-.17em;font-size:.75em;font-style:normal}.m-title-block .title,.m-title-block_big .title,.m-title-block_cramped .title{font-family:zona_pro,Helvetica,Arial,Lucida Grande,sans-serif;font-size:2.25rem;line-height:1.16;margin-top:14px;max-width:83.333333%}.m-title-block .title.dt-prefix:before,.m-title-block_big .title.dt-prefix:before,.m-title-block_cramped .title.dt-prefix:before{content:"DT";color:#0095da}.m-title-block .sub-title,.m-title-block_big .sub-title,.m-title-block_cramped .sub-title{font-size:1.25rem;color:#a0a0a0;line-height:1.16;margin:.8em 0 1.1em;max-width:65.98%}.m-title-block .byline,.m-title-block_big .byline,.m-title-block_cramped .byline{color:#555;margin-top:14px}.m-title-block .byline a,.m-title-block_big .byline a,.m-title-block_cramped .byline a{font-weight:700}.m-title-block .byline .dash,.m-title-block_big .byline .dash,.m-title-block_cramped .byline .dash{padding:0 .2em}.m-title-block .byline time,.m-title-block_big .byline time,.m-title-block_cramped .byline time{white-space:nowrap}.m-title-block .byline .count,.m-title-block_big .byline .count,.m-title-block_cramped .byline .count{font-weight:700}.m-title-block .byline .label,.m-title-block_big .byline .label,.m-title-block_cramped .byline .label{color:#0095da;text-transform:uppercase}.m-title-block .m-share,.m-title-block_big .m-share,.m-title-block_cramped .m-share{margin-top:20px}.m-title-block .m-title-block--alert,.m-title-block_big .m-title-block--alert,.m-title-block_cramped .m-title-block--alert{margin-top:2.2em;margin-bottom:.4em;font-size:1.23077em;line-height:1.33}.m-title-block .m-title-block--alert.notice,.m-title-block_big .m-title-block--alert.notice,.m-title-block_cramped .m-title-block--alert.notice{position:relative;color:#d1a10d;padding-left:2.3em}.m-title-block .m-title-block--alert.notice a,.m-title-block_big .m-title-block--alert.notice a,.m-title-block_cramped .m-title-block--alert.notice a{font-weight:700;text-decoration:underline}.m-title-block .m-title-block--alert.notice:before,.m-title-block_big .m-title-block--alert.notice:before,.m-title-block_cramped .m-title-block--alert.notice:before{content:"!";width:1.6em;height:1.6em;border-radius:50%;position:absolute;top:-.32em;left:0;font-size:1.1em;font-weight:700;line-height:1.5em;text-align:center;background:#f0ba12;color:#fff}@media (max-width:500px){.m-title-block .crumbs,.m-title-block_big .crumbs,.m-title-block_cramped .crumbs{display:none}.m-title-block .title,.m-title-block_big .title,.m-title-block_cramped .title{font-size:1.75rem;max-width:none}.m-title-block .sub-title,.m-title-block_big .sub-title,.m-title-block_cramped .sub-title{font-size:1.125rem;max-width:none}}.mem-image--branding{display:block;position:absolute;top:0;right:0;z-index:10;width:140px;min-width:0;padding:25px;pointer-events:none}@media (max-width:1077px){.mem-image--branding{display:none}}.l-block-wrap,.l-page,.m-alert-bar,.m-leaderboard{clear:both;min-width:1078px;width:100%}.l-block-wrap:after,.l-page:after,.m-alert-bar:after,.m-leaderboard:after{clear:both;content:"";display:table}@media (max-width:1077px){.l-block-wrap,.l-page,.m-alert-bar,.m-leaderboard{min-width:0}}.l-block{clear:both;margin:0 auto;position:relative;width:970px}@media (max-width:1077px){.l-block{margin:0;width:auto}}@media (min-width:1078px) and (max-width:1308px){body.l-wide .l-block{margin:0 54px;width:auto}}@media (min-width:1309px){body.l-wide .l-block{width:1200px}}@media (max-width:500px){.l-content-wrap,.l-content-wrap_centered,.l-content-wrap_full,.m-header-media.carousel-gallery .m-share,.m-title-block,.m-title-block_big,.m-title-block_cramped,body.paged .l-page_multistitch .m-share_bar{margin-left:20px;margin-right:20px}}@media (min-width:501px) and (max-width:1077px){.l-content-wrap,.l-content-wrap_centered,.l-content-wrap_full,.m-title-block,.m-title-block_big,.m-title-block_cramped,body.paged .l-page_multistitch .m-share_bar{margin-left:40px;margin-right:40px}}@media (max-width:1077px){.m-content>.excerpt,.m-content>blockquote,.m-content>h1,.m-content>h2,.m-content>h3,.m-content>h4,.m-content>h5,.m-content>h6,.m-content>ol,.m-content>p,.m-content>ul{padding-left:8.02407%;padding-right:8.02407%}}@media (max-width:500px){.m-content>.excerpt,.m-content>blockquote,.m-content>h1,.m-content>h2,.m-content>h3,.m-content>h4,.m-content>h5,.m-content>h6,.m-content>ol,.m-content>p,.m-content>ul{padding-left:0;padding-right:0}}@media (max-width:500px){.l-content-wrap .m-bucket-slider .bucket{left:20px;margin-left:-40px;position:relative}}img.dt-lazy-pending{height:0!important;min-height:0!important;padding-bottom:56.25%!important}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}@font-face{font-family:open_sans;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/OpenSans-Regular-webfont.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:open_sans;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/OpenSans-RegularItalic-webfont.woff) format("woff");font-weight:400;font-style:italic}@font-face{font-family:open_sans;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/OpenSans-Semibold-webfont.woff) format("woff");font-weight:600;font-style:normal}@font-face{font-family:open_sans;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/OpenSans-SemiboldItalic-webfont.woff) format("woff");font-weight:600;font-style:italic}@font-face{font-family:open_sans;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/OpenSans-Bold-webfont.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:open_sans;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/OpenSans-BoldItalic-webfont.woff) format("woff");font-weight:700;font-style:italic}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-thin-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-thin-webfont.woff) format("woff");font-weight:200;font-style:normal}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-thinitalic-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-thinitalic-webfont.woff) format("woff");font-weight:200;font-style:italic}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-light-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-light-webfont.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-lightitalic-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-lightitalic-webfont.woff) format("woff");font-weight:400;font-style:italic}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-regular-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-regular-webfont.woff) format("woff");font-weight:600;font-style:normal}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-regularitalic-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-regularitalic-webfont.woff) format("woff");font-weight:600;font-style:italic}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-bold-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-bold-webfont.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:zona_pro;src:url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-bolditalic-webfont.woff2) format("woff2"),url(https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/fonts/zonapro-bolditalic-webfont.woff) format("woff");font-weight:700;font-style:italic}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{font-size:.875rem;font-family:open_sans,Helvetica,Arial,Lucida Grande,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#f5f5f5;color:#282828;font-weight:400;min-height:100vh!important}b,strong{font-weight:700}em,i{font-style:italic}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}svg{fill:currentColor}input,select,textarea{color:inherit}button,input[type=button],input[type=reset],input[type=submit]{-moz-user-select:none;-ms-user-select:none;-webkit-appearance:button;-webkit-user-select:none;background-color:transparent;background-image:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;user-select:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=password],input[type=text],textarea{-webkit-appearance:none;border-radius:0}.dtads-slot{display:none}.dtads-slot-leaderboard,.dtads-slot-leaderboard-tablet{min-height:90px}body.dtads-is-rendered .dtads-slot{min-height:0!important}.dtads-out-of-page{font-size:0;height:0;line-height:0;overflow:hidden;padding:0!important}body.dtads-exp-desktop .dtads-desktop,body.dtads-exp-mobile .dtads-mobile,body.dtads-exp-tablet .dtads-tablet{display:block}@media (min-width:1078px){.dtads-collapse-desktop{display:none}}@media (min-width:501px) and (max-width:1077px){.dtads-collapse-tablet{display:none}}@media (max-width:500px){.dtads-collapse-mobile{display:none}}.m-leaderboard{text-align:center}.m-leaderboard .l-block>*{margin-left:auto;margin-right:auto}@media (max-width:500px){.m-leaderboard.is-sticky .l-block{background-color:inherit;position:fixed;text-align:center;top:54px;transform:translateZ(0);width:100%;z-index:5000099}.m-leaderboard.is-transitioning .l-block{transform:translate3d(0,-100%,0);transition:transform .6s cubic-bezier(.465,.183,.153,.946)}}.m-limited-leaderboard{text-align:center}.m-limited-leaderboard .l-block>*{margin-left:auto;margin-right:auto}.dtads-slot,.m-board{text-align:center}.dtads-slot>*,.dtads-slot>*>*,.m-board>*,.m-board>*>*{margin-left:auto;margin-right:auto}.m-board{clear:both}.m-board>*{max-width:728px}.m-above-content-bar,.m-share{display:none}@media (min-width:1078px){.hide-for-desktop{display:none!important}}@media (min-width:501px) and (max-width:1077px){.hide-for-tablet{display:none!important}}@media (max-width:1077px){.hide-for-lt-desktop{display:none!important}}@media (min-width:501px){.hide-for-gt-mobile{display:none!important}}@media (max-width:500px){.hide-for-mobile{display:none!important}}.hidden,.is-hidden{display:none!important}body.is-covered embed,body.is-covered iframe,body.is-covered object{z-index:1!important}body.plundered .l-page{padding-top:30px}body.plundered .dtads-slot,body.plundered .m-blockboard,body.plundered .m-leaderboard,body.plundered .m-mem--ad{display:none}.m-bartender{position:relative;z-index:5000100}.m-bartender--door{display:none}.l-block--premium .m-header-media{float:none;margin:auto;width:100%}@media (min-width:1078px){.l-block--premium .m-header-media{padding-bottom:50px}}.l-block--premium .m-share:after,.l-block--premium .m-share:before{content:"";display:block;clear:both;width:2560px;height:50px;position:absolute;right:0;top:0;background-color:#eee;z-index:-1}.l-block--premium .m-share:before{left:0;right:auto}.l-block--premium .m-share .key-item.comment>a,.l-block--premium .m-share .key-item.facebook>a{padding-left:0;padding-right:0}.l-block--premium .m-share .key-item.comment>a:before,.l-block--premium .m-share .key-item.facebook>a:before{float:none;margin-left:auto;margin-right:auto}.l-block--premium .m-share .key-item.comment .count,.l-block--premium .m-share .key-item.facebook .count{display:none}.l-block--premium .m-share_bar .key-item:first-child{border-left:1px solid #e2e2e2}.dtads-skin .m-title-block--premium{width:100%;left:0;margin:auto}.dtads-skin .m-content.premium-single .size-xxlarge,.dtads-skin .m-content.premium-single .wp-caption.dt-caption-xxlarge,.dtads-skin .m-content.premium-single>.xxlarge{width:100%;left:0;margin:auto;min-width:0;max-width:none}.l-sidebar{position:relative}.l-sidebar .m-discovery{max-width:300px;padding:40px 0}.l-sidebar .l-group .m-discovery{padding-bottom:0}body.plundered .l-sidebar .dtads-slot:first-child+div{margin-top:0}.l-sidebar .l-group.is-sticky{position:fixed;top:0}.l-sidebar .l-group.is-frozen{position:absolute;left:0!important}@media (max-height:715px){.l-sidebar .m-discovery .items .item:nth-child(2){margin-bottom:0}.l-sidebar .m-discovery .items .item:nth-child(3){display:none}}@media (max-height:810px){.l-sidebar .m-discovery .items .item:nth-child(3){margin-bottom:0}.l-sidebar .m-discovery .items .item:nth-child(4){display:none}}@media (max-height:905px){.l-sidebar .m-discovery .items .item:nth-child(4){margin-bottom:0}.l-sidebar .m-discovery .items .item:nth-child(5){display:none}}@media (max-width:1077px){.l-content-wrap{min-height:0!important}}.m-header-media{float:left;width:640px;margin-bottom:40px;position:relative}.m-header-media.full{width:100%;margin-bottom:50px}.m-header-media .m-carousel-gallery{position:relative;z-index:2}.m-header-media+.m-board{position:relative;top:-50px}@media (max-width:1077px){.m-header-media{float:none!important;width:auto!important;margin-bottom:40px!important}.m-header-media+.m-board{top:-40px}}@media (max-width:500px){.m-header-media.carousel-gallery .m-share{margin-bottom:18px}}body.ua-header-media .m-header-media{display:flex;flex-direction:column}body.ua-header-media .m-share_bar{order:2}body.ua-header-media .m-share_bar+*{order:1}body.ua-header-media .m-title-block{order:3;padding-bottom:0}body.ua-header-media .m-title-block .crumbs{display:none}@media (max-width:500px){body.ua-header-media .m-title-block{padding-top:0}}@media (min-width:1078px){body.ua-header-media .dtads-skin.l-page>.l-block{padding-top:24px}}body.single .l-page>.l-block{clear:both}body.single .l-page>.l-block:after{content:"";display:table;clear:both}body.single .l-page>.l-block>.m-share{margin-bottom:40px}@media (min-width:1078px){body.single .l-page>.l-block>.m-share{float:left;width:640px}}body.single .m-blockboard{clear:both;padding-top:50px}body.single .m-blockboard+.l-block .m-grid-river{padding-top:60px}body.single .m-blockboard+.l-block .m-grid-river:before{display:none}.m-newsletter-minimal{border-bottom:1px solid #e7e7e7;margin-bottom:40px;margin-top:-10px;padding-bottom:20px}@media (min-width:1078px){.m-newsletter-minimal{display:none}}.has-list-dt-newsletter .m-newsletter-minimal{display:none}.l-content-wrap .m-share,.l-content-wrap_full .m-share{margin:50px 0 20px}@media (min-width:1078px){.l-content-wrap_centered .m-content,.l-content-wrap_centered .m-unstyled-content{width:640px;margin-left:auto;margin-right:auto}}.l-premium-single:after,.m-content:after{clear:both;content:"";display:table}.l-premium-single .m-profile-block{margin-top:40px}@media (min-width:1078px){.l-premium-single .l-content-wrap{float:none;width:auto;padding-left:20%;padding-right:20%}}@media (min-width:501px){.l-premium-single .m-share{width:100%!important}}.m-above-content-banner{float:right;width:46.875%;max-width:300px;margin:5px 0 14px 20px;overflow:hidden}.m-above-content-banner img{width:100%;height:auto}.m-title-block--alert{display:none}.l-page_multistitch .is-n00b .m-title-block--alert{display:block}.l-multistitch-page{clear:both;padding-top:50px;overflow:hidden}.l-multistitch-page .m-board{margin-bottom:50px}@media (min-width:501px){body.paged .m-content.alpha .m-carousel-gallery:first-child,body.paged .m-content.alpha>.size-large:first-child{margin-top:-40px}}body{width:100%;min-width:1078px}@media (max-width:1077px){body{min-width:0}}@media (max-width:1077px){.l-main-container{overflow:hidden}}.m-site-foot{margin-bottom:-24px}.l-page{padding-bottom:60px;overflow-x:hidden}@media (max-width:500px){.l-page{padding-bottom:42px}}.l-content-wrap,.l-river-wrap{float:left;width:640px}@media (max-width:1077px){.l-content-wrap,.l-river-wrap{float:none;width:auto}}.l-sidebar{float:right;width:300px}@media (max-width:1077px){.l-sidebar{display:none}}.m-blockboard--inner,.m-board.framed,.m-leaderboard{background:#fff}.m-blockboard--inner .dtads-slot,.m-board.framed .dtads-slot,.m-leaderboard .dtads-slot{padding:20px 0}@media (max-width:500px){.m-blockboard--inner .dtads-slot,.m-board.framed .dtads-slot,.m-leaderboard .dtads-slot{padding:10px 0}}@media (max-width:320px){.m-blockboard--inner .dtads-slot,.m-board.framed .dtads-slot,.m-leaderboard .dtads-slot{padding:0}}.m-board.framed{background:#e1e1e1}.m-blockboard--inner{background-image:linear-gradient(90deg,#f5f5f5,#fff 20%,#fff 80%,#f5f5f5)}.m-alert-bar{display:none;background-color:#e4d4a2;color:#69571e}.m-alert-bar .alert{padding:10px 20px 0;font-size:.875rem;overflow:hidden}.m-alert-bar .alert.is-loading .buttons{opacity:.3}.m-alert-bar .buttons,.m-alert-bar .msg{float:left}.m-alert-bar .msg{padding:4px 20px 8px 0;line-height:1.33;font-weight:700}.m-alert-bar .buttons{margin-bottom:7px}.m-alert-bar .button{border-radius:.18em;cursor:pointer;display:block;text-align:center;text-decoration:none;white-space:nowrap;background-color:#282828;border:1px solid #282828;color:#bfbfbf;font-size:.8125rem;height:2em;line-height:2em;padding:0 .5em;display:inline-block;margin:0 10px 5px 0}.m-alert-bar .button:first-child{margin-left:0}.m-alert-bar.is-visible{display:block}.m-content{font-size:1rem;line-height:1.875}.m-content>.excerpt:last-child,.m-content>blockquote:last-child,.m-content>h1:last-child,.m-content>h2:last-child,.m-content>h3:last-child,.m-content>h4:last-child,.m-content>h5:last-child,.m-content>h6:last-child,.m-content>ol:last-child,.m-content>p:last-child,.m-content>ul:last-child{margin-bottom:0}@media (min-width:1078px){.m-content>.excerpt,.m-content>blockquote,.m-content>h1,.m-content>h2,.m-content>h3,.m-content>h4,.m-content>h5,.m-content>h6,.m-content>ol,.m-content>p,.m-content>ul{padding-right:15px}}.m-content .excerpt,.m-content h1,.m-content h2,.m-content h3,.m-content h4{font-size:1.125rem;font-weight:700;line-height:1.26;margin:2.625em 0 .84722em}.m-content h2,.m-content h3{font-family:zona_pro,Helvetica,Arial,Lucida Grande,sans-serif;line-height:1.26}.m-content h2{font-size:1.375rem;color:#0095da;font-weight:600}.m-content h3{font-size:1.125rem;color:inherit;font-weight:800}.m-content h5,.m-content h6{font-weight:700}.m-content blockquote,.m-content h5,.m-content h6,.m-content ol,.m-content p,.m-content ul{margin:1.5625em 0}.m-content ol,.m-content ul{margin-left:2.5em}.m-content ul{list-style-type:square}.m-content ol{list-style-type:decimal}.m-content>.dt-caption-large,.m-content>.dtvideos-container,.m-content>.gallery,.m-content>.large,.m-content>.m-carousel-gallery,.m-content>.m-credited-image,.m-content>.m-editors-rec,.m-content>.size-large,.m-content>iframe,.m-content>object{display:block;margin:3.25em 0}.m-content>.dt-caption-large:first-child,.m-content>.dtvideos-container:first-child,.m-content>.gallery:first-child,.m-content>.large:first-child,.m-content>.m-carousel-gallery:first-child,.m-content>.m-credited-image:first-child,.m-content>.m-editors-rec:first-child,.m-content>.size-large:first-child,.m-content>iframe:first-child,.m-content>object:first-child{margin-top:0}.m-content>.dt-caption-large:last-child,.m-content>.dtvideos-container:last-child,.m-content>.gallery:last-child,.m-content>.large:last-child,.m-content>.m-carousel-gallery:last-child,.m-content>.m-credited-image:last-child,.m-content>.m-editors-rec:last-child,.m-content>.size-large:last-child,.m-content>iframe:last-child,.m-content>object:last-child{margin-bottom:0}.m-content>.dt-caption-large,.m-content>.dtvideos-container,.m-content>iframe{width:100%!important}.m-content>.dt-caption-large img,.m-content>.large img,.m-content img.size-large{width:100%;height:auto}.m-content .table-wrap{margin:2em 0}.m-content>a img,.m-content>div img,.m-content>img,.m-content>p img{max-width:100%;height:auto}.m-content embed,.m-content object{max-width:100%}.m-content blockquote{font-size:1.125rem;color:#0095da}.m-content blockquote a{text-decoration:underline}@media (max-width:500px){.m-content .m-carousel-gallery{width:100%}}.m-content .m-aff-button+.m-aff-button{margin-left:.8em}.m-content .aligncenter{display:block;margin-left:auto;margin-right:auto}.m-content .alignleft,.m-content .alignright{max-width:50%}.m-content .alignleft.fixed-width,.m-content .alignright.fixed-width{max-width:none}.m-content .alignleft.fixed-width iframe,.m-content .alignright.fixed-width iframe{display:block;margin:0 auto}@media (max-width:500px){.m-content .alignleft.fixed-width,.m-content .alignright.fixed-width{float:none;margin-left:auto;margin-right:auto}}.m-content .alignleft{float:left;margin:.375em 1.25em .4375em 0}.m-content .alignright{float:right;margin:.375em 0 .4375em 1.25em}.m-content .alignnone{margin-left:0;margin-right:0}.m-content table.aligncenter{display:table}.m-content tr.aligncenter{display:table-row;margin:0}.m-content td.aligncenter,.m-content tr.aligncenter td{display:table-cell;margin:0;text-align:center}.m-content td.alignleft,.m-content tr.alignleft td{float:none;margin:0;text-align:left}.m-content td.alignright,.m-content tr.alignright td{float:none;margin:0;text-align:right}@media (max-width:1077px){.m-content .wp-caption.alignleft{margin-left:8.02407%}.m-content .wp-caption.alignright{margin-right:8.02407%}}@media (max-width:500px){.m-content a img.alignleft,.m-content a img.alignright,.m-content img.alignleft,.m-content img.alignright{max-width:54%;height:auto}.m-content .wp-caption.alignleft{margin-left:0}.m-content .wp-caption.alignright{margin-right:0}}.m-content .alignleft .m-image-credit,.m-content .alignright .m-image-credit,.m-content .dt-caption-large .m-image-credit,.m-content .dt-caption-xlarge .m-image-credit{font-size:.6875rem;background-color:#3e3e3e;color:#fff;font-weight:700;opacity:.5;padding:.7272em;position:absolute;right:8px;top:6px;z-index:2}.m-content .gallery-item .m-image-credit{display:none}.m-content .dtads-slot{clear:both;float:left;margin:5px 30px 20px 0}@media (max-width:500px){.m-content .dtads-slot{float:none!important;margin:40px auto!important}.m-content .dtads-slot:last-child{margin-bottom:0!important}}.m-content .alignright .dtads-slot{float:none;margin:0}.m-content .dtads-slot-mpu-content{width:300px;height:250px}.m-content .dtads-slot-mpu-content-mobile{width:320px}@media (max-width:320px){.m-content .dtads-slot-mpu-content-mobile{position:relative;left:-20px}}.m-content .simplePullQuote{font-family:zona_pro,Helvetica,Arial,Lucida Grande,sans-serif;font-size:1.5em;border-right:1px solid #d7d7d7;color:#0095da;float:left;line-height:1.26;margin:.47786em 4.6875% .47786em 0;padding:.47786em 3.12516% .47786em 0;width:37.5%}.m-content .simplePullQuote p{color:inherit;font-size:inherit;line-height:inherit;margin:0}.m-content .simplePullQuote.right{float:right;margin:.47786em 0 .47786em 4.6875%;padding:.47786em 0 .47786em 3.12516%;border-right:none;border-left:1px solid #d7d7d7}@media (max-width:500px){.m-content .simplePullQuote{font-size:1.3125em;border-bottom:1px solid #d7d7d7;border-left:none!important;border-right:none!important;border-top:1px solid #d7d7d7;float:none!important;margin:45px 40px!important;padding:.93024em 0!important;width:auto}}.m-content .m-content-module{float:left;width:37.5%;margin:.9375% 4.6875% 3.51562% 0}.m-content .m-aside,.m-content .m-content-module.right{float:right;width:38.4375%;margin:.9375% 0 3.51562% 3.75%}.m-content .m-aside.left{float:left;width:37.5%;margin:.9375% 4.6875% 3.51562% 0}.m-content .m-aside,.m-content .m-content-module{font-size:.875rem}@media (max-width:500px){.m-content .m-aside,.m-content .m-content-module{float:none!important;width:auto!important;margin:45px 40px!important}}.m-discovery .item{font-size:.8125rem;color:#555;margin-bottom:1.84615em;overflow:hidden;width:90%}.m-discovery .item:last-child{margin-bottom:0}.m-discovery .thumb{line-height:0;overflow:hidden;position:relative;background:#f0f0f0;float:left;height:76px;width:76px}.m-discovery .thumb img{display:block;height:auto;width:100%}.m-discovery .meta{margin-left:92px}.m-discovery .cat{font-weight:700;margin-bottom:.6em}.m-discovery .title{line-height:1.4;margin-top:-.2em}.m-header-media.image{line-height:0}.m-header-media.image img{max-width:100%;height:auto}.m-header-media.video{line-height:0}.m-header-media.video>*{width:100%!important}.m-header-media.video>.m-youtube-subscribe{width:auto!important}@media (min-width:501px){.m-header-media .m-youtube-subscribe{margin-top:16px}.m-header-media.full .m-youtube-subscribe{margin-top:0;position:absolute;top:17px;right:15px}}.m-header-media .m-image-credit{font-size:.6875rem;background-color:#3e3e3e;color:#fff;font-weight:700;left:8px;opacity:.5;padding:.7272em;position:absolute;top:58px;z-index:2}@media (max-width:1077px){.m-header-media.image img{width:100%;height:auto}.m-header-media .m-youtube-subscribe{margin-top:0;position:absolute;top:17px;right:15px}.m-header-media .m-youtube-subscribe .long{display:none}}@media (max-width:500px){.m-header-media .m-youtube-subscribe{display:none}}.m-youtube-subscribe a{font-size:.9375rem;color:#888;text-decoration:none}.m-youtube-subscribe a .yt:before{background-size:27px 19px;content:"";display:inline-block;filter:grayscale(100%);height:19.02656px;margin-left:.3em;padding-left:.3em;position:relative;top:-2px;vertical-align:middle;width:27px}@media (min-width:1078px){.dtads-skin.l-page{padding-bottom:33.6px}.dtads-skin.l-page .l-block-wrap,.dtads-skin.l-page>.l-block{padding-left:24px;padding-right:24px}.dtads-skin.l-page .l-block-wrap:after,.dtads-skin.l-page>.l-block:after{clear:both;content:"";display:table}.dtads-skin.l-page>.l-block{padding-bottom:48px;background-color:#f5f5f5;width:1018px}.dtads-skin.l-page .l-block-wrap,.dtads-skin.l-page .m-blockboard{width:1018px;min-width:0;margin:0 auto}.dtads-skin.l-page .m-blockboard{padding-top:0;background:#f5f5f5}.single-post .dtads-skin.l-page .m-blockboard{margin-left:-24px}.single-multipage-post .dtads-skin.l-page .m-blockboard{margin-left:auto}.dtads-skin.l-page .m-blockboard--inner{padding-right:0!important;padding-left:0!important;background:#fff!important}}@media (min-width:1078px) and (min-width:501px){.dtads-skin.l-page.l-page_category .m-grid-river--items .m-grid-river--group:first-child .m-grid-river--item.hero:first-child,.dtads-skin.l-page.l-page_home .m-grid-river--items .m-grid-river--group:first-child .m-grid-river--item.hero:first-child{padding-top:0;border-top:none}}@media (min-width:1078px){.dtads-skin.l-page.l-page_home .m-mem{margin-bottom:-24px}.dtads-skin.l-page.l-page_home>.l-block{padding-top:24px}.dtads-skin.l-page.l-page_home .m-grid-river{margin-top:0}.dtads-skin.l-page.l-page_home .m-blockboard+.l-block .m-grid-river{margin-top:26px}.dtads-skin.l-page.l-page_archive .m-grid-river{margin-top:0}.dtads-skin.l-page.l-page_archive>.l-block{padding-top:24px}.dtads-skin.l-page.l-page_video-cat>.l-block,.dtads-skin.l-page.l-page_video-show>.l-block{padding-top:50px}.dtads-skin.l-page .m-video-groups{padding-top:1px}.dtads-skin.l-page .m-leaderboard{margin-bottom:0;background:none}}@media (min-width:1078px) and (max-width:1077px){.dtads-skin{background:#f5f5f5!important}}.dtads-clickable,.dtads-clickable .m-leaderboard{cursor:pointer}.dtads-clickable .m-leaderboard>*,.dtads-clickable>*{cursor:default}.dtads-container-bigtop{max-height:500px}.m-site-head{font-size:.875rem;background:#272727;color:#f7f7f7;height:54px;position:relative}.m-site-head>*{display:none}.m-title-block_cramped{padding-bottom:14px}.m-title-block_cramped .crumbs{margin-bottom:14px}.m-title-block_big{padding-top:32px;padding-bottom:16px}</style>
+<script id="dt-head-script">!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):t.ES6Promise=e()}(this,function(){"use strict";function t(t){var e=typeof t;return null!==t&&("object"===e||"function"===e)}function e(t){return"function"==typeof t}function n(t){I=t}function r(t){J=t}function o(){return function(){return process.nextTick(a)}}function i(){return"undefined"!=typeof H?function(){H(a)}:c()}function s(){var t=0,e=new V(a),n=document.createTextNode("");return e.observe(n,{characterData:!0}),function(){n.data=t=++t%2}}function u(){var t=new MessageChannel;return t.port1.onmessage=a,function(){return t.port2.postMessage(0)}}function c(){var t=setTimeout;return function(){return t(a,1)}}function a(){for(var t=0;t<G;t+=2){var e=$[t],n=$[t+1];e(n),$[t]=void 0,$[t+1]=void 0}G=0}function f(){try{var t=require,e=t("vertx");return H=e.runOnLoop||e.runOnContext,i()}catch(n){return c()}}function l(t,e){var n=arguments,r=this,o=new this.constructor(p);void 0===o[et]&&k(o);var i=r._state;return i?!function(){var t=n[i-1];J(function(){return x(i,o,t,r._result)})}():E(r,o,t,e),o}function h(t){var e=this;if(t&&"object"==typeof t&&t.constructor===e)return t;var n=new e(p);return g(n,t),n}function p(){}function v(){return new TypeError("You cannot resolve a promise with itself")}function d(){return new TypeError("A promises callback cannot return that same promise.")}function _(t){try{return t.then}catch(e){return it.error=e,it}}function y(t,e,n,r){try{t.call(e,n,r)}catch(o){return o}}function m(t,e,n){J(function(t){var r=!1,o=y(n,e,function(n){r||(r=!0,e!==n?g(t,n):S(t,n))},function(e){r||(r=!0,j(t,e))},"Settle: "+(t._label||" unknown promise"));!r&&o&&(r=!0,j(t,o))},t)}function b(t,e){e._state===rt?S(t,e._result):e._state===ot?j(t,e._result):E(e,void 0,function(e){return g(t,e)},function(e){return j(t,e)})}function w(t,n,r){n.constructor===t.constructor&&r===l&&n.constructor.resolve===h?b(t,n):r===it?(j(t,it.error),it.error=null):void 0===r?S(t,n):e(r)?m(t,n,r):S(t,n)}function g(e,n){e===n?j(e,v()):t(n)?w(e,n,_(n)):S(e,n)}function A(t){t._onerror&&t._onerror(t._result),T(t)}function S(t,e){t._state===nt&&(t._result=e,t._state=rt,0!==t._subscribers.length&&J(T,t))}function j(t,e){t._state===nt&&(t._state=ot,t._result=e,J(A,t))}function E(t,e,n,r){var o=t._subscribers,i=o.length;t._onerror=null,o[i]=e,o[i+rt]=n,o[i+ot]=r,0===i&&t._state&&J(T,t)}function T(t){var e=t._subscribers,n=t._state;if(0!==e.length){for(var r=void 0,o=void 0,i=t._result,s=0;s<e.length;s+=3)r=e[s],o=e[s+n],r?x(n,r,o,i):o(i);t._subscribers.length=0}}function M(){this.error=null}function P(t,e){try{return t(e)}catch(n){return st.error=n,st}}function x(t,n,r,o){var i=e(r),s=void 0,u=void 0,c=void 0,a=void 0;if(i){if(s=P(r,o),s===st?(a=!0,u=s.error,s.error=null):c=!0,n===s)return void j(n,d())}else s=o,c=!0;n._state!==nt||(i&&c?g(n,s):a?j(n,u):t===rt?S(n,s):t===ot&&j(n,s))}function C(t,e){try{e(function(e){g(t,e)},function(e){j(t,e)})}catch(n){j(t,n)}}function O(){return ut++}function k(t){t[et]=ut++,t._state=void 0,t._result=void 0,t._subscribers=[]}function Y(t,e){this._instanceConstructor=t,this.promise=new t(p),this.promise[et]||k(this.promise),B(e)?(this.length=e.length,this._remaining=e.length,this._result=new Array(this.length),0===this.length?S(this.promise,this._result):(this.length=this.length||0,this._enumerate(e),0===this._remaining&&S(this.promise,this._result))):j(this.promise,q())}function q(){return new Error("Array Methods must be provided an Array")}function F(t){return new Y(this,t).promise}function D(t){var e=this;return new e(B(t)?function(n,r){for(var o=t.length,i=0;i<o;i++)e.resolve(t[i]).then(n,r)}:function(t,e){return e(new TypeError("You must pass an array to race."))})}function K(t){var e=this,n=new e(p);return j(n,t),n}function L(){throw new TypeError("You must pass a resolver function as the first argument to the promise constructor")}function N(){throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.")}function U(t){this[et]=O(),this._result=this._state=void 0,this._subscribers=[],p!==t&&("function"!=typeof t&&L(),this instanceof U?C(this,t):N())}function W(){var t=void 0;if("undefined"!=typeof global)t=global;else if("undefined"!=typeof self)t=self;else try{t=Function("return this")()}catch(e){throw new Error("polyfill failed because global object is unavailable in this environment")}var n=t.Promise;if(n){var r=null;try{r=Object.prototype.toString.call(n.resolve())}catch(e){}if("[object Promise]"===r&&!n.cast)return}t.Promise=U}var z=void 0;z=Array.isArray?Array.isArray:function(t){return"[object Array]"===Object.prototype.toString.call(t)};var B=z,G=0,H=void 0,I=void 0,J=function(t,e){$[G]=t,$[G+1]=e,G+=2,2===G&&(I?I(a):tt())},Q="undefined"!=typeof window?window:void 0,R=Q||{},V=R.MutationObserver||R.WebKitMutationObserver,X="undefined"==typeof self&&"undefined"!=typeof process&&"[object process]"==={}.toString.call(process),Z="undefined"!=typeof Uint8ClampedArray&&"undefined"!=typeof importScripts&&"undefined"!=typeof MessageChannel,$=new Array(1e3),tt=void 0;tt=X?o():V?s():Z?u():void 0===Q&&"function"==typeof require?f():c();var et=Math.random().toString(36).substring(16),nt=void 0,rt=1,ot=2,it=new M,st=new M,ut=0;return Y.prototype._enumerate=function(t){for(var e=0;this._state===nt&&e<t.length;e++)this._eachEntry(t[e],e)},Y.prototype._eachEntry=function(t,e){var n=this._instanceConstructor,r=n.resolve;if(r===h){var o=_(t);if(o===l&&t._state!==nt)this._settledAt(t._state,e,t._result);else if("function"!=typeof o)this._remaining--,this._result[e]=t;else if(n===U){var i=new n(p);w(i,t,o),this._willSettleAt(i,e)}else this._willSettleAt(new n(function(e){return e(t)}),e)}else this._willSettleAt(r(t),e)},Y.prototype._settledAt=function(t,e,n){var r=this.promise;r._state===nt&&(this._remaining--,t===ot?j(r,n):this._result[e]=n),0===this._remaining&&S(r,this._result)},Y.prototype._willSettleAt=function(t,e){var n=this;E(t,void 0,function(t){return n._settledAt(rt,e,t)},function(t){return n._settledAt(ot,e,t)})},U.all=F,U.race=D,U.resolve=h,U.reject=K,U._setScheduler=n,U._setAsap=r,U._asap=J,U.prototype={constructor:U,then:l,"catch":function(t){return this.then(null,t)}},U.polyfill=W,U.Promise=U,U.polyfill(),U});
+"use strict";var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a};(function(){var a={},b=Array.prototype.slice,c=Function.prototype.bind,d=function(b){return a.isObject(b)?Object.create(b):{}},e=function(b,c,e,f,g){if(!(f instanceof c))return b.apply(e,g);var h=d(b.prototype),i=b.apply(h,g);return a.isObject(i)?i:h};a.bind=function(d,f){if(c&&d.bind===c)return c.apply(d,b.call(arguments,1));if(!a.isFunction(d))throw new TypeError("Bind must be called on a function");var g=b.call(arguments,2);return function a(){return e(d,a,f,this,g.concat(b.call(arguments)))}},a.partial=function(c){var d=b.call(arguments,1);return function b(){for(var f=0,g=d.length,h=Array(g),j=0;j<g;j++)h[j]=d[j]===a?arguments[f++]:d[j];for(;f<arguments.length;)h.push(arguments[f++]);return e(c,b,this,this,h)}},a.before=function(a,b){var c;return function(){return 0<--a&&(c=b.apply(this,arguments)),1>=a&&(b=null),c}},a.once=a.partial(a.before,2),a.keys=function(b){return a.isObject(b)?Object.keys(b):[]},a.isObject=function(a){var b="undefined"==typeof a?"undefined":_typeof(a);return"function"===b||"object"===b&&!!a};var f=0;a.uniqueId=function(a){var b=++f+"";return a?"dt-event-"+a+b:"dt-event-"+b};var g=window.DTEvents={},h=/\s+/,j=function b(c,d,e,f,g){var j,k=0;if(e&&"object"===("undefined"==typeof e?"undefined":_typeof(e)))for(void 0!==f&&("context"in g)&&void 0===g.context&&(g.context=f),j=a.keys(e);k<j.length;k++)d=b(c,d,j[k],e[j[k]],g);else if(e&&h.test(e))for(j=e.split(h);k<j.length;k++)d=c(d,j[k],f,g);else d=c(d,e,f,g);return d};g.on=function(a,b,c){return i(this,a,b,c)};var i=function(a,b,c,d,e){if(a._events=j(k,a._events||{},b,c,{context:d,ctx:a,listening:e}),e){var f=a._listeners||(a._listeners={});f[e.id]=e}return a};g.listenTo=function(b,c,d){if(!b)return this;var e=b._listenId||(b._listenId=a.uniqueId("l")),f=this._listeningTo||(this._listeningTo={}),g=f[e];if(!g){var h=this._listenId||(this._listenId=a.uniqueId("l"));g=f[e]={obj:b,objId:e,id:h,listeningTo:f,count:0}}return i(b,c,d,this,g),this};var k=function(a,b,c,d){if(c){var e=a[b]||(a[b]=[]),f=d.context,g=d.ctx,h=d.listening;h&&h.count++,e.push({callback:c,context:f,ctx:f||g,listening:h})}return a};g.off=function(a,b,c){return this._events?(this._events=j(l,this._events,a,b,{context:c,listeners:this._listeners}),this):this},g.stopListening=function(b,c,d){var e=this._listeningTo;if(!e)return this;for(var f,g=b?[b._listenId]:a.keys(e),h=0;h<g.length&&(f=e[g[h]],!!f);h++)f.obj.off(c,d,this);return this};var l=function(b,c,d,e){if(b){var f,g=0,h=e.context,i=e.listeners;if(!c&&!d&&!h){for(var k=a.keys(i);g<k.length;g++)f=i[k[g]],delete i[f.id],delete f.listeningTo[f.objId];return}for(var l=c?[c]:a.keys(b);g<l.length;g++){c=l[g];var m=b[c];if(!m)break;for(var n,o=[],p=0;p<m.length;p++)n=m[p],d&&d!==n.callback&&d!==n.callback._callback||h&&h!==n.context?o.push(n):(f=n.listening,f&&0==--f.count&&(delete i[f.id],delete f.listeningTo[f.objId]));o.length?b[c]=o:delete b[c]}return b}};g.once=function(b,c,d){var e=j(m,{},b,c,a.bind(this.off,this));return"string"==typeof b&&null==d&&(c=void 0),this.on(e,c,d)},g.listenToOnce=function(b,c,d){var e=j(m,{},c,d,a.bind(this.stopListening,this,b));return this.listenTo(b,e)};var m=function(b,c,d,e){if(d){var f=b[c]=a.once(function(){e(c,f),d.apply(this,arguments)});f._callback=d}return b};g.trigger=function(a){if(!this._events)return this;for(var b=Math.max(0,arguments.length-1),c=Array(b),d=0;d<b;d++)c[d]=arguments[d+1];return j(n,this._events,a,void 0,c),this};var n=function(a,b,c,d){if(a){var e=a[b],f=a.all;e&&f&&(f=f.slice()),e&&o(e,d),f&&o(f,[b].concat(d))}return a},o=function(a,b){var c,d=-1,e=a.length,f=b[0],g=b[1],h=b[2];switch(b.length){case 0:for(;++d<e;)(c=a[d]).callback.call(c.ctx);return;case 1:for(;++d<e;)(c=a[d]).callback.call(c.ctx,f);return;case 2:for(;++d<e;)(c=a[d]).callback.call(c.ctx,f,g);return;case 3:for(;++d<e;)(c=a[d]).callback.call(c.ctx,f,g,h);return;default:for(;++d<e;)(c=a[d]).callback.apply(c.ctx,b);}};g.bind=g.on,g.unbind=g.off,g.extendTo=function(a){if(a&&"object"===("undefined"==typeof a?"undefined":_typeof(a)))for(var b in g)Object.prototype.hasOwnProperty.call(g,b)&&(a[b]=g[b])}})(),window.DTEvent={_promised_events:{},getEventPromise:function(a){var b=this;return this._promised_events.hasOwnProperty(a)||(this._promised_events[a]=new Promise(function(c){b.once(a,function(){c(arguments)},b)})),this._promised_events[a]},promise:function(){this.getEventPromise.apply(this,arguments),this.trigger.apply(this,arguments)}},window.DTEvents.extendTo(window.DTEvent),"use strict";var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a};(function(){"use strict";var a="dt_prefs",b="rooay7Nrv3dvPQfT",c={},d=function(a){var b;try{var c="__storage_test__";return b=window[a],b.setItem(c,c),b.removeItem(c),!0}catch(a){return a instanceof DOMException&&(22===a.code||1014===a.code||"QuotaExceededError"===a.name||"NS_ERROR_DOM_QUOTA_REACHED"===a.name)&&0!==b.length}},e=function(){if(d("localStorage"))try{var b=window.localStorage.getItem(a);b&&(b=JSON.parse(b),b&&"object"===("undefined"==typeof b?"undefined":_typeof(b))&&Object.keys(b).forEach(function(a){c[a]=b[a]}))}catch(a){console.log("DTPrefs: load failed.")}},f=function(){if(d("localStorage"))try{var b=JSON.stringify(c);b&&"string"==typeof b&&window.localStorage.setItem(a,b)}catch(a){console.log("DTPrefs: save failed.")}};(function(){e()})(),window.DTPrefs={get:function(a,d,e){return a=a||"",d=d||b,e="undefined"==typeof e?null:e,"undefined"!=typeof c[d]&&a&&"undefined"!=typeof c[d][a]?c[d][a]:e},set:function(a,d,e){a=a||"",d=d||b,e=e||null,a&&("undefined"==typeof c[d]&&(c[d]={}),c[d][a]=e,f())},del:function(a,d){a=a||"",d=d||b,"undefined"!=typeof c[d]&&a&&"undefined"!=typeof c[d][a]&&(delete c[d][a],!Object.keys(c[d]).length&&delete c[d],f())}}})(),"use strict";var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},_createClass=function(){function a(a,b){for(var c,d=0;d<b.length;d++)c=b[d],c.enumerable=c.enumerable||!1,c.configurable=!0,"value"in c&&(c.writable=!0),Object.defineProperty(a,c.key,c)}return function(b,c,d){return c&&a(b.prototype,c),d&&a(b,d),b}}();function _classCallCheck(a,b){if(!(a instanceof b))throw new TypeError("Cannot call a class as a function")}(function(){"use strict";var a={},b=function(){function b(){_classCallCheck(this,b),this.callbacks=[]}return _createClass(b,[{key:"addCallback",value:function(a){this.callbacks.push(a)}},{key:"get",value:function(b,c){return b=b||null,c="undefined"==typeof c?null:c,b&&"undefined"!=typeof a[b]?a[b]:c}},{key:"set",value:function(b,c){return b=b||null,c=c||null,b&&("object"===("undefined"==typeof b?"undefined":_typeof(b))?Object.keys(b).forEach(function(c){a[c]=b[c]}):a[b]=c,0<this.callbacks.length&&this.callbacks.map(function(a){a(b,c)})),this}},{key:"del",value:function(b){return b=b||null,b&&"undefined"!=typeof a[b]&&delete a[b],this}},{key:"getAll",value:function(){return a}}]),b}();window.DTData=new b})(),"use strict",window.dtDOMReady=function(a){if("function"!=typeof a)throw new Error("Callback is not a function.");"interactive"===document.readyState||"complete"===document.readyState?a():document.addEventListener("DOMContentLoaded",a)},window.dtDecodeBase64=function(a){var d,f={},e=[],g="",h=String.fromCharCode,i=[[65,91],[97,123],[48,58],[43,44],[47,48]];for(z in i)for(d=i[z][0];d<i[z][1];d++)e.push(h(d));for(d=0;64>d;d++)f[e[d]]=d;for(d=0;d<a.length;d+=72){var j,c,k=0,b=0,l=a.substring(d,d+72);for(c=0;c<l.length;c++)for(j=f[l.charAt(c)],k=(k<<6)+j,b+=6;8<=b;)g+=h((k>>>(b-=8))%256)}return g},window.dtHTMLEntities=function(a){return(a+"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;")},"use strict",function(a){var b,c,d,e,f,g,h,j,k,i,l,m,n;for(b=window.location.search.substring(1),c=b.split("&"),e=f=g=h=j="",(k=0,i=c.length);k<i;k++)l=c[k].split("="),void 0!==l[0]&&void 0!==l[1]&&("utm_source"===l[0]?e=l[1]:"utm_medium"===l[0]?f=l[1]:"utm_term"===l[0]?g=l[1]:"utm_content"===l[0]?h=l[1]:"utm_campaign"===l[0]&&(j=l[1]));e||f||g||h||j?(d={utm_source:e,utm_medium:f,utm_term:g,utm_content:h,utm_campaign:j},document.cookie="dt_utm="+JSON.stringify(d)+"; expires=0; path=/"):(m=(n=new RegExp("(?:^|; )"+encodeURIComponent("dt_utm")+"=([^;]*)").exec(document.cookie))?n[1]:null,d=m?JSON.parse(m):{utm_source:"",utm_medium:"",utm_term:"",utm_content:"",utm_campaign:""}),a.set({utm:d})}(DTData),"use strict",function(a){"use strict";var b=function(a){var b;try{var c="__storage_test__";return b=window[a],b.setItem(c,c),b.removeItem(c),!0}catch(a){return a instanceof DOMException&&(22===a.code||1014===a.code||"QuotaExceededError"===a.name||"NS_ERROR_DOM_QUOTA_REACHED"===a.name)&&0!==b.length}},c=function(d){var e=Math.floor,f=Date.now(),a=e(1048576*(1+Math.random())).toString(16),b=e(1048576*(1+Math.random())).toString(16),c=f+"-"+a+"-"+b;return d&&(c=d+"-"+c),c};window.DTSession={refreshPageViewId:function(){var b=c("v1");a.set("page_view_id",b)}}}(DTData);
+'use strict';var _typeof='function'==typeof Symbol&&'symbol'==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&'function'==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?'symbol':typeof a};(function(){'use strict';var a=1,b={actions:[],actionLimit:30,debug:!1,logStyles:{log:'background: #aaa; color: #333',warning:'background: #ccc; color: #555',error:'background: #000; color: #777'},personas:{},pruneTime:4838400,storageKey:'dt_personas',traits:{},traitLimit:50},c=window.navigator&&window.navigator.userAgent&&-1!==window.navigator.userAgent.search(/bot|crawler|spider/i),d=c,e={},f={},g={actions:{},key:'',traits:[],version:a},h=!1,i=!1,j=function(a){for(var b,c=Object(a),d=1;d<arguments.length;d++)if(b=arguments[d],null!=b)for(var e in b)Object.prototype.hasOwnProperty.call(b,e)&&(c[e]=b[e]);return c},k=function(a){var b;try{var c='__storage_test__';return b=window[a],b.setItem(c,c),b.removeItem(c),!0}catch(a){return a instanceof DOMException&&(22===a.code||1014===a.code||'QuotaExceededError'===a.name||'NS_ERROR_DOM_QUOTA_REACHED'===a.name)&&0!==b.length}},l=function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:'',b=arguments[1],c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:'log',d=3<arguments.length&&void 0!==arguments[3]&&arguments[3];if(d||h){var f=-1<['warning','error'].indexOf(c)?c:'log',g='%cDTPersonas:';g+=-1<['warning','error'].indexOf(f)?' '+f.toUpperCase()+':':'',g+=a&&'string'==typeof a?' '+a:'';var i=[g];if(e.logStyles[f]&&i.push(e.logStyles[f]),void 0!==b&&i.push(b),'function'==typeof window.console[f]){var j;(j=window.console)[f].apply(j,i)}else{var k;(k=window.console).log.apply(k,i)}}},m=function(a){return'string'==typeof a?a.replace(/[^A-Za-z0-9-_]/gm,''):''},n=function(a){if(!a||'string'!=typeof a)throw new Error('Missing or bad query.');var b=a.replace(/\s/gm,''),c=b.match(/^[=!<>][=]?/),d=c?c[0]:'==',e=m(b);if(!e)throw new Error('No key found in query.');return{key:e,operator:d}},o=function(a,b){var c=2<arguments.length&&arguments[2]!==void 0?arguments[2]:'==',d=+a,e=+b;if('number'!=typeof d||'number'!=typeof e)throw new Error('I specifically said numbers. NUMBERS!!!');switch(c){case'<':return d<e;case'<=':return d<=e;case'>':return d>e;case'>=':return d>=e;case'!=':return d!==e;case'==':return d===e;default:throw new Error('Unsupported operator.');}},p=function(a,b){if(!a||'object'!==('undefined'==typeof a?'undefined':_typeof(a)))throw new Error('Missing or bad actions.');if(b&&'number'!=typeof b)throw new Error('Bad pruneTime.');var c={};return Object.keys(a).forEach(function(d){if(Array.isArray(a[d])){var e=a[d].filter(function(a){return'number'==typeof a&&(b&&Date.now()/1e3-a>b?!1:!0)}),f=a[d].length-e.length;if(f&&l('Pruned '+f+' old actions from '+d+'.'),e.length){var g=m(d);g&&(c[g]=e)}}}),c},q=function(a,b,c){if(!a||'object'!==('undefined'==typeof a?'undefined':_typeof(a)))throw new Error('Missing or bad actions.');var e=m(b);if(!e)throw new Error('Missing or bad key.');if(c&&'number'!=typeof c)throw new Error('Bad pruneLimit.');var f=JSON.parse(JSON.stringify(a));if(d)return l('Did not record '+e+' action (disabled).'),f;Array.isArray(f[e])||(f[e]=[]),f[e].push(Math.ceil(Date.now()/1e3)),l('Recorded '+e+' action.');var g=Math.max(0,f[e].length-c);return g&&(f[e].splice(0,g),l('Pruned '+g+' over limit actions from '+e+'.')),f},r=function(a,b,c,d){if(!a||'object'!==('undefined'==typeof a?'undefined':_typeof(a)))throw new Error('Missing or bad actions.');var e=m(b);if(!e)throw new Error('Missing or bad key.');if(c&&'number'!=typeof c)throw new Error('Bad lt.');if(d&&'number'!=typeof d)throw new Error('Bad gt.');if(!Array.isArray(a[e]))return 0;if(!c&&!d)return a[e].length;var f=0;return a[e].forEach(function(a){var b=Date.now()/1e3-a;return c&&d&&b<c&&b>d?void f++:c&&b<c?void f++:void(d&&b>d&&f++)}),f},s=function(){if(d)return l('Data not saved (disabled).'),!1;try{if(k('localStorage')){var a={actions:g.actions,version:g.version};return window.localStorage.setItem(e.storageKey,JSON.stringify(a)),l('Data saved.',a),!0}}catch(a){l('Save data failed.',a,'error',!0)}return l('Data not saved.'),!1},t=function(){if(d)return l('Data not loaded (disabled).'),!1;try{if(k('localStorage')){var b=JSON.parse(window.localStorage.getItem(e.storageKey));if(b){if(b.version===a)return g.actions=p(b.actions||{},e.pruneTime),l('Data Loaded.',b),!0;l('Saved data is wrong api version.')}}}catch(a){l('Load data failed.',a,'error',!0)}return l('Data not loaded.'),!1},u={storageAvailable:k,init:function init(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{},c={};d&&(c.traits=[],c.actions=[]),j(e,b,a,c),h=e.debug||-1!==window.location.search.search(/dtpersonasdebug=1/);var k=Date.now();t(),e.actions.forEach(function(a,b){try{'function'==typeof a&&a(u.record)}catch(a){l('Caught exception from action at index '+b+'.',a,'error',!0)}}),e.traits.forEach(function(a,b){try{if(!a||'string'!=typeof a.key||'function'!=typeof a.condition)throw new Error('Trait object is bad.');var c=m(a.key);if(!c)throw new Error('Key is bad.');a.condition()&&(g.traits.length<e.traitLimit?g.traits.push(c):l('Trait limit hit.'))}catch(a){l('Caught exception from trait at index '+b+'.',a,'error',!0)}}),e.personas.forEach(function(a,b){try{if(!a||'string'!=typeof a.key||'number'!=typeof a.rank||'function'!=typeof a.condition)throw new Error('Persona object is bad.');var c=m(a.key);if(!c)throw new Error('Key is bad.');f[a.key]=a,!g.key&&a.condition()&&(g.key=c)}catch(a){l('Caught exception from persona at index '+b+'.',a,'error',!0)}}),g.key&&document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('persona-'+g.key)},!1),s(),i=!0,l('Persona defined',g),l('Init took '+(Date.now()-k)+'ms to run.')},record:function record(a){try{g.actions=q(g.actions,a,e.actionLimit),i&&s()}catch(a){l('Caught exception on record. Action was not recorded.',a,'error',!0)}},count:function count(a,b,c){try{return r(g.actions,a,b,c)}catch(a){return l('Caught exception on count, returning default.',a,'error',!0),0}},get:function get(){return g.key},is:function is(a){var b=n(a);return g.key&&f[g.key]&&f[b.key]?o(f[g.key].rank,f[b.key].rank,b.operator):null},getTraits:function getTraits(){return g.traits},hasTrait:function hasTrait(a){return-1!==g.traits.indexOf(a)},isBot:function isBot(){return c},isDisabled:function isDisabled(){return d}};window.DTPersonas=u})(),function(a){var b=window.DTPersonas,c=-1!==window.location.search.search(/dt_?debug=1/)||b.storageAvailable('localStorage')&&window.localStorage.getItem('dt_debug');b.init({debug:c,personas:[{key:'bot',rank:2,condition:function condition(){return b.isBot()}},{key:'disabled',rank:2,condition:function condition(){return b.isDisabled()}},{key:'staff',rank:2,condition:function condition(){return b.hasTrait('staff-visitor')}},{key:'power-user',rank:6,condition:function condition(){return b.hasTrait('direct-visitor')&&b.hasTrait('frequent-visitor')&&b.hasTrait('engaged')}},{key:'subscriber',rank:5,condition:function condition(){return!1}},{key:'user',rank:4,condition:function condition(){return b.hasTrait('direct-visitor')}},{key:'prospect',rank:3,condition:function condition(){return b.hasTrait('session-visitor')&&b.hasTrait('referred')}},{key:'acquired',rank:1,condition:function condition(){return b.hasTrait('ua-referred')}},{key:'referred',rank:2,condition:function condition(){return b.hasTrait('referred')}},{key:'none',rank:2,condition:function condition(){return!0}}],traits:[{key:'direct-visitor',condition:function condition(){return!!b.count('direct-enter',604800)}},{key:'session-visitor',condition:function condition(){return!!b.count('session-view',1800)}},{key:'recent-visitor',condition:function condition(){return!!b.count('unique-view',172800,10800)}},{key:'frequent-visitor',condition:function condition(){return 10<b.count('unique-view',1209600,10800)}},{key:'staff-visitor',condition:function condition(){return!!b.count('staff-view')}},{key:'ua-referred',condition:function condition(){return!!b.count('ua-view',86400)}},{key:'fb-referred',condition:function condition(){return!!b.count('facebook-enter',86400)}},{key:'search-referred',condition:function condition(){return!!b.count('search-enter',86400)}},{key:'referred',condition:function condition(){return!!b.count('referral',86400)}},{key:'engaged',condition:function condition(){return 3<b.count('engage',1209600)||3<=b.count('session-view')/Math.max(b.count('unique-view'),1)}}],actions:[function(a){-1===document.referrer.search(/https?:\/\/(?:[a-z0-9]+\.)?www\.digitaltrends\.com\//i)?a('unique-view'):a('session-view')},function(a){-1!==window.location.search.search(/utm_[^=]+?=/i)||document.referrer||window.location.pathname&&-1===window.location.pathname.search(/^\/[^/]*?\/?$/)||a('direct-enter')},function(a){-1===document.referrer.search(/https?:\/\/www\.google\.com\//i)?-1===document.referrer.search(/https?:\/\/www\.facebook\.com\//i)?-1===document.referrer.search(/https?:\/\/www\.twitter\.com\//i)?-1!==document.referrer.search(/https?:\/\/www\.reddit\.com\//i)&&(a('reddit-enter'),a('referral')):(a('twitter-enter'),a('referral')):(a('facebook-enter'),a('referral')):(a('search-enter'),a('referral'))},function(b){var c=a.get('utm');if(c)for(var d=[{k:'medium',v:'cpc'}],e=d.length;e--;)if(c['utm_'+d[e].k]===d[e].v){b('ua-view');break}},function(a){window.DTEvent.on('dt:share:shared',function(b){a('engage'),a('share'),'string'==typeof b&&-1!==['twitter','facebook','reddit','pinterest','linkedin'].indexOf(b)&&a(b+'-share')})},function(a){window.DTEvent.on('dt:dynamic_components:user_data_available',function(b){((b||{}).capabilities||{}).edit_posts&&a('staff-view')})}]})}(DTData);</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.digitaltrends.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.digitaltrends.com/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="https://www.digitaltrends.com/?p=791683">
+
+			<script>
+				(function() {
+					'use strict';
+
+					var stage = 0;
+					var options = {"qnqb92BhrzmkpqGx":{"post_sharing_data":{"object_id":791683,"taxonomy":"","url":"https:\/\/www.digitaltrends.com\/computing\/how-to-migrate-a-windows-installation-to-a-different-hard-drive\/","summary":"Migrating your files can be a bit tricky, whether you\u2019re moving your Windows install to a new hard drive or an entirely new rig. Thankfully, this guide will help you move files, settings, and other critical data to a new drive.","title":"Want to move your Windows 10 install to a new hard drive? Here&#8217;s how","image":"https:\/\/icdn2.digitaltrends.com\/image\/windows-10-upgrade-popup-2.jpg?ver=1","twitter_text":"Want to move your Windows 10 install to a new hard drive? Here&#8217;s how","twitter_hash_tags":""},"related_video_pool":[{"attachment_id":"1271043","content_id":"lI1nBLV7","title":"Here&#8217;s How to Change Your Gmail Password In A Few Quick Steps"},{"attachment_id":"1258107","content_id":"XugWr9WQ","title":"How did Apple make the iPhone X&#8217;s OLED screen fit? Here&#8217;s a clue"},{"attachment_id":"1271034","content_id":"c1J7jEY5","title":"Here&#8217;s How to Buy Apple&#8217;s $1,000 iPhone X Smartphone"}]},"debug":{"related_video_data":[{"attachment_id":"1271043","content_id":"lI1nBLV7","title":"Here&#8217;s How to Change Your Gmail Password In A Few Quick Steps"},{"attachment_id":"1258107","content_id":"XugWr9WQ","title":"How did Apple make the iPhone X&#8217;s OLED screen fit? Here&#8217;s a clue"},{"attachment_id":"1271034","content_id":"c1J7jEY5","title":"Here&#8217;s How to Buy Apple&#8217;s $1,000 iPhone X Smartphone"}]},"sticky_video":{"active":1,"related":1,"mute":0,"delay":0,"suppress_time":1,"categories":{"good":[],"bad":["press-releases"]},"article_types":{"good":[],"bad":["feature"]},"post_types":{"good":["post"],"bad":[]}},"spotx_channel_id":{"jwplayer_header_bidding":"207448"},"dtvideos":{"jwplayer_kill_ads":false,"jwplayer_player_id":"6B7vzQfZ","ad_schedule_id":"HtW7UHty","ad_tag":"https:\/\/pubads.g.doubleclick.net\/gampad\/ads?sz=970x556&iu=\/5611\/dtmn.video\/dt_ros&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast3&unviewed_position_start=1&url=__page-url__&description_url=http%3A%2F%2Fwww.digitaltrends.com&correlator=__random-number__&cmsid=2860&vid=__item-mediaid__","ad_targeting_params":{"tags":["computing","how-to","pc","windows","windows-10"],"cat":["computing","how-to"],"supports":["bt","bt2","mp","skin"],"aid":791683}}};
+					var prevDTOptions = null;
+					var allOptions = null;;
+
+					if ( stage > 0 && window.DTOptions ){
+						prevDTOptions = window.DTOptions;
+						var prevOptions = prevDTOptions.getAll();
+						var stageOptions = JSON.parse(JSON.stringify(options));
+						allOptions = Object.assign(prevOptions, stageOptions);
+					} else {
+						allOptions = options;
+					}
+
+					var getAll = function () {
+
+						return allOptions;
+
+					};
+
+					var get = function (key, group, def) {
+
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+						def = (typeof def !== 'undefined') ? def : null;
+
+						if (typeof allOptions[group] !== 'undefined') {
+							if (key && typeof allOptions[group][key] !== 'undefined') {
+								return allOptions[group][key];
+							}
+						}
+
+						return def;
+					};
+
+					var set = function (key, group, data) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+						data = data || null;
+
+						if (key) {
+							if (typeof options[group] === 'undefined') {
+								options[group] = {};
+							}
+
+							options[group][key] = data;
+						}
+					};
+
+					var del = function (key, group) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+
+						if (typeof options[group] !== 'undefined') {
+							if (key && typeof options[group][key] !== 'undefined') {
+								options[group][key] = null;
+							}
+						}
+					};
+
+					window.DTOptions = {
+						get: get,
+						getAll: getAll,
+						set: set,
+						del: del,
+					};
+				}());
+			</script>
+
+			<meta name="news_keywords" content="migrate windows installation, migrate OS, migrate windows to new drive, migrating windows, copying windows, windows, Windows 10, Windows migration tool, Windows 10 to SSD, Computing,">
+			<!-- Begin GPT -->
+			<script type="text/javascript">
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+					var gads   = document.createElement( 'script' );
+					gads.async = true;
+					gads.type  = 'text/javascript';
+					var useSSL = 'https:' == document.location.protocol;
+					gads.src   = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+					var node   = document.getElementsByTagName( 'script' )[0];
+					node.parentNode.insertBefore( gads, node );
+				})();
+			</script>
+			<!-- End GPT -->
+
+					<!-- DT Variables (digitaltrends-2013/functions.php) -->
+		<script type="text/javascript">
+			var ajaxurl = "https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/ajax-actions.php";
+			var ord 	= Math.random()*10000000000000000;
+					var DT_Facebook_AppId = '61377565444';
+		var DT_Facebook_ChannelUrl = 'https://www.digitaltrends.com/fb-channel.php';
+		var DT_Facebook_PageId = '8522591132';
+		
+		window.dt_lists_map = {"dt-newsletter":"daily-brief","dt-deals-newsletter":"deals"};
+
+				var DTVFeaturedVideoCategories = [{"query":"auto:recommended","title":"Trending Now"},{"query":"taxonomy:video_category:how-to-videos","title":"Quick Tips"},{"query":"taxonomy:video_category:car-videos,computer-videos,cool-tech-videos,home-videos,home-theater-videos,mobile-videos,outdoor-videos,photography-videos","title":"Latest Reviews"},{"query":"taxonomy:video_category:game-trailers","title":"Game Trailers"},{"query":"taxonomy:video_category:movie-trailers-videos","title":"Movie Trailers"},{"query":"taxonomy:video_category:home-theater-videos","title":"Home Theater"},{"query":"taxonomy:video_category:car-videos","title":"Cars"},{"query":"taxonomy:video_category:mobile-videos","title":"Mobile"},{"query":"taxonomy:video_category:computer-videos","title":"Computing"},{"query":"taxonomy:video_category:cool-tech-videos","title":"Cool Tech"},{"query":"taxonomy:video_category:how-to-videos","title":"How To"},{"query":"taxonomy:video_category:gaming-videos","title":"Gaming"},{"query":"taxonomy:video_category:home-videos","title":"Home"}];
+				</script>
+		<!-- End DT Variables -->
+	
+			<script>
+				(function() {
+					'use strict';
+
+					var l10ns = {"ahe084RE8hgWerv8":{"admin-mem":{"By":"By","ReviewBy":"DT Review By","ExclusiveBy":"DT Exclusive By","SearchForPost":"Search For Post"},"shortcode-timer":{"Days":"Days","Hours":"Hours","Minutes":"Minutes","Seconds":"Seconds"},"dt-river":{"ShowMore":"Show More"},"site-head":{"currentArticle":"Now Reading","share":"Share","shopCTA":"Buy Now"},"video-home":{"play_all":"Play All","view_more":"View More","by":"By"},"video-player":{"empty_playlist":"<strong>Playlist is empty<\/strong> Choose another playlist or try searching"}}};
+
+					var get = function get(key, group) {
+						key = key || '';
+						group = group || 'ahe084RE8hgWerv8';
+
+						if (typeof l10ns[group] !== 'undefined') {
+							if (key && typeof l10ns[group][key] !== 'undefined') {
+								return l10ns[group][key];
+							}
+						}
+
+						return null;
+					};
+
+					window.DTL10n = {
+						get: get,
+					};
+				}());
+			</script>
+
+					<meta property="fb:app_id" content="61377565444">
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.digitaltrends.com\/computing\/how-to-migrate-a-windows-installation-to-a-different-hard-drive\/"},"dateCreated":"April 28, 2017","datePublished":"April 28, 2017","dateModified":"April 28, 2017","articleSection":"post","author":{"@type":"Person","name":"Brendan Hesse"},"creator":{"@type":"Thing","name":"Brendan Hesse"},"headline":"Want to move your Windows 10 install to a new hard drive? Here&#8217;s how","url":"https:\/\/www.digitaltrends.com\/computing\/how-to-migrate-a-windows-installation-to-a-different-hard-drive\/","thumbnailUrl":"https:\/\/icdn2.digitaltrends.com\/image\/windows-10-upgrade-popup-2-1500x1000.jpg?ver=1","image":{"@type":"ImageObject","url":"https:\/\/icdn2.digitaltrends.com\/image\/windows-10-upgrade-popup-2.jpg?ver=1","width":1500,"height":1000},"publisher":{"@type":"Organization","name":"Digital Trends","url":"https:\/\/digitaltrends.com","logo":{"@type":"ImageObject","url":"https:\/\/cdn.dtcn.com\/assets\/images\/logos\/dt_60x60.png","width":60,"height":60}},"keywords":["Computing","How-To","PC","windows","windows 10"]}</script><meta property="fb:pages" content="8522591132"><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+      <meta name="onesignal" content="wordpress-plugin">
+          <link rel="manifest" href="https://www.digitaltrends.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id=">
+          <script src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/OneSignalSDK.js.téléchargement" async=""></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.digitaltrends.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '87a1768e-b153-4fcf-9039-77585a740492';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['disable'] = true;
+oneSignal_options['path'] = "https://www.digitaltrends.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.6b31cc7e-8212-45ce-95eb-ed8c35d3e69c";
+oneSignal_options['persistNotification'] = false;
+oneSignal_options['promptOptions'] = { };
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+<script type="text/javascript">var algolia = {"debug":false,"application_id":"B2H1YXTAO5","search_api_key":"e87e81ad0f5077ef5bf184cb906347dd","powered_by_enabled":false,"query":"","autocomplete":{"sources":[{"index_id":"posts_post","index_name":"prod_posts_post","label":"Posts","admin_name":"Posts","position":1,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_review","index_name":"prod_posts_review","label":"Reviews","admin_name":"Reviews","position":2,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_virtual_review","index_name":"prod_posts_virtual_review","label":"Virtual Reviews","admin_name":"Virtual Reviews","position":3,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_prod_guide","index_name":"prod_posts_prod_guide","label":"Product Guides","admin_name":"Product Guides","position":4,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_topic","index_name":"prod_posts_topic","label":"Topics","admin_name":"Topics","position":5,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true},{"index_id":"posts_deal","index_name":"prod_posts_deal","label":"Deals","admin_name":"Deals","position":6,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true}],"input_selector":"input[name='s']:not('.no-autocomplete')"},"indices":{"posts_post":{"name":"prod_posts_post","id":"posts_post","enabled":true,"replicas":[]},"posts_review":{"name":"prod_posts_review","id":"posts_review","enabled":true,"replicas":[]},"posts_virtual_review":{"name":"prod_posts_virtual_review","id":"posts_virtual_review","enabled":true,"replicas":[]},"posts_deal":{"name":"prod_posts_deal","id":"posts_deal","enabled":true,"replicas":[]},"posts_prod_guide":{"name":"prod_posts_prod_guide","id":"posts_prod_guide","enabled":true,"replicas":[]},"posts_topic":{"name":"prod_posts_topic","id":"posts_topic","enabled":true,"replicas":[]}}};</script>		<script>
+			(function(dtdata){
+				dtdata.set({
+															'ajax_url': 'https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/ajax-actions.php',
+																				'https': 'on',
+																				'canonical_url': 'https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/',
+																				'post_id': '791683',
+																				'post_title': 'Want to move your Windows 10 install to a new hard drive? Here&#8217;s how',
+																				'page_type': 'single',
+																				'post_type': 'post',
+																				'post_author': 'Brendan Hesse',
+																				'publish_date': '1493337600',
+																				'publish_date_by_day': '20170428',
+																				'word_count': '1453',
+																				'header_media_type': 'image',
+																				'header_media_location': 'default',
+																				'category': ['computing\',\'how-to'],
+																				'post_tag': ['computing\',\'how-to\',\'pc\',\'windows\',\'windows-10'],
+																				'post_format': [''],
+																				'primary_category': 'computing',
+																				'primary_category_name': 'Computing',
+																				'primary_category_url': 'https://www.digitaltrends.com/computing/',
+																				'categories': 'computing,how-to',
+																				'article_type': 'evergreen',
+													});
+			}(DTData));
+		</script>
+				<script>
+			(function(dtdata, dtpersonas){
+				'use strict'
+
+				if (window.DTPersonas) {
+					var persona = dtpersonas.get();
+
+					if (persona && dtdata) {
+						dtdata.set({persona: persona});
+					}
+				}
+			}(DTData, DTPersonas));
+		</script>
+				<script>
+			window.dataLayer = window.dataLayer || [];
+			(function(dtdata, dataLayer){
+				dataLayer.push(dtdata.getAll());
+				dtdata.addCallback(function(key, val){
+					if (key) {
+						if (typeof key == 'object') {
+							dataLayer.push(key);
+						} else {
+							var obj = {};
+							obj[key] = val;
+							dataLayer.push(obj);
+						}
+					}
+				});
+			}(DTData, dataLayer));
+		</script>
+		
+<link href="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/dt-single-foot.css" id="dt-single-foot-style" media="all" rel="stylesheet" type="text/css"><style type="text/css">.fancybox-margin{margin-right:0px;}</style><script type="text/javascript" class="kxct" data-id="IwNLJc7X" data-timing="async" data-version="3">
+				window.Krux||((Krux=function(){ Krux.q.push(arguments)}).q=[]);
+				(function(){
+					window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+					(function(){
+					var k=document.createElement('script');k.type='text/javascript';k.async=true;
+					k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/IwNLJc7X.js';
+					var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+					}());
+				}());
+			</script><script type="text/javascript" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/gpt.js.téléchargement"></script><script src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/[[_i_,_com.digitaltrends.www.events.airlock.desktop.not_]]"></script><script type="text/javascript" async="" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/iframe_api"></script><style>.dt-lazy-loading { opacity: 0; } .dt-lazy-loaded { opacity: 1; transition: opacity 0.7s cubic-bezier(0.465, 0.183, 0.153, 0.946); }</style></head>
+
+
+<!--[if lt IE 7]> <body class="ie6 ie ieold post-template-default single single-post postid-791683 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7 ie ieold post-template-default single single-post postid-791683 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8 ie ieold post-template-default single single-post postid-791683 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if IE 9]>    <body class="ie9 ie post-template-default single single-post postid-791683 single-format-standard dtads-unskin dtads-no-broadside"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<body class="post-template-default single single-post postid-791683 single-format-standard dtads-unskin dtads-no-broadside persona-none dtads-exp-desktop has-unready-videoplayer" data-post-id="791683" data-post-type="post" data-primary-category="5" style="">
+<!--<![endif]-->
+
+			<!-- Google Tag Manager -->
+		<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKFXF7"
+		height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WKFXF7');</script>
+		<!-- End Google Tag Manager -->
+
+		
+
+<header class="m-bartender h-bartender">
+	<!--googleoff: all-->
+		<span class="m-bartender--door h-front"></span>
+
+		<span class="m-bartender--door h-back"></span>
+	<!--googleon: all-->
+
+	
+<div class="m-pint-wrap is-fixed" data-pint-id="hnosz2bew2q" data-type="fixed" style="height: 54px;"><div class="m-pint-pos" style="width: 100%; z-index: 1000; top: 0px; position: fixed;"><section id="dt-site-head" class="m-site-head m-pint h-pint" data-type="fixed" data-priority="1">
+	<div class="m-site-head--inner h-site-head-main">
+		<div class="m-site-head--brand h-site-head-brand">
+			<a href="https://www.digitaltrends.com/">
+				<span class="label">Digital Trends</span>
+			</a>
+		</div>
+
+		<nav class="m-site-head--nav h-site-head-nav">
+			<ul role="menubar">
+									<li class="parent h-parent h-item" data-key="1" role="presentation">
+													<button tabindex="-1" role="menuitem" aria-controls="dt-site-head-drawer-1" aria-expanded="false" aria-haspopup="true" title="">
+								More							</button>
+											</li>
+									<li class="parent h-parent h-item" data-key="2" role="presentation">
+													<button tabindex="0" role="menuitem" aria-controls="dt-site-head-drawer-2" aria-expanded="false" aria-haspopup="true" title="">
+								Product Reviews							</button>
+											</li>
+									<li class="parent h-parent h-item" data-key="3" role="presentation">
+													<button tabindex="-1" role="menuitem" aria-controls="dt-site-head-drawer-3" aria-expanded="false" aria-haspopup="true" title="">
+								News							</button>
+											</li>
+									<li class="parent h-parent h-item" data-key="4" role="presentation">
+													<button tabindex="-1" role="menuitem" aria-controls="dt-site-head-drawer-4" aria-expanded="false" aria-haspopup="true" title="">
+								Features							</button>
+											</li>
+									<li class="parent h-parent h-item" data-key="5" role="presentation">
+													<button tabindex="-1" role="menuitem" aria-controls="dt-site-head-drawer-5" aria-expanded="false" aria-haspopup="true" title="">
+								Videos							</button>
+											</li>
+									<li class="t-mainnav h-item" data-key="6" role="presentation">
+													<a href="https://www.digitaltrends.com/deals/" target="" tabindex="-1" role="menuitem" title="Deals">
+								Deals							</a>
+											</li>
+									<li class="h-item" data-key="7" role="presentation">
+													<a href="https://www.digitaltrends.com/best-products/" target="" tabindex="-1" role="menuitem" title="">
+								Best Products							</a>
+											</li>
+									<li class="h-item" data-key="8" role="presentation">
+													<a href="https://www.digitaltrends.com/how-to/" target="" tabindex="-1" role="menuitem" title="">
+								How To							</a>
+											</li>
+									<li class="h-item" data-key="9" role="presentation">
+													<a href="https://es.digitaltrends.com/" target="" tabindex="-1" role="menuitem" title="">
+								Español							</a>
+											</li>
+							</ul>
+		</nav>
+
+		<button class="m-site-head--burger h-site-head-burger">
+			<span class="inner">
+				<span class="icon icon-a"><span></span><span></span><span></span></span>
+				<span class="icon icon-b"><span></span><span></span><span></span></span>
+				<span class="label">Menu</span>
+			</span>
+		</button>
+
+		<button class="m-site-head--search h-site-head-search" aria-controls="dt-site-head-drawer-9" aria-expanded="false" aria-haspopup="true">
+			<span class="label">Search</span>
+		</button>
+
+		<button class="m-site-head--back h-site-head-back" aria-hidden="true">
+			<span class="label">Back to Menu</span>
+		</button>
+
+		<div class="m-site-head--contextual type-share">
+				<div class="inner">
+					<div class="content">
+						<span class="pre">Now Reading:</span> Want to move your Windows 10 install to a new hard drive? Here’s how
+					</div>
+
+					<button class="h-do-share">
+						<span class="label">Share</span>
+					</button>
+				</div>
+				</div><div class="m-site-head--drawer h-site-head-drawer">
+							<div id="dt-site-head-drawer-1" class="inner count-3 h-site-head-inner-drawer">
+											<section class="h-item">
+							<h3 id="dt-site-head-drawer-list-1" class="title">
+								More							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-1">
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/awards/" target="" tabindex="-1" role="menuitem" title="Awards We Offer">
+											Awards We Offer										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/news-tips/" target="" tabindex="-1" role="menuitem" title="">
+											Send Us Your News Tip										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/giveaways/" target="" tabindex="-1" role="menuitem" title="">
+											Giveaways										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://shop.digitaltrends.com/" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											DT Shop										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://es.digitaltrends.com/" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											DT Español										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.themanual.com/" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											The Manual										</a>
+									</li>
+															</ul>
+						</section>
+											<section class="h-item">
+							<h3 id="dt-site-head-drawer-list-2" class="title">
+								Who We Are							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-2">
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/about/" target="" tabindex="-1" role="menuitem" title="">
+											About Us										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://workforcenow.adp.com/jobs/apply/posting.html?client=DTrends&amp;ccId=19000101_000001&amp;type=MP&amp;lang=en_US" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											Careers										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/about/advertise-on-digital-trends/" target="" tabindex="-1" role="menuitem" title="">
+											Advertise										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/about/company-contacts/" target="" tabindex="-1" role="menuitem" title="">
+											Contact Us										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/legal/privacy-policy/" target="" tabindex="-1" role="menuitem" title="">
+											Privacy Policy										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/legal/terms-of-use/" target="" tabindex="-1" role="menuitem" title="">
+											Terms of Use										</a>
+									</li>
+															</ul>
+						</section>
+											<section class="social h-item">
+							<h3 id="dt-site-head-drawer-list-3" class="title">
+								Social							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-3">
+																	<li class="linkedin h-item" role="presentation">
+										<a href="https://www.linkedin.com/company/digitaltrends-com" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											LinkedIn										</a>
+									</li>
+																	<li class="pinterest h-item" role="presentation">
+										<a href="http://pinterest.com/digitaltrends/" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											Pinterest										</a>
+									</li>
+																	<li class="youtube h-item" role="presentation">
+										<a href="http://www.youtube.com/subscription_center?add_user=DigitalTrends" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											YouTube										</a>
+									</li>
+																	<li class="gplus h-item" role="presentation">
+										<a href="https://plus.google.com/+digitaltrends/posts" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											Google+										</a>
+									</li>
+																	<li class="rss h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/rss-home/" target="" tabindex="-1" role="menuitem" title="">
+											RSS Home										</a>
+									</li>
+																	<li class="mail h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/newsletter/" target="" tabindex="-1" role="menuitem" title="">
+											Newsletter										</a>
+									</li>
+																	<li class="facebook h-item" role="presentation">
+										<a href="http://www.facebook.com/DigitalTrends" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											Facebook										</a>
+									</li>
+																	<li class="twitter h-item" role="presentation">
+										<a href="http://twitter.com/digitaltrends" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											Twitter										</a>
+									</li>
+																	<li class="instagram h-item" role="presentation">
+										<a href="https://instagram.com/digitaltrends" target="_blank" nofollow="" tabindex="-1" role="menuitem" title="">
+											Instagram										</a>
+									</li>
+															</ul>
+						</section>
+									</div>
+							<div id="dt-site-head-drawer-2" class="inner count-1 h-site-head-inner-drawer">
+											<section class="h-item">
+							<h3 id="dt-site-head-drawer-list-1" class="title">
+								Popular Categories							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-1">
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/cell-phone-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Phones										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/tv-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											TVs										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/laptop-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Laptops										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/car-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Cars										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/game-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Games										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/topic/movie-reviews/" target="" tabindex="-1" role="menuitem" title="Movies">
+											Movies										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/headphone-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Headphones										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/digital-camera-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Cameras										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/desktop-computer-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Desktops										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/speaker-subwoofer-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Speakers										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/appliance-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Appliances										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/wearable-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											Wearables										</a>
+									</li>
+																	<li class="more h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/product-reviews/" target="" tabindex="-1" role="menuitem" title="">
+											More Product Reviews										</a>
+									</li>
+															</ul>
+						</section>
+									</div>
+							<div id="dt-site-head-drawer-3" class="inner count-1 h-site-head-inner-drawer">
+											<section class="h-item">
+							<h3 id="dt-site-head-drawer-list-1" class="title">
+								Popular Categories							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-1">
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/mobile/" target="" tabindex="-1" role="menuitem" title="">
+											Mobile										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/computing/" target="" tabindex="-1" role="menuitem" title="">
+											Computing										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/home-theater/" target="" tabindex="-1" role="menuitem" title="">
+											Home Theater										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/gaming/" target="" tabindex="-1" role="menuitem" title="">
+											Gaming										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/cars/" target="" tabindex="-1" role="menuitem" title="">
+											Cars										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/photography/" target="" tabindex="-1" role="menuitem" title="">
+											Photography										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/home/" target="" tabindex="-1" role="menuitem" title="">
+											Smart Home										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/movies/" target="" tabindex="-1" role="menuitem" title="">
+											Movies &amp; TV										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/music/" target="" tabindex="-1" role="menuitem" title="">
+											Music										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/cool-tech/" target="" tabindex="-1" role="menuitem" title="">
+											Emerging Tech										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/outdoors/" target="" tabindex="-1" role="menuitem" title="">
+											Outdoors										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/business/" target="" tabindex="-1" role="menuitem" title="">
+											Business										</a>
+									</li>
+																	<li class="more h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/page/1/" target="" tabindex="-1" role="menuitem" title="">
+											More Coverage										</a>
+									</li>
+															</ul>
+						</section>
+									</div>
+							<div id="dt-site-head-drawer-4" class="inner count-1 h-site-head-inner-drawer">
+											<section class="h-item">
+							<h3 id="dt-site-head-drawer-list-1" class="title">
+								Popular Categories							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-1">
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/2017-home-awards/" target="" tabindex="-1" role="menuitem" title="">
+											2017 Home Awards										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/2017-outdoor-awards/" target="" tabindex="-1" role="menuitem" title="">
+											2017 Outdoor Awards										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/2017-car-awards/" target="" tabindex="-1" role="menuitem" title="2017 Car Awards">
+											2017 Car Awards										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/smart-cities/" target="" tabindex="-1" role="menuitem" title="">
+											Smart Cities										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/topic/awesome-tech-cant-buy-yet/" target="" tabindex="-1" role="menuitem" title="">
+											Awesome Tech										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/future-of-food/" target="" tabindex="-1" role="menuitem" title="">
+											Future of Food										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/topic/now-boarding/" target="" tabindex="-1" role="menuitem" title="">
+											Now Boarding										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/topic/road-rave/" target="" tabindex="-1" role="menuitem" title="">
+											Road Rave										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/smart-apartment/" target="" tabindex="-1" role="menuitem" title="">
+											Smart Apartment										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/topic/weekend-workshop/" target="" tabindex="-1" role="menuitem" title="">
+											Weekend Workshop										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/dt10/" target="" tabindex="-1" role="menuitem" title="">
+											DT10: Tech's Future										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/topic/audiophile/" target="" tabindex="-1" role="menuitem" title="">
+											The Audiophile										</a>
+									</li>
+																	<li class="more h-item" role="presentation">
+										<a href="https://www.digitaltrends.com/features/" target="" tabindex="-1" role="menuitem" title="">
+											More Features										</a>
+									</li>
+															</ul>
+						</section>
+									</div>
+							<div id="dt-site-head-drawer-5" class="inner count-1 h-site-head-inner-drawer">
+											<section class="h-item">
+							<h3 id="dt-site-head-drawer-list-1" class="title">
+								Popular Categories							</h3>
+
+							<ul role="menu" aria-labelledby="dt-site-head-drawer-list-1">
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/dt-daily-videos/" target="" tabindex="-1" role="menuitem" title="">
+											DT Daily										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/trends-with-benefits/" target="" tabindex="-1" role="menuitem" title="">
+											Trends with Benefits										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/close-to-the-metal/" target="" tabindex="-1" role="menuitem" title="">
+											Close to the Metal										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/between-the-streams/" target="" tabindex="-1" role="menuitem" title="">
+											Between the Streams										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/dot-life/" target="" tabindex="-1" role="menuitem" title="">
+											.life										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/innovators-and-essentials/" target="" tabindex="-1" role="menuitem" title="">
+											Innovators										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/pro-test/" target="" tabindex="-1" role="menuitem" title="">
+											Pro:Test										</a>
+									</li>
+																	<li class="h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/got-it-made/" target="" tabindex="-1" role="menuitem" title="">
+											Got It Made										</a>
+									</li>
+																	<li class="more h-item" role="presentation">
+										<a href="http://www.digitaltrends.com/videos/" target="" tabindex="-1" role="menuitem" title="">
+											More Videos										</a>
+									</li>
+															</ul>
+						</section>
+									</div>
+			
+			<div id="dt-site-head-drawer-9" class="inner h-site-head-inner-drawer">
+				<form class="m-site-head--search-form" action="https://www.digitaltrends.com/" method="get">
+					<input type="text" name="s" placeholder="What can we help you find?" autofocus="">
+					<input type="submit" value="Search">
+				</form>
+			</div>
+		</div>
+	</div>
+</section></div></div>
+</header>
+
+
+<div class="l-main-container">
+
+	<div class="l-page " data-dtads-inject="1" itemscope="" itemtype="http://schema.org/Article" data-post-id="791683" data-post-url="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/">
+
+		
+<div class="m-leaderboard ">
+	<div class="l-block">
+		<div class="dtads-slot dtads-slot-leaderboard dtads-desktop" data-slot-type="leaderboard"></div>		<div class="dtads-slot dtads-slot-leaderboard-tablet dtads-tablet" data-slot-type="leaderboard_tablet"></div>		<div class="dtads-slot dtads-slot-leaderboard-mobile dtads-mobile" data-slot-type="leaderboard_mobile"></div>
+					<div class="dtads-slot dtads-out-of-page dtads-desktop dtads-tablet dtads-mobile" data-slot-type="out_of_page"></div>			</div>
+</div>
+
+		
+
+		<div class="l-block ">
+
+			
+				<header class="m-title-block">
+
+					<div class="crumbs" data-scope="breadcrumbs">
+						<span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://www.digitaltrends.com/" rel="v:url" property="v:title">Home</a> <em>&gt;</em> <span rel="v:child" typeof="v:Breadcrumb"><a href="https://www.digitaltrends.com/computing/" rel="v:url" property="v:title">Computing</a> <em>&gt;</em> <span class="breadcrumb_last">Want to move your Windows 10 install to a new hard…</span></span></span></span>					</div>
+
+					<h1 class="title" itemprop="headline">
+						Want to move your Windows 10 install to a new hard drive? Here’s how					</h1>
+
+					
+					<div class="byline">
+						<cite data-scope="byline">
+	<span class="by">By</span>
+
+	
+		<span class="vcard">
+			<a class="author url fn " rel="author" href="https://www.digitaltrends.com/users/bhesse/" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Brendan Hesse</span></a><!--This <a> here is good feng-shui -->
+		</span>
+
+		
+	
+	<span class="dash">—</span>
+
+	<time itemprop="datePublished" class="date dtreviewed" datetime="2017-04-28T10:00:49+00:00" pubdate="pubdate">
+		Posted on April 28, 2017 10:00 am	</time>
+
+	
+	<span itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+		<meta itemprop="name" content="Digital Trends">
+	</span>
+
+	</cite>					</div>
+
+				</header>
+
+			
+			
+	
+
+	<div class="m-header-media image" data-scope="header-media">
+					
+	<div class="m-share m-share_bar  full h-share-bar">
+		<div class="m-share--wrap">
+
+			<div class="key-items">
+
+													
+
+									<div class="key-item facebook is-empty h-share-count h-do-share" data-app="facebook">
+						<a href="javascript:void(0)" title="Share this on Facebook">
+							<span id="dt-dc-share-count-0" class="count h-count"></span>						</a>
+					</div>
+				
+
+									<div class="key-item twitter is-empty h-do-share" data-app="twitter">
+						<a href="javascript:void(0)" title="Share this on Twitter">
+						</a>
+					</div>
+				
+
+							
+											<div class="key-item text subscribe is-empty h-topic-newsletter-subscribe">
+							<a href="javascript:void(0)" title="Subscribe to this topic">
+								<span class="text">Subscribe</span>
+							</a>
+						</div>
+					
+				
+
+									<div class="key-item text share is-empty h-do-share">
+						<a href="javascript:void(0)" title="Share this">
+							<span class="text">Share</span>
+						</a>
+					</div>
+				
+			</div>
+
+		</div>
+	</div>
+
+		
+					
+				
+				
+				<a href="http://s3.amazonaws.com/digitaltrends-uploads-prod/2017/02/Windows-10-upgrade-popup.jpg" rel="post">
+					<img width="640" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/windows-10-upgrade-popup-2-640x0.jpg" class="attachment-dt_header_media size-dt_header_media wp-image-1134262" alt="ubuntu">				</a>
+
+				
+				
+					
+		
+	</div>
+
+	
+
+			<aside class="l-sidebar h-smart-sidebar">
+
+	<div class="dtads-slot dtads-slot-half-roadblock dtads-desktop" data-slot-type="halfpage_roadblock"></div>
+
+		
+<div class="m-discovery">
+	<div class="items">
+					<div class="item">
+				<a href="https://www.digitaltrends.com/gaming/best-nes-games-ever/" rel="nofollow">
+					<div class="thumb">
+						<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/best-snes-games-header-image-copy-2-80x80-c.png" class="attachment-width=80&amp;height=80&amp;crop=1 size-width=80&amp;height=80&amp;crop=1 wp-image-554614" alt="best nes games ever snes header image copy">					</div>
+
+					<div class="meta">
+													<div class="cat">
+								Gaming							</div>
+						
+						<h4 class="title">
+							The 50 best NES games of all time						</h4>
+					</div>
+				</a>
+			</div>
+					<div class="item">
+				<a href="https://www.digitaltrends.com/photography/best-space-photos/gallery/" rel="nofollow">
+					<div class="thumb">
+						<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/navcam-comet-80x80-c.jpg" class="attachment-width=80&amp;height=80&amp;crop=1 size-width=80&amp;height=80&amp;crop=1 wp-image-1275497" alt="best space photos navcam comet">					</div>
+
+					<div class="meta">
+													<div class="cat">
+								Photography							</div>
+						
+						<h4 class="title">
+							Get your Sagan on with 50 awe-inspiring photos of the final frontier						</h4>
+					</div>
+				</a>
+			</div>
+			</div>
+</div>
+
+
+
+
+	<div class="l-group is-sticky" style="top: 84px;">
+
+		<div class="dtads-slot dtads-slot-mpu-sticky dtads-desktop" data-slot-type="mpu_sticky"></div>
+
+					<div class="m-discovery">
+				<div class="items">
+											<div class="item post">
+							<a href="https://www.digitaltrends.com/computing/how-to-uninstall-windows-10/">
+																	<div class="thumb">
+										<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/windows-10-home-laptop-2-640x0-90x90-c.jpg" class="attachment-thumbnail-small size-thumbnail-small wp-image-1207740" alt="How to uninstall windows 10">									</div>
+								
+								<div class="meta">
+																			<div class="cat">
+											Computing										</div>
+									
+									<div class="title">
+										How to uninstall Windows 10									</div>
+								</div>
+							</a>
+						</div>
+											<div class="item post">
+							<a href="https://www.digitaltrends.com/how-to/how-to-change-your-username-on-a-mac/">
+																	<div class="thumb">
+										<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/mac-os-x-yosemite-update-desktop-users-deserve-2-90x90-c.png" class="attachment-thumbnail-small size-thumbnail-small wp-image-589673" alt="How to change your username on a Mac">									</div>
+								
+								<div class="meta">
+																			<div class="cat">
+											How-To										</div>
+									
+									<div class="title">
+										How to change your username on a Mac									</div>
+								</div>
+							</a>
+						</div>
+											<div class="item post">
+							<a href="https://www.digitaltrends.com/computing/seagate-speeds-hard-drives-multi-actuator/">
+																	<div class="thumb">
+										<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/seagate-multi-actuator-technology-90x90-c.jpg" class="attachment-thumbnail-small size-thumbnail-small wp-image-1289569" alt="Seagate">									</div>
+								
+								<div class="meta">
+																			<div class="cat">
+											Computing										</div>
+									
+									<div class="title">
+										Seagate speeds up data access on its hard drives, but they won’t…									</div>
+								</div>
+							</a>
+						</div>
+											<div class="item review">
+							<a href="https://www.digitaltrends.com/car-reviews/2018-porsche-panamera-e-hybrid-review/">
+																	<div class="thumb">
+										<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/2018-porsche-panamera-4-e-hybrid-prd-90x90-c.jpg" class="attachment-thumbnail-small size-thumbnail-small wp-image-1290233" alt="2018 porsche panamera 4 e hybrid prd">									</div>
+								
+								<div class="meta">
+																			<div class="cat">
+											Cars										</div>
+									
+									<div class="title">
+										2018 Porsche Panamera 4 E-Hybrid first drive									</div>
+								</div>
+							</a>
+						</div>
+									</div>
+			</div>
+		
+	</div>
+
+</aside>
+
+
+
+			<div class="l-content-wrap">
+				
+<div class="m-newsletter-minimal  h-register-newsletter">
+
+	<div class="line-1 h-message">Get today's popular <strong>Digital&nbsp;Trends</strong> articles in your inbox:</div>
+
+
+	<form class="h-form" method="post">
+		<input type="text" class="field h-field" name="dt_newsletter_register_email" placeholder="Enter your email">
+
+		<input type="hidden" name="dt_newsletter_source" value="dt-newsletter-above-content">
+
+		<input type="text" name="robot" value="" style="display:none">
+
+		<input type="submit" class="submit h-submit" value="Sign Up">
+	</form>
+
+</div>
+
+				<article class="m-content " itemprop="articleBody" data-scope="content" id="dtads-cstm-qev1ygd76y">
+
+					<p>Are you looking to upgrade your hard drive to that long-awaited SSD or hybrid drive? Congratulations! But first, you’ll have to move your operating system, and all the data it holds, over to the new drive. Windows 10 doesn’t make this easy, but we’re here for you! Here’s the guide you need to clone and swap your Windows 10 install to a new hard drive.</p>
+<p><em>Note: This guide is primarily designed for people who are only switching hard drives. This method may work if you’re building a new rig or switching computers, depending on your setup. It almost certainly won’t work with any sort of virtualization project, though you can find those services if you’re willing to pay for them.</em></p>
+<h3>Prepare your system</h3>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-dt-lazy-src="https://icdn6.digitaltrends.com/image/windows-10-disk-cleanup-720x720.png" onerror="dti_load_error(this)" class="wp-image-1132534 alignleft dt-lazy-pending" alt="Windows 10 Disk Cleanup">Before copying and moving anything, it’s important to make sure you clean out your files to make the transition as quick and painless as possible. Thankfully, Windows comes with its own proprietary cleanup tool, which you should use before you move on.</p>
+<p><strong>Step 1</strong>: Head to <strong>Disk Cleanup</strong>. Launch the utility as you would normally, or enter “disk cleanup” in the Windows search bar.</p><div class="dtads-slot dtads-slot-mpu dtads-desktop"></div>
+<p><strong>Step 2</strong>: Once open, you should see a box with a list of file types, which lets you check the files that you want to get rid of. In this case, most file types should be checked, because these are all classifications of files that you don’t need, such as temp files and various Recycle Bin data. It’s always a good idea to double check the various options, just in case there is something you’d like to keep.</p>
+<p><strong>Step 3</strong>: Click&nbsp;<strong>Clean up system files</strong>&nbsp;near the bottom of the window. This adds a few extra file types you may want to delete, such as Previous Windows Installations — which can be quite sizable, especially if you’re part of Windows 10’s Windows Insider program. Note: When the Disk Cleanup tool switches to include system file types, it resets any changes you had made to the file type list in Step 2. Bad Windows. Bad!</p>
+<p><strong>Step 4</strong>: Hit <strong>OK</strong> to start the Disk Cleanup tool and sweep the gunk out of your system. Even with several GB of data, the process shouldn’t take too long.</p>
+<h3>Pick a migration tool</h3>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-dt-lazy-src="https://icdn7.digitaltrends.com/image/easeus-todo-720x720.png" onerror="dti_load_error(this)" class="wp-image-1132535 aligncenter dt-lazy-pending" alt="EaseUS Todo">
+<p>Windows 10 doesn’t offer an easy method for cloning and swapping your operating system over to a new hard drive. The good news is that there are plenty of apps that allow you to do exactly that! These are usually backup programs that also include significant cloning functions specifically designed for moving Windows 10 from an old hard drive to an SSD (or similar migrations). There are quite a few to choose from, but below are several&nbsp;<em>free</em> options that we recommend.</p>
+<p><strong><a href="http://www.todo-backup.com/products/home/free-backup-software.htm">EaseUS Todo Backup Free 10.0</a></strong>: The long name hides a well-maintained backup tool, one that boasts an an interface that’s very friendly to both Windows power users and newcomers.</p>
+<p><strong><a href="http://www.partition-tool.com/professional.htm">EaseUS Partition Master Professional 11.9</a></strong>: A more professional version with better data management tools, for those who know what they’re doing and want more control over the migration process. Make sure you opt for the free trial version, however, which should be enough to complete your move.</p>
+<p><strong><a href="http://www.backup-utility.com/clone/clone-hard-drive-to-ssd-4348.html">AOMEI Backupper Standard 4.0.2</a></strong>: A long-term backup solution with a lively interface, this app is a great pick if you like the idea of using backup and cloning tools for future projects but don’t have any current solution.</p>
+<h3>Back up your files</h3>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-dt-lazy-src="https://icdn8.digitaltrends.com/image/backupper-backup-screen-720x720.jpg" onerror="dti_load_error(this)" class="size-large wp-image-1132537 aligncenter dt-lazy-pending" alt="Backupper Backup Screen">
+<p>Hey, you just downloaded a backup tool! This is a great time to back up your data in case something goes wrong. Open up your tool and look at the main menu. All of the aforementioned tools have a clear sidebar and top menu with options that include “<strong>Backup</strong>” or “<strong>Backup Tool</strong>.” Choose the appropriate option — again, the wording may vary — and select&nbsp;where you’d like to back up your files. Then take the time to complete the process before moving on to the migration procedure.</p>
+<p>We probably don’t have to say this, but you shouldn’t back up your data onto the hard drive you are using for migration. Use a separate external hard drive, or specify an online source if you have sufficient&nbsp;storage available there.</p>
+<h3>Choose your destination drive</h3>
+<p><strong>Step 1</strong>: Connect your new hard drive — or your old hard drive, depending on how or why you are migrating — to your computer. You’ve got a variety of options for connecting a new hard drive, but the most common one is SATA. SATA cables are flat, often red in color, and the connectors have an L-shaped bend at one end. Find a free slot on your motherboard to plug the drive into and a spare power cable coming off your power supply and you should be up and running. If you’re stumped or confused, see our complete guide to <a href="https://www.digitaltrends.com/computing/how-to-install-sata-drive/">installing a SATA hard drive</a>.</p>
+<p><strong>Step 2</strong>: Open your chosen backup application. In the main menu, look for the option that says “<strong>Migrate OS to SSD/HDD,</strong>” “<strong>Clone</strong>,” or simply “<strong>Migrate</strong>.” That’s the one you want! Choose it.</p>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-dt-lazy-src="https://icdn9.digitaltrends.com/image/screen-shot-2017-02-20-at-4-26-49-pm-720x720.png" onerror="dti_load_error(this)" class="wp-image-1132538 aligncenter dt-lazy-pending" alt="Backupper Cloning">
+<p><strong>Step 3</strong>: This should open a new window in which the program will detect the drives connected to your computer and ask for a destination drive. Make sure you choose your new SSD or other drive as the destination, and make sure the destination drive has enough room. This window should also provide useful information about the data in each drive — the example below is from EaseUS Partition Manager, the one above is from AOMEI’s Backupper.</p>
+<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/screen-shot-2017-02-20-at-4-29-08-pm-720x720.png" data-dt-lazy-src="https://icdn1.digitaltrends.com/image/screen-shot-2017-02-20-at-4-29-08-pm-720x720.png" onerror="dti_load_error(this)" class="wp-image-1132542 aligncenter dt-lazy-loaded" alt="EaseUS Partition Master">
+<h3>Adjust partition sizing</h3>
+<p>These backup tools will typically give you options to adjust customize partitions. You will have the option to delete partitions on the destination drive, which you may need to do if the drive has been used before or has been set up to work with a different device out of the box. If you’re unsure, it’s a good idea to delete the partitions, just to be on the safe side.</p>
+<img src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/screen-shot-2017-02-20-at-4-30-04-pm-720x720.png" data-dt-lazy-src="https://icdn2.digitaltrends.com/image/screen-shot-2017-02-20-at-4-30-04-pm-720x720.png" onerror="dti_load_error(this)" class="wp-image-1132543 aligncenter dt-lazy-loaded" alt="Backupper Partition Customization">
+<p>You’ll also have an option to choose how partitions are sized when they migrate over. You can choose to make a copy without resizing partitions, but this is usually a poor choice that doesn’t take advantage of the tool. Instead, choose the option to fit and optimize partitions to the new drive. “<strong>Optimize</strong>,” “<strong>Resize</strong>,” and similar commands are&nbsp;what you want to look out for.</p>
+<h3>Stand back and let the cloning begin</h3>
+<p>The program’s cloning wizard will now take over. Take a look at your drives, and start the migration process. Confirm that you want to proceed, and the software will let you know when it is finished. This can take some time, however, so it’s a good idea to ensure&nbsp;that your power cables are connected and that the older hard drives have plenty of room to “breathe,” so they don’t overheat. Once the migration is complete, reboot your computer and check to see if everything works. Your tool should prompt you to do so, or you can choose to automatically restart your PC after the migration process is complete. Then, you can either delete the backup tool, or keep it around for more data management.</p>
+<p><em>Updated April 19, 2017 by Jeremy Kaplan: Expanded instructions for the Disk Cleanup section, and added a step to the “Choose your destination” section with info on how to connect a hard drive. This article was originally published on July 8, 2015, and updated on February 20, 2017, by Tyler Lacoma to include instructions for Windows 10.&nbsp;</em></p>
+
+<div class="m-editors-rec">
+	<h3>Editors' Recommendations</h3>
+	<ul>
+			<li><a href="https://www.digitaltrends.com/computing/how-to-speed-up-windows/">How to speed up Windows in a few easy steps</a></li>
+			<li><a href="https://www.digitaltrends.com/computing/how-to-factory-reset-windows/">How to factory reset Windows and make your PC new again</a></li>
+			<li><a href="https://www.digitaltrends.com/computing/how-to-show-hidden-files-in-windows/">Want to show hidden files in Windows? Here's a quick guide for Windows 7/8.1/10</a></li>
+			<li><a href="https://www.digitaltrends.com/computing/how-to-install-windows-chromebook/">Like Chrome OS, but miss Windows? Here’s how to install it on your Chromebook</a></li>
+			<li><a href="https://www.digitaltrends.com/computing/how-to-transfer-files-from-android-to-your-pc/">How to transfer files from Android to your PC — the easy way</a></li>
+		</ul>
+</div>
+
+	                <span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+	                    <span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+	                        <meta itemprop="url" content="http://cdn.dtcn.com/dt/dt-logo-small.png">
+	                        <meta itemprop="width" content="0">
+	                        <meta itemprop="height" content="0">
+	                    </span>
+	                    <meta itemprop="name" content="Digital Trends">
+	                </span>
+
+				</article>
+
+				
+<div class="m-related-articles">
+	<span>Related Topics: </span>
+	<a href="https://www.digitaltrends.com/tag/computing/">Computing</a>, <a href="https://www.digitaltrends.com/tag/how-to/">How-To</a>, <a href="https://www.digitaltrends.com/tag/pc/">PC</a>, <a href="https://www.digitaltrends.com/tag/windows/">windows</a>, <a href="https://www.digitaltrends.com/tag/windows-10/">windows 10</a>, <a href="https://www.digitaltrends.com/computing/">Computing</a></div>
+<div class="m-next-articles">
+		<a class="dont-miss" href="https://www.digitaltrends.com/computing/how-to-take-a-screenshot-on-pc/">
+			<div class="section-title">Don't Miss</div><br>
+			<div class="left-arrow arrow"></div>
+			<div class="post-title">How to take a screenshot on a PC with Windows 10, 8, and 7</div>
+	</a>
+			<a class="up-next" href="https://www.digitaltrends.com/computing/google-implementing-aggressive-policies-in-chrome/">
+			<div class="section-title">Up Next</div><br>
+			<div class="right-arrow arrow"></div>
+			<div class="post-title">Google gets more aggressive in alerting users when web pages are not secure</div>
+	</a>
+	</div>				
+				<style>
+	.m-fa8ls4wfrl { margin-top: 60px; overflow: hidden; }
+	.m-fa8ls4wfrl div { float: right; }
+	.m-fa8ls4wfrl div:first-child { float: left; }
+	@media (max-width: 1077px) { .m-fa8ls4wfrl div { margin: 0 auto; float: none !important; } }
+</style>
+
+<div class="m-fa8ls4wfrl">
+	<div class="dtads-slot dtads-slot-mpu-5a3bf02d71b84 dtads-desktop" data-slot-type="mpu-5a3bf02d71b84"></div>	<div class="dtads-slot dtads-slot-mpu-5a3bf02d71bdf dtads-desktop" data-slot-type="mpu-5a3bf02d71bdf"></div>	<div class="dtads-slot dtads-slot-mpu-variable-mobile-5a3bf02d71c2f dtads-mobile" data-slot-type="mpu_variable_mobile-5a3bf02d71c2f"></div></div>
+			</div>
+
+			
+
+<div class="m-blockboard dtads-collapse-mobile ">
+	<div class="m-blockboard--inner">
+		<div class="l-block">
+			<div class="dtads-slot dtads-slot-board-5a3bf02d71c98 dtads-desktop dtads-tablet" data-slot-type="board-5a3bf02d71c98"></div>		</div>
+	</div>
+</div>
+			<div class="l-block">
+
+				<section class="m-grid-river" data-scope="infinite-discovery">
+					<div class="m-grid-river--items l-1-hero-3-item infinite " id="h-river"></div>
+				<button class="m-show-more-button">Show More</button></section>
+
+				<script>
+					DTEvent.getEventPromise( 'dt:infinite:init' ).then( function() {
+						var infinite_river = new DT.Infinite.Elements( {
+							container_id: 'h-river',
+							el_class:     'm-grid-river--group',
+							fill_on_load: false,
+							ajax_action:  'dt_infinite_discovery_ajax',
+							ajax_data: {
+								term: '5',
+								post: '791683'
+							}
+						});
+					});
+				</script>
+
+			</div>
+
+		</div>
+
+	<div class="m-sticky-video m-sticky-video_orphan h-sticky-video is-pending"><div id="dt-sticky-video-container"></div><span class="m-sticky-video--head"><span class="m-sticky-video--title">Here’s How to Change Your Gmail Password In A Few Quick Steps</span><button class="m-sticky-video--close">Close</button></span></div></div>
+
+	<script>
+		var dt_premium_toc = setInterval(function() {
+			if ( 'undefined' !== typeof DT_AWARDS_TOC ) {
+				clearInterval( dt_premium_toc );
+				new DT_AWARDS_TOC();
+			}
+		}, 200);
+	</script>
+
+
+
+			<footer class="m-site-foot" id="dt-site-foot">
+				<div class="m-site-foot--inner">
+					<ul id="menu-footer" class="m-site-foot--menu"><li id="menu-item-1221595" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221595"><a href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/#">Must Reads</a>
+<ul class="sub-menu">
+	<li id="menu-item-1221609" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1221609"><a href="https://www.digitaltrends.com/movies/best-netflix-movies/">Best Netflix Movies</a></li>
+	<li id="menu-item-1235751" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1235751"><a title="Best Netflix Original Series" href="https://www.digitaltrends.com/movies/best-netflix-original-series/">Best Netflix Original Series</a></li>
+	<li id="menu-item-1235752" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-1235752"><a title="Best iPhone Games" href="https://www.digitaltrends.com/tag/best-iphone-games/">Best iPhone Games</a></li>
+	<li id="menu-item-1234604" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1234604"><a title="Best TVs" href="https://www.digitaltrends.com/home-theater/best-tvs/">Best TVs</a></li>
+	<li id="menu-item-1246763" class="menu-item menu-item-type-post_type menu-item-object-review menu-item-1246763"><a title="iPhone X Review" href="https://www.digitaltrends.com/cell-phone-reviews/apple-iphone-x-review/">iPhone X Review</a></li>
+	<li id="menu-item-1246762" class="menu-item menu-item-type-post_type menu-item-object-review menu-item-1246762"><a title="iPhone 8 Plus Review" href="https://www.digitaltrends.com/cell-phone-reviews/apple-iphone-8-plus-review/">iPhone 8 Plus Review</a></li>
+</ul>
+</li>
+<li id="menu-item-1221593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221593"><a href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/#">Who We Are</a>
+<ul class="sub-menu">
+	<li id="menu-item-1221636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221636"><a href="https://www.digitaltrends.com/about/">About</a></li>
+	<li id="menu-item-1221630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221630"><a href="https://www.digitaltrends.com/about/advertise-on-digital-trends/">Advertise</a></li>
+	<li id="menu-item-1221629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221629"><a href="https://www.digitaltrends.com/about/company-contacts/">Contact Us</a></li>
+	<li id="menu-item-1221626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221626"><a href="https://www.digitaltrends.com/legal/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-1221625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221625"><a href="https://www.digitaltrends.com/legal/terms-of-use/">Terms of Use</a></li>
+	<li id="menu-item-1221627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221627"><a href="https://www.digitaltrends.com/contact/corrections/">Corrections</a></li>
+	<li id="menu-item-1221632" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221632"><a target="_blank" href="https://workforcenow.adp.com/jobs/apply/posting.html?client=DTrends&amp;ccId=19000101_000001&amp;type=MP&amp;lang=en_US">Careers</a></li>
+</ul>
+</li>
+<li id="menu-item-1221592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221592"><a href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/#">Related Coverage</a>
+<ul class="sub-menu">
+	<li id="menu-item-1221606" class="menu-item menu-item-type-post_type menu-item-object-topic menu-item-1221606"><a href="https://www.digitaltrends.com/deals/">DT Deals</a></li>
+	<li id="menu-item-1221605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221605"><a href="https://www.digitaltrends.com/best-products/">Best Products</a></li>
+	<li id="menu-item-1221599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221599"><a target="_blank" href="https://shop.digitaltrends.com/">DT Shop</a></li>
+	<li id="menu-item-1221600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221600"><a target="_blank" href="https://es.digitaltrends.com/">DT Español</a></li>
+	<li id="menu-item-1221601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221601"><a target="_blank" href="https://www.themanual.com/">The Manual</a></li>
+	<li id="menu-item-1284552" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1284552"><a href="https://www.digitaltrends.com/giveaways/">Giveaways</a></li>
+</ul>
+</li>
+<li id="menu-item-1221596" class="m-social menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1221596"><a href="https://www.digitaltrends.com/computing/how-to-migrate-a-windows-installation-to-a-different-hard-drive/#">Add Us To Your Social Channels</a>
+<ul class="sub-menu">
+	<li id="menu-item-1221639" class="item facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-1221639"><a target="_blank" href="https://www.facebook.com/DigitalTrends">Facebook</a></li>
+	<li id="menu-item-1221640" class="item twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-1221640"><a target="_blank" href="https://twitter.com/digitaltrends">Twitter</a></li>
+	<li id="menu-item-1221643" class="item instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-1221643"><a target="_blank" href="https://www.instagram.com/digitaltrends/">Instagram</a></li>
+	<li id="menu-item-1221641" class="item linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-1221641"><a target="_blank" href="https://www.linkedin.com/company-beta/90282/">Linkedin</a></li>
+	<li id="menu-item-1221644" class="item pinterest menu-item menu-item-type-custom menu-item-object-custom menu-item-1221644"><a target="_blank" href="https://www.pinterest.com/digitaltrends/">Pinterest</a></li>
+	<li id="menu-item-1221645" class="item youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-1221645"><a target="_blank" href="https://www.youtube.com/channel/UC8wXC0ZCfGt3HaVLy_fdTQw?sub_confirmation=1">YouTube</a></li>
+	<li id="menu-item-1221647" class="item rss menu-item menu-item-type-post_type menu-item-object-page menu-item-1221647"><a href="https://www.digitaltrends.com/rss-home/">RSS Home</a></li>
+</ul>
+</li>
+</ul>
+					<div class="m-site-foot--brand">
+						<a href="https://www.digitaltrends.com/">
+							<span class="label">
+								Digital Trends							</span>
+						</a>
+					</div>
+
+					<div class="m-site-foot--blurb">
+						Digital Trends helps readers keep tabs on the fast-paced world of tech with all the latest news, fun product reviews, insightful editorials, and one-of-a-kind sneak peeks.					</div>
+
+											<a class="m-site-foot--newsletter" href="https://www.digitaltrends.com/newsletter">
+							<strong>Subscribe</strong> to our Newsletter						</a>
+					
+					<div class="m-site-foot--copyright">
+						Copyright ©2017 Designtechnica Corporation.
+						All rights reserved.					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script type="text/template" id="t-carousel-gallery">
+	<div class="m-carousel-gallery--wrap h-wrap">
+		<div class="m-carousel-gallery--slides h-slides"></div>
+
+		<div class="m-carousel-gallery--controls h-controls">
+			<div class="shift next h-next">
+				<a href="javascript:">Next</a>
+			</div>
+
+			<div class="shift prev h-prev">
+				<a href="javascript:">Previous</a>
+			</div>
+
+			<div class="m-carousel-gallery--dots h-pos-dots"></div>
+
+			<div class="m-carousel-gallery--num h-pos-text">
+				<span class="current h-pos-text-current"></span> of <span class="total h-pos-text-total"></span>
+			</div>
+
+			<div class="m-carousel-gallery--autoplay h-autoplay">
+				<div>Video starting in <span class="seconds h-autoplay-seconds"></span></div>
+			</div>
+		</div>
+
+		<div class="m-carousel-gallery--player h-player h-sticky-video m-sticky-video"></div>
+	</div>
+
+	<div class="m-carousel-gallery--close h-close">
+		<a href="javascript:">Close Video</a>
+	</div>
+
+	<div class="m-carousel-gallery--meta h-meta">
+		<div class="m-carousel-gallery--content h-content"></div>
+	</div>
+</script>
+
+<script type="text/template" id="t-carousel-gallery-pos-dots">
+	<div class="dot h-pos-dots-dot">
+		<a href="javascript:"></a>
+	</div>
+</script>
+
+<script type="text/template" id="t-carousel-gallery-loader">
+	<div class="m-carousel-gallery--loader">
+		<div class="inner">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="t-carousel-gallery-play">
+	<div class="m-carousel-gallery--play">
+		<a href="javascript:">Play</a>
+	</div>
+</script><script type="text/template" id="t-videoplayer-container">
+	<div class="m-videoplayer--inner h-inner">
+		<div class="m-videoplayer--wrap h-wrap">
+			<div class="m-videoplayer--player h-player"></div>
+
+			<div class="m-videoplayer--meta h-player-meta"></div>
+
+			<div class="m-videoplayer--message h-player-message"></div>
+
+			<div class="m-videoplayer--drawer h-drawer">
+				<div class="m-videoplayer--panel playlist">
+					<div class="m-videoplayer--jump">
+						<select class="jump h-playlist-jump"></select>
+					</div>
+
+					<div class="m-videoplayer--pane h-playlist-pane">
+						<div class="m-videoplayer--items h-playlist-items"></div>
+					</div>
+				</div>
+
+				<div class="m-videoplayer--panel search">
+					<div class="m-videoplayer--term">
+						<div class="label">Results for</div>
+
+						<div class="term h-search-term"></div>
+					</div>
+
+					<div class="m-videoplayer--pane h-search-pane">
+						<div class="m-videoplayer--items h-search-items"></div>
+					</div>
+				</div>
+
+				<div class="m-videoplayer--search">
+					<div class="close h-search-clear">Clear search</div>
+
+					<input class="field h-search-field" type="text" placeholder="Find Videos">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="m-videoplayer--loader">
+		<div class="inner">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-videoplayer-item">
+	<% var id = (typeof id === 'string') ? id : '' %>
+	<% var title = (typeof title === 'string') ? title : '' %>
+	<% var thumb = (typeof thumb === 'string') ? thumb : '' %>
+	<% var is_playing = (typeof is_playing !== 'undefined' && is_playing) ? 'is-playing' : '' %>
+	<% var is_next = (typeof is_next !== 'undefined' && is_next) ? 'is-next' : '' %>
+
+	<div class="item <%- is_playing %> <%- is_next %> h-item" data-id="<%- id %>">
+		<div class="inner">
+			<div class="meta">
+			<span><%= is_next ? 'UP NEXT' : '' %></span>
+				<% if (title) { %>
+					<div class="title"><%= title %></div>
+				<% } %>
+			</div>
+
+			<% if (thumb) { %>
+				<div class="thumb" style="background-image: url('<%= thumb %>');"></div>
+			<% } %>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/template" id="t-videoplayer-meta">
+	<% var title = (typeof title === 'string') ? title : '' %>
+	<% var play_count = (typeof play_count !== 'undefined') ? parseInt(play_count) || 0 : 0 %>
+	<% var author = (typeof author === 'string') ? author : '' %>
+	<% var date = (typeof date === 'string') ? date : '' %>
+	<% var plural = (play_count > 1) ? 's' : '' %>
+
+	<% if (title) { %>
+		<div class="label">Now Playing</div>
+
+		<% if (play_count) { %>
+			<div class="count"><%= play_count %> Play<%= plural %></div>
+		<% } %>
+
+		<div class="title"><%= title %></div>
+
+		<% if (author) { %>
+			<div class="author">By <strong><%= author %></strong></div>
+		<% } %>
+
+		<% if (date) { %>
+			<div class="date"><%= date %></div>
+		<% } %>
+	<% } %>
+</script>
+
+
+<script type="text/template" id="t-videoplayer-message">
+	<% var label = (typeof label === 'string') ? label : '' %>
+	<% var text = (typeof text === 'string') ? text : '' %>
+
+	<div class="label"><%= label %></div>
+
+	<div class="text"><%= text %></div>
+</script>
+
+			<!-- Begin DT Ads -->
+			<script type="text/javascript">
+				var dtads_slot_types = {"out_of_page":{"class":"dtads-out-of-page","keyvals":{"type":"roadblock"}},"leaderboard":{"class":"dtads-slot-leaderboard","sizes":[[728,90],[950,250],[970,66],[970,90],[970,250],[970,418],[970,200],[940,230],[970,300]],"keyvals":{"type":"roadblock","loc":"lb"}},"leaderboard_tablet":{"class":"dtads-slot-leaderboard-tablet","sizes":[[728,90],[728,230]],"keyvals":{"type":"roadblock","loc":"lb"}},"leaderboard_mobile":{"class":"dtads-slot-leaderboard-mobile","sizes":[[320,50],[320,100]],"keyvals":{"loc":"lb"}},"leaderboard_limited":{"class":"dtads-slot-leaderboard","sizes":[[728,90]],"keyvals":{"type":"roadblock","loc":"lb"}},"board":{"class":"dtads-slot-board","sizes":[[728,90]]},"board_content":{"class":"dtads-slot-board-content","sizes":[[970,250],[728,90]],"keyvals":{"loc":"content"}},"board_content_tablet":{"class":"dtads-slot-board-content-tablet","sizes":[[728,90]],"keyvals":{"loc":"content"}},"mpu":{"class":"dtads-slot-mpu","sizes":[[300,250]]},"mpu_btc":{"class":"dtads-slot-mpu","sizes":[[300,250]],"keyvals":{"loc":"btc"}},"mpu_roadblock":{"class":"dtads-slot-mpu-roadblock","sizes":[[300,250]],"keyvals":{"type":"roadblock"}},"mpu_sticky":{"class":"dtads-slot-mpu-sticky","sizes":[[300,250]],"keyvals":{"loc":"sb"}},"mpu_content":{"class":"dtads-slot-mpu-content","sizes":[[300,250]],"keyvals":{"loc":"content"}},"mpu_variable_mobile":{"class":"dtads-slot-mpu-variable-mobile","sizes":[[300,250],[320,480],[350,480]]},"mpu_content_mobile":{"class":"dtads-slot-mpu-content-mobile","sizes":[[320,50],[320,100],[300,50],[300,250],[320,480],[350,480]],"keyvals":{"loc":"content"}},"halfpage":{"class":"dtads-slot-half","sizes":[[300,250],[300,600],[300,900],[300,1050]]},"halfpage_roadblock":{"class":"dtads-slot-half-roadblock","sizes":[[300,250],[300,600],[300,900],[300,1050]],"keyvals":{"type":"roadblock","loc":"sb"}},"bigtop":{"class":"dtads-slot-bigtop","sizes":[[1400,600]],"keyvals":{"type":"roadblock"}},"mpu-5a3bf02d71b84":{"class":"dtads-slot-mpu-5a3bf02d71b84","sizes":[[300,250]],"keyvals":{"loc":"bs"}},"mpu-5a3bf02d71bdf":{"class":"dtads-slot-mpu-5a3bf02d71bdf","sizes":[[300,250]],"keyvals":{"loc":"bs-1"}},"mpu_variable_mobile-5a3bf02d71c2f":{"class":"dtads-slot-mpu-variable-mobile-5a3bf02d71c2f","sizes":[[300,250],[320,480],[350,480]],"keyvals":{"loc":"bs-2"}},"board-5a3bf02d71c98":{"class":"dtads-slot-board-5a3bf02d71c98","sizes":[[728,90]],"keyvals":{"loc":"btc"}}};
+				var dtads_unit_name  = '/5611/dt.dgt.www';
+				var dtads_keyvals    = {"tags":["computing","how-to","pc","windows","windows-10"],"cat":["computing","how-to"],"supports":["bt","bt2","mp","skin"],"aid":791683};
+				var dtads_lazy       = false;
+			</script>
+			<!-- End DT Ads -->
+
+			<div id="dt-dc-fvsm-0"></div><div id="dt-dc-footer-components-0"></div><div id="dt-dc-wp_admin_toolbar-0"></div>
+			<script>
+				window.dt_dynamic_components = {"share-count":[{"name":"share-count","args":{"type":"facebook","object_id":791683,"taxonomy":""},"i":0}],"fvsm":[{"name":"fvsm","args":null,"i":0}],"footer-components":[{"name":"footer-components","args":null,"i":0}],"wp_admin_toolbar":[{"name":"wp_admin_toolbar","args":{"post_id":791683},"i":0}]};
+			</script>
+
+					<script>
+
+			// window.dataLayer = window.dataLayer || [];
+			(function(vent, dtdata, dataLayer) {
+
+				vent.on('dt:dynamic_components:user_data_available', function(user_data) {
+					dtdata.set({
+						'logged_in': 1,
+						'user_id': user_data.user_ID,
+						'client_ip': user_data.ip_address,
+						'user_roles': user_data.roles
+					});
+				} );
+
+				vent.on('dt:dynamic_components:guest_ip_available', function(ip_address) {
+					dtdata.set({
+						'logged_in': 0,
+						'client_ip': ip_address
+					});
+				} );
+
+				vent.on('dt:dynamic_components:user_ready', function() {
+					dataLayer.push({
+						'event': 'user_ready'
+					});
+				} );
+
+
+			}(DTEvent, DTData, dataLayer));
+		</script>
+		
+			<script>
+				(function() {
+					'use strict';
+
+					var stage = 1;
+					var options = [];
+					var prevDTOptions = null;
+					var allOptions = null;;
+
+					if ( stage > 0 && window.DTOptions ){
+						prevDTOptions = window.DTOptions;
+						var prevOptions = prevDTOptions.getAll();
+						var stageOptions = JSON.parse(JSON.stringify(options));
+						allOptions = Object.assign(prevOptions, stageOptions);
+					} else {
+						allOptions = options;
+					}
+
+					var getAll = function () {
+
+						return allOptions;
+
+					};
+
+					var get = function (key, group, def) {
+
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+						def = (typeof def !== 'undefined') ? def : null;
+
+						if (typeof allOptions[group] !== 'undefined') {
+							if (key && typeof allOptions[group][key] !== 'undefined') {
+								return allOptions[group][key];
+							}
+						}
+
+						return def;
+					};
+
+					var set = function (key, group, data) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+						data = data || null;
+
+						if (key) {
+							if (typeof options[group] === 'undefined') {
+								options[group] = {};
+							}
+
+							options[group][key] = data;
+						}
+					};
+
+					var del = function (key, group) {
+						key = key || '';
+						group = group || 'qnqb92BhrzmkpqGx';
+
+						if (typeof options[group] !== 'undefined') {
+							if (key && typeof options[group][key] !== 'undefined') {
+								options[group][key] = null;
+							}
+						}
+					};
+
+					window.DTOptions = {
+						get: get,
+						getAll: getAll,
+						set: set,
+						del: del,
+					};
+				}());
+			</script>
+
+			<script>var dtads_inject_ad_slot_html = { desktop: '<div class="dtads-slot dtads-slot-mpu-content dtads-desktop dtads-tablet" data-slot-type="mpu_content" ></div>', tablet: '<div class="dtads-slot dtads-slot-mpu-content dtads-desktop dtads-tablet" data-slot-type="mpu_content" ></div>', mobile: '<div class="dtads-slot dtads-slot-mpu-content-mobile dtads-mobile" data-slot-type="mpu_content_mobile" ></div>' };</script>			<script type="text/template" id="t-topic-newsletter-signup-modal">
+
+				<div class="m-modal m-modal_topic-newsletter h-topic-newsletter-signup-modal">
+
+					<div class="m-modal--wrap">
+
+						<div class="m-modal--view">
+							<h3 class="m-modal--big-text">
+								Get future <span class="tag">Computing</span> content delivered straight to your inbox
+							</h3>
+						</div>
+
+						<div class="m-modal--form m-base-form fat">
+							<div class="field-block">
+								<input class="h-email-topic-newsletter-signup-modal" type="text" maxlength="1280" placeholder="Your email" />
+							</div>
+
+							<div class="block final">
+								<div class="button h-submit-topic-newsletter-signup-modal" data-tag="computing">Submit</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</script>
+
+			<script type="text/template" id="t-topic-newsletter-success-modal">
+
+				<div class="m-modal m-modal_topic-newsletter h-topic-newsletter-success-modal">
+
+					<div class="m-modal--wrap">
+
+						<div class="m-modal--view">
+							<h3 class="m-modal--big-text">
+								<span>Success!</span>
+							</h3>
+						</div>
+
+						<div class="m-modal--form m-base-form fat">
+							<div class="block final">
+								<a class="button" href="https://www.digitaltrends.com/newsletter-management?email=<%= email %>">Manage Your <span>Subscriptions</span></a>
+								<a class="close h-close-success-modal" href="javascript:void(0)">Close</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</script>
+			
+		<script type="text/template" id="t-comments">
+			
+<section
+	class="m-comments"
+	data-comment-count="0"
+	data-comment-module="facebook"
+	data-comments-open=""
+	data-comments-order="desc"
+	data-post-id="791683"
+	data-scope="comments"
+	id="comments-791683"
+></section>
+		</script>
+
+		<script>(function() {var el = document.createElement('link');el.href = 'https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/styles/css/dt-single-foot.css?ver=1513813194877';el.id = 'dt-single-foot-style';el.media = 'all';el.rel = 'stylesheet';el.type = 'text/css';document.head.appendChild(el);}());</script><noscript>&lt;link href="https://cdn5.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/styles/css/dt-single-foot.css?ver=1513813194877" id="dt-single-foot-style" rel="stylesheet"&gt;</noscript><link rel="stylesheet" id="dropcap_stylesheet-css" href="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="admin-bar-css" href="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/admin-bar.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/jquery.min.js.téléchargement" defer=""></script>
+<script type="text/javascript" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/clipboard.min.js.téléchargement" defer=""></script>
+<script type="text/javascript" src="https://mtrx.go.sonobi.com/morpheus.digitaltrends.1658.js?ver=1.0.0" defer=""></script>
+
+		<script id="dt-foot-script">
+			document.addEventListener('DOMContentLoaded', function() {
+				var goodBrowser = (
+					window.Promise &&
+					window.fetch &&
+					window.Symbol &&
+					window.WeakMap &&
+					window.NodeList &&
+					window.NodeList.prototype[Symbol.iterator]
+				);
+
+				var loadScript = function (src) {
+					var scriptEl = document.createElement('script');
+					scriptEl.src = src;
+
+					scriptEl.onload = function() {
+						DTEvent.promise('dt-foot-script-ready');
+					};
+
+					scriptEl.onerror = function() {
+						DTEvent.promise('dt-foot-script-failed');
+					};
+
+					var thisScriptEl = document.getElementById('dt-foot-script');
+
+					thisScriptEl.parentNode.insertBefore(scriptEl, thisScriptEl.nextSibling);
+				};
+
+				var log = function (msg, level) {
+					if (window.console && window.console.log) {
+						if (level && window.console.warn) {
+							console.warn(msg);
+						} else {
+							console.log(msg);
+						}
+					}
+				};
+
+				if (goodBrowser) {
+					log('Good browser. No polyfills needed.');
+					loadScript('https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/scripts/js/dt-foot.min.js?ver=1513813194877');
+				} else {
+					log('Inferior browser. Do you want polyfills? Because that\'s how you get polyfills.', 1);
+					loadScript('https://www.digitaltrends.com/wp-content/themes/digitaltrends-2014/assets/scripts/js/dt-foot-polyfill.min.js?ver=1513813194877');
+				}
+			}, false);
+		</script><script src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/dt-foot.min.js.téléchargement"></script>
+
+		<script type="text/javascript" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/wp-embed.min.js.téléchargement" defer=""></script>
+	
+
+<script type="text/javascript" async="" src="https://z.moatads.com/jwplayerplugin0938452/moatplugin.js"></script><script type="text/javascript" async="" src="./How to Migrate a Windows 10 Installation, from Cleanup to Backup and Partitioning _ Digital Trends_files/6B7vzQfZ.js.téléchargement"></script></body></html>
