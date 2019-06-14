@@ -1,0 +1,80 @@
+tilde: ~
+CSV: comma separeted value Ben,Art,Reb
+i386 (debian) for i7...
+i686: 32 bits
+
+fat 32 pour < 2 048 go
+LTS: long time support (OS linux)
+
+The systems development life cycle (SDLC), also referred to as the application development life-cycle, is a term used in systems engineering, information systems and software engineering to describe a process for planning, creating, testing, and deploying an information system.
+
+Emacs est une famille d'éditeurs de texte disposant d'un ensemble extensible de fonctionnalités et qui est très populaire[réf. souhaitée] parmi les programmeurs et plus généralement les personnes ayant des compétences techniques sur les ordinateurs.
+L'EMACS originel, signifiant Editing MACroS running on TECO, c'est-à-dire « macros d'édition pour TECO », a été écrit en 1976 par Richard Stallman, initialement avec Guy Steele.
+
+==> A question ? Link to a theme, link to a StackExchange website.
+
+Cisco Systems est une entreprise informatique américaine spécialisée, à l’origine, dans le matériel réseau (routeurs et commutateurs ethernet), et depuis 2009 dans les serveurs.
+
+trojan: cheval de troie
+
+Un CD-ROM ne contient que des données non modifiables
+
+Un développeur full stack est un informaticien capable de réaliser des tâches à n'importe quel niveau technique de la pile des différentes couches qui constituent une application informatique.
+
+Un logiciel gratuit, gratuiciel, ou freeware est un logiciel propriétaire distribué gratuitement sans toutefois conférer à l'utilisateur certaines libertés d'usage associées au logiciel libre.
+
+NTFS make linux permission impossible, please use in general ext4 for linux and windows(, use NTFS if windows ONLY ONLY ONLY even for rescue, so forget right now)
+
+ctrl or maj to select multiple elements
+
+Double and float are inexact: https://stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places
+
+(arrondir)
+floor: sol (inferior)
+ceil: plafond (superior)
+
+logiciels qui sont compilés pour être affichés dans un environnement en mode texte (TUI pour Text-based user interface en anglais) comme l'interface en ligne de commande du logiciel Cmd par exemple
+
+Windows NT (« New technology » ou « nouvelle technologie ») désigne la série de systèmes d'exploitation multitâche préemptif, multi-utilisateur, multiprocesseur, créés par Microsoft et ne reposant pas sur le système historique MS-DOS de Microsoft, contrairement à Windows 1.0, 2, 3.x, 95, 98 et Me. Il a permis à Microsoft et son partenaire Intel d'entrer sur le marché des serveurs, une nouvelle stratégie qui a contribué à la très forte hausse des sociétés de technologie de la seconde partie des années 1990.
+
+Un fabricant d'équipement d'origine (FEO), en anglais Original Equipment Manufacturer (OEM), ou équipementier est une entreprise fabriquant des pièces détachées, principalement pour le compte d'une autre entreprise, l'intégrateur ou l'assembleur. Ce type d'entreprise se retrouve usuellement dans les industries automobile, aéronautique, informatique ou électronique. On parle également de sous-traitance pour définir le lien entre l'équipementier et l'assembleur ou bien même de co-traitance parfois lorsque l'équipementier est partenaire dans l'innovation. C'est majoritairement le cas dans l'automobile.
+
+Une rich Internet application (RIA), ou application Internet riche, est une application Web qui offre des caractéristiques similaires aux logiciels traditionnels installés sur un ordinateur. La dimension interactive et la vitesse d'exécution sont particulièrement soignées dans ces applications Web.
+
+IOPS (input/output operations per second en anglais, opérations d'entrée-sortie par seconde) est une unité de mesure commune en informatique.
+
+La commande TRIM, disponible sur la plupart des modèles récents de disque dur SSD (contrôleur Intel, Indilix et Sandforce principalement), permet à certains systèmes d'exploitation modernes (Linux à partir du noyau 2.6.33 et Windows 7 toutes versions), d'éviter l'effondrement des performances avec le temps. Elle sert à effacer directement les cellules de mémoire concernées lorsqu'un fichier est effacé, afin d'optimiser les écritures ultérieures qui pourront alors être effectuées sans avoir à réaliser l'effacement préalable imposé par la technologie de la mémoire flash. 
+Pour que la commande TRIM soit active, il faut un SSD compatible, que les drivers du contrôleur de la carte mère soient compatibles et Windows 7 (XP et Vista ne supportent pas TRIM nativement).
+
+NVM Express (de l'anglais Non-Volatile Memory, on trouve aussi de façon abrégée NVMe) est une spécification d'interface permettant à un ordinateur d'accéder à un périphérique de stockage permanent à travers un bus PCI Express.
+
+Le M.2, également connu sous le sigle de NGFF (pour Next Generation Form Factor), est un connecteur permettant de brancher sur une carte mère différentes sortes de cartes filles, telles que des cartes Wi-Fi, WWAN, USB, PCIe, ou des SSD de petit format basés sur la norme SATA1 (la dernière génération de SSD M.2 se connecte directement en PCIe afin de permettre des débits plus élevés. D'où la présence sur certaines cartes mères de ports distincts M.2 SATA et M.2 PCIe ou Ultra M.2). Sa conception est destinée aux appareils mobiles tels que les ultrabooks ou les tablettes.
+Ce format est une amélioration du mSATA.
+
+Dans la terminologie de Microsoft, le managed code est un code source qui s'exécute sous le contrôle de la machine virtuelle CLR, ou d'une autre machine virtuelle. Ce terme est employé par opposition au unmanaged code (code non géré), qui est exécuté directement par le processeur.
+
+motion design: video with animation
+
+Free and Open Source Software (FOSS)
+
+sRGB, ou standard RGB (« Red Green Blue », en français « Rouge vert bleu normal »), est un espace de couleur informatique proposé par Hewlett-Packard et Microsoft en 1996, utilisé dans les dispositifs numériques, notamment les écrans d'ordinateurs.
+
+CLI est un sigle qui peut désigner : Command-line interface (en français, interface en ligne de commande) ;
+
+Extensions are Dynamic Link Library (DLL) files written in, for example, C.
+Linux systems use a different file type: Shared Object (SO).
+
+BScIT: Bachelor of Science in Information Technology
+
+an iso file can contain a software (open)
+
+Assurance Qualité (QA) Dans le cadre du développement de produits et de services, l'assurance qualité (ou QA pour Quality Assurance) désigne tout processus systématique visant à vérifier qu'un produit ou un service en cours de développement est conforme à des exigences précises.
+
+magic number is hard written in calculus, we may prefer var such as MAX_LENGTH
+
+La ligne de code, ou ligne de code source (SLOC en anglais) est une métrique logicielle servant à mesurer la taille d’un programme informatique en dénombrant le nombre de lignes de son code source.
+Mesure alternative
+Une autre unité de mesure est l'année-homme, c'est-à-dire le nombre d'années de programmation pour un programmeur unique. Par exemple, et en théorie, un programme de 20 années-hommes pourrait être réalisé en 20 ans par un programmeur unique, ou en un an par une équipe de 20 programmeurs.
+
+UTF8 icons: https://www.w3schools.com/charsets/ref_emoji.asp
+

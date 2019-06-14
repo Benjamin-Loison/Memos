@@ -1,0 +1,5 @@
+Convert picture to .ico: https://image.online-convert.com/fr/convertir-en-ico
+
+CaesiumPH: compress pictures lossless
+
+Open PGM pictures: use IrfanView or OpenOffice

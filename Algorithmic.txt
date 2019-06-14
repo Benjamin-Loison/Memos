@@ -1,0 +1,15 @@
+To write a file with several lines and without an empty line at the end:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+for(int i = 0; i < strucIdDb.size() - 1; i++)
+	fw.write(i + " " + strucIdDb.get(i) + "\n");
+int nb = strucIdDb.size() - 1;
+fw.write(nb + " " + strucIdDb.get(nb) + "\n");
+
+INSTEAD OF:
+
+for(int i = 0; i < strucIdDb.size(); i++)
+	if(i != strucIdDb.size() - 1)
+		fw.write(i + " " + strucIdDb.get(i) + "\n");
+	else
+		fw.write(nb + " " + strucIdDb.get(nb));

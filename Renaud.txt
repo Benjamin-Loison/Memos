@@ -1,0 +1,41 @@
+MCLauncherGenerator
+
+dead.letter: overclock3000.home.org : Dec 29 19:23:15 : Bastia-Logs : user NOT in sudoers ; TTY=pts/2 ; PWD=/ ; USER=root ; COMMAND=/bin/bash
+2 Modèle 3 B raspberry: independent branché livebox (TS/MC/Web): 31 € unit https://fr.gearbest.com/raspberry-pi/pp_354347.html?wid=55&currency=EUR&vip=2093934&gclid=CjwKCAiA7JfSBRBrEiwA1DWSG_2EsgT2c8-_ZjBNhWbAeUHUMmGECsLRLDTjaOBz77F7N330wKbzeRoCuL4QAvD_BwE + 9 € unit USB key 8G: https://www.ldlc.com/fiche/PB00213470.html
+HTTPS auto
+last hack
+
+ -----
+- ASK -
+ -----
+
+https: manuel/auto (both)
+SSH certificat
+anti-ddos: CloudFlare/OVH (VPN) how redirect ? iptables ?
+webmail localhost
+dns localhost
+
+ ------
+- SHOW -
+ ------
+
+hosting http://altiscraft.fr/BEN/Panel/
+ftp access
+
+-> ask for VM as a new device in internal network
+
+
+ANTI-DDOS: http://docs.ovh.ca/fr/guides-network-firewall.html#iptables with OVH vps and OpenVPN https://openclassrooms.com/courses/creer-son-propre-serveur-vpn-avec-open-vpn: DONE + vpn for server ?
+
+man iptables
+
+       -L, --list [chain]
+              List all rules in the selected chain.  If no chain is selected, all chains are listed. Like every other iptables command, it applies to the specified table (filter is the default), so NAT rules get listed by
+               iptables -t nat -n -L
+              Please note that it is often used with the -n option, in order to avoid long reverse DNS lookups.  It is legal to specify the -Z (zero) option as well, in which case the chain(s) will be atomically listed and zeroed.  The exact output is affected by the other arguments given.  The  exact  rules
+              are suppressed until you use
+               iptables -L -v
+              or iptables-save(8). <--- what does it mean ?
+
+still a problem: dig srv _minecraft._tcp.altiscraft.fr (get ip)
+otherwise next version: don't care same ip for website (redirect web traffic with intermédiaire OVH iptables) and configure a program coded by myself to send to the server what clients sent (send to the real game server with their IP) and then the server game send back to the intermédiaire who is it destinated) or do not use intermédiaire and don't care about ip
