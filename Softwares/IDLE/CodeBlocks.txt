@@ -1,0 +1,14 @@
+Remove cmd:
+-----------
+
+Click Project on the CodeBlocks menu.
+Click Properties.
+Click the second tab, Build Targets.
+On the right, where it says Type: Console application, change it to GUI application.
+Rebuild the project.
+
+right click on the text and scrool like with the scroolbar
+
+F2: show/hide logs (CodeBlock's console)
+Select and drag the logs where I want to put the windows' logs
+Encoding: Settings -> Configure Editor -> General settings -> Encoding settings

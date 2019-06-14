@@ -1,0 +1,14 @@
+Ctrl + E or F5: execute whole file
+
+Alt + Enter: execute the selected code
+
+Ctrl + I: interrupt
+
+Ctrl + Enter: execute cell:
+
+##
+
+This is a cell
+
+##
+

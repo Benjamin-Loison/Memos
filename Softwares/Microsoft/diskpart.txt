@@ -1,0 +1,3 @@
+unhide: set id = 07 override
+
+if unusable -> create partition primary and then format

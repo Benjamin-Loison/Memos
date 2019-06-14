@@ -1,0 +1,21 @@
+https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=weEkbNJ3guI6sPiK2dDisXLeGbXzs1LoNw-eEK-KZGecO_uwL3uSnMMSvPe&dispatch=5885d80a13c0db1f8e263663d3faee8d83a0bf7db316a7beb1b14b43acd04037&rapidsState=Donation__DonationFlow___StateDonationStart&rapidsStateSignature=5f1c087fd0ca2cd984a52b7f4db67d65d22badfe
+
+Chargebacks:
+
+Terms and conditions: clear about refund
+paypal fee for dispute ? PayPal (Standard and Express)- $20
+après achat: si un problème se survient ? -> contact
+
+during claim: show
+Your terms and conditions
+Proof that the player was made aware of your refund policy
+Proof that what they purchased was as described
+
+Close an account: https://www.paypal.com/us/cgi-bin/webscr?cmd=_close-account
+
+If account is closed by PayPal: it is forbidden to reopen another account
+
+business account -> business acount friend way impossible ?
+
+can be called with SKype (multiperson)
+

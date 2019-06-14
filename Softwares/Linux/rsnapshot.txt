@@ -1,0 +1,12 @@
+use tabs and not spaces
+copy /etc/rsnapshot and use rsnapshot -c /etc/newfile.conf daily
+-t is used to show the commands that would be executed but THEY AREN'T
+(don't forget to add yourself the crontab)
+
+Windows:
+
+c:\cygwin64\bin\bash -l /rsnapshot.sh
+
+rsnapshot.sh:
+
+rsnapshot daily

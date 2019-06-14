@@ -1,0 +1,1 @@
+User as a folder: %APPDATA%\Microsoft\Skype for Desktop\skylib\

@@ -1,0 +1,4 @@
+SSL For Free: need to change every three week the apache files...
+
+Prefer manual verification than FTP (more secured manually)
+

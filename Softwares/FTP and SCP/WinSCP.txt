@@ -1,0 +1,15 @@
+System Error. Code: 5. Access is denied -> Execute WinSCP as Administrator (access to Admin folder)
+
+Recover passwords:
+
+reg query "HKEY_CURRENT_USER\Software\Martin Prikryl\WinSCP 2\Sessions"
+
+https://github.com/anoopengineer/winscppasswd
+
+winscppasswd.exe altiscraft.fr website encrypted_password
+
+F5: upload
+Ctrl + R: refresh selected side !
+
+Ctrl + alt + h: show/hide hidden files (both sides)
+

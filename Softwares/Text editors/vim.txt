@@ -1,0 +1,86 @@
+vi doesn't work like vim
+vi cmd can open file with vim
+
+delete all: dG
+beginning cursor: gg
+
+change crontab (nano to vim): add in file: ~/.profile
+	export EDITOR=vim
+
+path to vim: whereis vim / locate vim
+	
+ls -la /usr/sbin/sendmail
+
+update-alternatives --config editor
+
+Global conf: /etc/vim/vimrc
+Conf: cp /etc/vim/vimrc ~/.vimrc
+F3 to paste a code and then F3 to disable
+set pastetoggle=<F3>
+set tabstop=4
+set shiftwidth=4
+syntax on
+set background=dark
+set showcmd
+set mouse=a
+set number
+Options (temporary):
+	Switch on/off: :set option :set nooption
+	Set non-boolean value: :set option=value
+	State of an option: :set option?
+
+Replace all: :%s/text/replace/g
+
+GOD DAMN IT: apt-file search "/gl.h " | cut -d : -f 1 | tr "\n" " "
+
+Modes: (default: interactive)
+	Insert: 'i'
+	Cmd: ':'
+	
+Movements:
+	Left: h
+	Down: j
+	Up: k
+	Right: l
+	Beginning/End of the line: 0 $
+	Word by word: w
+	
+:w file[.ext]
+
+Delete x chars (interactive mode): 4x
+Delete cursor's line: dd (or 1dd)
+Delete cursor's word: dw (or 3dw: "three times, delete word" or d3w: "delete three words"
+Delete beginning/end of line to cursor (cursor excluded): d0 d$
+Copy lign: yy (or yw: copy word, y$, ...)
+Paste (after the cursor): p (or 8p)
+Replace one/multiple character/s: rs (replace the current character with a 's') Rhello (replace the current character with "hello")
+Undo: u Redo: ctrl + r
+First/last lign: gg G (go to 7 ligns after the cursor's lign: 7G)
+Search: /toFind (next occurence: n, previous occurence: N) or ? instead of / (for searching backward)
+Replace lign's first occurence: :s/old/new (all lign's occurences) :s/old/new/g
+Replace lign x to lign x': :x,ys/old/new/g
+Replace all occurences: :%s/old/new/g
+Paste file at cursor: :r file
+Split horizontally/vertically: :sp otherFile (or same :P) :vsp
+Change viewport: ctrl + w (twice)
+	ctrl + w and
+	Switch to movement: movement key
+	extend/reduce: + -
+	equalize: =
+	change [inversely]: r R
+	close: q
+Extern cmd: :!cmd
+Select text with mouse, upper/lowercase: U u
+Copy with mouse: y
+
+Tab works in interactive mode
+First lign's number is 1
+
+Ligns' number: set number
+Copy with putty: shift select
+Paste with putty: shift + insert or shift + right click
+
+Restore .file.ext.swp to file.ext doesn't give a readable file !
+
+indent a block of code: select with visual mode and then press < or > to indent in the desired direction
+

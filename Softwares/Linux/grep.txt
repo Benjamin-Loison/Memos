@@ -1,0 +1,37 @@
+cp $(find | grep 'r\(\.[0-9-]\{,3\}\)\{2\}') L -v
+
+Compression avec gzip (.tar.gz)
+Création
+
+tar zcvf votre_archive.tar.gz votre_dossier/
+Extraction
+
+tar zxvf votre_archive.tar.gz
+
+tar -zxvf *.tgz
+ 
+netstat: package net-tools
+ 
+Auto-mount on reboot:
+
+sudo fdisk /dev/sdb
+Press O and press Enter (creates a new table)
+Press N and press Enter (creates a new partition)
+Press P and press Enter (makes a primary partition)
+Then press 1 and press Enter (creates it as the 1st partition)
+Finally, press W (this will write any changes to disk)
+Run sudo mkfs.ext4 /dev/sdb1
+You need to add it to /etc/fstab use your favourite text editor
+Be careful with this file as it can quite easily cause your system not to boot.
+Add a line for the drive, the format would look like this.
+This assumes the partition is formatted as ext4 as per mkfs above
+#device        mountpoint             fstype    options  dump   fsck
+/dev/sdb1    /home/yourname/mydata    ext4    defaults    0    1
+
+Passion for "toto" on linux (for instance, for a user)
+
+Big simple (without symbol like ") content to put in a file ? echo "FAT
+FAT
+FAT" > your.file
+
+(no need of a text editor)

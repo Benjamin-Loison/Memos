@@ -1,0 +1,22 @@
+bug intersection couleur...: opacité
+circle without being filled: fill:none stroke:black stroke-width:25
+
+Emergency save: C:\Users\<username>\
+
+fondu gradient between two triangles of our logo ?
+
+svg format support alpha so think about adding a white background or not
+
+Select multiple not ctrl, maj
+
+Ctrl + +: unifier différentes parties
+
+F2: éditer les noeuds d'un élément
+
+Drop whitespace/resize: Ctrl + Shift + R
+
+Rectangle without filling (only stroke): (https://graphicdesign.stackexchange.com/questions/21633/draw-rectangle-with-stroke-in-inkscape)
+Left-click [X] in the color palette. Right-click black in the color palette
+
+Draw arrows: https://www.youtube.com/watch?v=8jpYJG6iLyM
+

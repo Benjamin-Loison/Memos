@@ -1,0 +1,2 @@
+change htdocs directory: C:\xampp\apache\conf
+Win: SSL with port 80 and 443 default

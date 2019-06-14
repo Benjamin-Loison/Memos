@@ -1,0 +1,29 @@
+Change IP: livebox/ -> Connexion -> Relancer la connexion ou Redémarrer
+IPv4 externe: Informations système -> Internet -> Adresse IPv4 WAN
+Reset (livebox) physical button => change ip
+
+3900: call
+
+SMTP:
+
+telnet smtp.orange.fr 25
+ehlo orange.fr
+auth plain
+email@example.com\x00email@example.com\x00password <- in base64
+mail from: <email@example.com>
+rcpt to: <email@example.com>
+data
+To: ToField <email@example.com>
+From: FromField <email@example.com>
+Subject: Test
+<- empty line is required !
+Message content
+.
+
+IMAP:
+
+telnet imap.orange.fr 143
+a LOGIN email@example.com password
+a select "INBOX"
+a fetch 1 body[text]
+

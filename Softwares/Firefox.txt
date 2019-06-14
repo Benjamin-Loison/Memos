@@ -1,0 +1,7 @@
+Thunderbird: Choose Tools ->Developer Tools-> Error Console, paste the expression: openDialog("chrome://pippki/content/resetpassword.xul") and press the Evaluate button. That will open a dialog asking you if you want to reset your password.
+Une erreur est survenue lors de la copie du message dans le dossier Envoyé. -> 1/ Outils > Paramètres des comptes 
+2/ Cliquer su 'Copies et dossiers' dans la partie gauche 
+3/ Dans la partie de droite, 
+a) Mettre pour "Lors de l'envoi de messages, placer une copie dans": 
+Autre dossier: Nom du compte > Courrier entrant > Inbox > Sent 
+

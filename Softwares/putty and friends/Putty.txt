@@ -1,0 +1,8 @@
+Vi: add char with numeric pad : Terminal->Features and check "Disable application keypad mode". Save the settings
+
+Can't create shortcut for executing a command over telnet
+-P : define port 
+
+All settings export to desktop: regedit /e "%USERPROFILE%\Desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham
+DO NOT CHANGE SimonTatham
+

@@ -1,0 +1,11 @@
+Refund PayPal when paid with Steam wallet
+
+Mode famille que sur un pc ou plusieurs ?
+
+Disable Steam Guard (/!\ no protection and no more access to steam shop or many and 15 days after re-enabling /!\
+Steam (top-left)
+Settings
+Account
+Manage Steam guard
+Disable
+

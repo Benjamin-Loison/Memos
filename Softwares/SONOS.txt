@@ -1,0 +1,1 @@
+Problème ajout dossier bibliothèque musicale: l'ordinateur ne répond pas -> control panel -> uninstall a program -> select on the left side: turn on/off Windows feature: active only SMB1 and restart windows (thanks to SMB issue with Wannacry)

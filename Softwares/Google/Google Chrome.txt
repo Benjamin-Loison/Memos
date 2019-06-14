@@ -1,0 +1,18 @@
+Ctrl + T: new tab
+Ctrl + W: close tab
+Ctrl + tab: switch tab
+Ctrl + N: new window
+Ctrl + Shift + N: new private window
+Ctrl + Shift + C: inspect an element
+
+check certificate valide duration: top left of the webpage
+
+Data of an user: C:\Users\Noah\AppData\Local\Google\Chrome\User Data\Default or Profile ...
+Login Data can be opened with SysTools SQLite Database Recovery (informations about passwords but they are encrypted)
+get passwords: SecurityXploded\Chrome Password Dump -> execute command line: ChromePasswordDump.exe -f "C:\Users\Sam Nkz\AppData\Local\Google\Chrome\User Data\Default" -o "C:\Users\Sam Nkz\a" (no relative path) - C:\Program Files (x86)\SecurityXploded\Chrome Password Dump
+USE THE SAME WINDOWS SESSION TO USE THE SOFTWARE OTHERWISE IT WON'T WORK
+
+chrome://bookmarks/ (export)
+
+GitZip extension to download a github folder by clicking on the blank space of the folder item and the download by hitting the down arrow at the bottom right
+

@@ -1,0 +1,54 @@
+Alt + F6: open new instance or Run -> Open in another instance
+Disable spell check: "Plugins" > "DSpellCheck" > "Auto-check document"
+Ctrl + D: copy and paste line
+Reverse actual and previous line: ctrl + t
+
+Plugins: add .dll in the Plugins folder (in general)
+Compare files with Notepad++ plugin compare
+
+Ctrl + W: close current tab
+
+F12: fullscreen
+
+Got a monitoring option (tail -f) eye icon in the toolbar
+
+Regex:
+@@@@@@
+
+Replace content before ':' (replace with a space in fact) ^.*: (to erase after use: :.*)
+replace before first space: ^\S+\s+(.+)$ and $1
+
+http://docs.notepad-plus-plus.org/index.php/Regular_Expressions
+
+@@@@@
+
+Replace (to remove date "")
+.*""
+nothing
+
+@@@@
+
+Ctrl + Shift + End: select all to end
+
+@@@
+
+Remove lines containing a pattern:
+
+Go to the search menu Ctrl+F and open the "Mark" tab.
+Check "Bookmark line" (if there is no "Mark" tab update to the current version).
+Enter your search term and click "Mark All"
+All lines containing the search term are bookmarked.
+Now go to the Menu "Search -> Bookmark -> Remove Bookmarked lines"
+
+@@@
+
+Macro is just perfect
+
+@@
+
+Remove duplicated lines and sort:
+Install TextFX (http://downloads.sourceforge.net/project/npp-plugins/TextFX/TextFX%20v0.26/TextFX.v0.26.unicode.bin.zip), put the DLL in C:\Program Files\Notepad++\plugins) and restart NotePad++
+Select TextFX button and make sure "sort outputs only unique..." is checked. Next, select a block of text (Ctrl+A to select the entire document). Finally, click "sort lines case sensitive" or "sort lines case insensitive"
+
+@@
+

@@ -1,0 +1,4 @@
+Chrome F12 -> Tab: Application -> Local Storage -> At the bottom token field: just replace by the token of someone else and you'll get a full access to his account
+
+type "%appdata%\discord\Local Storage\*" and filter "token" and replace and that's all
+

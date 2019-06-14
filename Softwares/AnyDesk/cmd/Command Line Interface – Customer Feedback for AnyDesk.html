@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<!-- saved from url=(0122)https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface -->
+<html lang="en" class="webkit chrome chrome67 win js ltr retina js rgba orientation_landscape maxw_1024"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" defer="" src="./Command Line Interface – Customer Feedback for AnyDesk_files/saved_resource"></script><script type="text/javascript" async="" src="./Command Line Interface – Customer Feedback for AnyDesk_files/mixpanel.js.téléchargement"></script><script type="text/javascript" async="" src="./Command Line Interface – Customer Feedback for AnyDesk_files/g6zr56UrgzHHOkkGW4Cg.js.téléchargement"></script><script type="text/javascript" async="" src="./Command Line Interface – Customer Feedback for AnyDesk_files/ga.js.téléchargement"></script><script src="./Command Line Interface – Customer Feedback for AnyDesk_files/analytics.js.téléchargement" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app39.us.archive.org';v.server_ms=4061;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="./Command Line Interface – Customer Feedback for AnyDesk_files/wbhack.js.téléchargement" charset="utf-8"></script>
+
+<script type="text/javascript">
+__wbhack.init('https://web.archive.org/web');
+</script>
+<link rel="stylesheet" type="text/css" href="./Command Line Interface – Customer Feedback for AnyDesk_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Command Line Interface – Customer Feedback for AnyDesk_files/iconochive.css">
+
+<!-- End Wayback Rewrite JS Include -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>Command Line Interface – Customer Feedback for AnyDesk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="NhlEyXN6qVyQweIDJPOJafMOx+cx0jculDBgmSn2ROFEKMBcmoDLDOe+na8VpZW5XTG4aYuhVYlkZtyyhVBuiw==">
+  <link rel="P3Pv1" href="https://web.archive.org/w3c/p3p.xml">
+
+    <link rel="canonical" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface">
+
+    <script type="text/javascript">
+    (function(window) {
+      var methods = ['log', 'dir', 'trace'];
+      
+      if (typeof window.console === 'undefined') {
+        window.console = {};
+      }
+      
+      for (var i in methods) {
+        if (!(methods[i] in window.console)) {          
+          window.console[methods[i]] = function() {};
+        }
+      }
+      
+    }(window));    
+  </script>
+
+  <script>
+    window.UserVoice || (window.UserVoice = []);
+  </script>
+
+  
+
+  <link rel="stylesheet" media="all" href="./Command Line Interface – Customer Feedback for AnyDesk_files/site2-e12a0e61e6f78cea7dda9188da6a9326.css">
+
+
+  <!--[if lt IE 7]>
+    <link rel="stylesheet" media="screen" href="//assets0.uvcdn.com/pkg/clients/site2/ie-dd504534fd5adc0f02c51328941904bf.css" />
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="//assets0.uvcdn.com/pkg/clients/site2/lt_IE_9-2c58c1ee1dbefb700ef2333ae314783d.js"></script>
+  <![endif]-->
+
+    <style type="text/css">
+  
+  /*
+  -----------------------------------------------------------
+    Link color
+  -----------------------------------------------------------
+  */
+  
+  .uvCustomLink-color,
+  a,
+  .uvHelp,
+  .uvTabSelect,
+  .uvTab-dropdown .uvFieldPlaceholder,
+  .uvModule-session .vcard .uvRememberMe a,
+  .uvBreadcrumbs a,
+  .uvStyle-linkArrow {
+    color: #007DBF;
+  }
+  
+  .uvCustomLink-background,
+  .uvTab-selected,
+  .uvTab-selected .uvFieldSelect,
+  .uvPagination .current {
+    background-color: #007DBF;
+  }
+  
+  /*
+  -----------------------------------------------------------
+    Primary color
+  -----------------------------------------------------------
+  */
+  
+  .uvCustomPrimary-color {
+    color: #6F675E;
+  }
+  
+  .uvCustomPrimary-background,
+  .uvUserBadgeLabel {
+    background-color: #6F675E;
+  }
+  
+  /*
+  -----------------------------------------------------------
+    Background color
+  -----------------------------------------------------------
+  */
+  
+  .uvCustomBackground-color {
+    color: #f9f9f9;
+  }
+  
+  .uvCustomBackground-background,
+  .uvMasthead {
+    background-color: #f9f9f9;
+  }
+  
+  /*
+  -----------------------------------------------------------
+    Status colors
+  -----------------------------------------------------------
+  */
+  
+  .uvStyle-status-under-review {
+    background-color: #999999;
+    color: #FFF;
+  }
+  .uvStyle-status-planned {
+    background-color: #F0BA00;
+    color: #FFF;
+  }
+  .uvStyle-status-started {
+    background-color: #6FBC00;
+    color: #FFF;
+  }
+  .uvStyle-status-completed {
+    background-color: #7D7EDF;
+    color: #FFF;
+  }
+  .uvStyle-status-declined {
+    background-color: #BBBBBB;
+    color: #FFF;
+  }
+</style>
+
+
+    
+
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  
+  // UserVoice Profile
+  _gaq.push(['_setAccount', 'UA-3735534-21']);
+  _gaq.push(['_setDomainName', 'anydesk.com']);
+  _gaq.push(['_addIgnoredRef', 'www.uservoice.com']);
+  // Do this to comply with some privacy policies
+  _gaq.push(['_gat._anonymizeIp']);
+  
+    var clientIdentifier = "Site";
+    _gaq.push(['_setCustomVar', 1, 'Client', clientIdentifier, 3]);
+  
+    _gaq.push(['_trackPageview']);
+  
+  // Custom Profile
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://web.archive.org/web/20170810044353/https://ssl/' : 'https://web.archive.org/web/20170810044353/http://www/') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  function trackEvent(name, label) {
+    if (label == null) {
+      label = "Site";
+    }
+    _gaq.push(['_trackEvent', "UserVoice", name, label]);
+  }
+  
+</script>
+<style></style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+
+<body class="uv-primaryColor-dark uv-locale-en uv-direction-ltr uv-topic uv-topic-70519 uv-no-user uv-helpdesk uv-article-page"><div id="wm-ipp" lang="en" style="display: block; direction: ltr;">
+<div style="position:fixed;left:0;top:0;right:0;">
+<div id="wm-ipp-inside">
+  <div style="position:relative;">
+    <div id="wm-logo" style="float:left;width:130px;padding-top:10px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="./Command Line Interface – Customer Feedback for AnyDesk_files/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"></a>
+    </div>
+    <div class="r" style="float:right;">
+      <div id="wm-btns" style="text-align:right;height:25px;">
+                  <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#" onclick="__wm.saveSnapshot(&#39;http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface&#39;, &#39;20170810044353&#39;)" title="Share via My Web Archive" id="wm-save-snapshot-open" style="display: none;">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in" style="display: inline-block;">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web" style="display: none;"></span>
+        	<a href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+	<a id="wm-tb-close" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#close" onclick="__wm.h(event);return false;" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" style="text-align:right;">
+	<a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#" onclick="window.open(&#39;https://www.facebook.com/sharer/sharer.php?u=https://web.archive.org/web/20170810044353/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface&#39;, &#39;&#39;, &#39;height=400,width=600&#39;); return false;" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+	<a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#" onclick="window.open(&#39;https://twitter.com/intent/tweet?text=https://web.archive.org/web/20170810044353/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface&amp;via=internetarchive&#39;, &#39;&#39;, &#39;height=400,width=600&#39;); return false;" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+    </div>
+    <table class="c" style="">
+      <tbody>
+	<tr>
+	  <td class="u" colspan="2">
+	    <form target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface" onfocus="this.focus();this.select();" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20170810044353"><input type="submit" value="Go"></form>
+	  </td>
+	  <td class="n" rowspan="2" style="width:110px;">
+	    <table>
+	      <tbody>
+		<!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+		<tr class="m">
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20170710030257/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface" title="10 Jul 2017"><strong>Jul</strong></a></td>
+		  <td class="c" id="displayMonthEl" title="You are here: 04:43:53 Aug 10, 2017">AUG</td>
+		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20170910071533/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface" title="10 Sep 2017"><strong>Sep</strong></a></td>
+		</tr>
+		<!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+		<tr class="d">
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20170710030257/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface" title="03:02:57 Jul 10, 2017"><img src="./Command Line Interface – Customer Feedback for AnyDesk_files/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0"></a></td>
+		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 04:43:53 Aug 10, 2017">10</td>
+		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20170910071533/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface" title="07:15:33 Sep 10, 2017"><img src="./Command Line Interface – Customer Feedback for AnyDesk_files/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"></a></td>
+		</tr>
+		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+		<tr class="y">
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20160715043635/http://support.anydesk.com:80/knowledgebase/articles/441867-command-line-interface" title="15 Jul 2016"><strong>2016</strong></a></td>
+		  <td class="c" id="displayYearEl" title="You are here: 04:43:53 Aug 10, 2017">2017</td>
+		  <td class="f" nowrap="nowrap">2018</td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td class="s">
+	    	    <div id="wm-nav-captures"><a class="t" href="https://web.archive.org/web/*/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface" title="See a list of every capture for this URL">32 captures</a><div class="r" title="Timespan for captures of this URL">10 Nov 2014 - 28 Nov 2017</div></div>
+	  </td>
+	  <td class="k">
+	    <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface" id="wm-graph-anchor">
+	      <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+		<canvas id="wm-sparkline-canvas" width="575" height="27" border="0"></canvas>
+	      <div class="yt" style="display: none; width: 25px; height: 27px;"></div><div class="mt" style="display: none; width: 2px; height: 27px;"></div></div>
+	    </a>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+    <div style="position:absolute;bottom:0;right:2px;text-align:right;">
+      <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#expand" onclick="__wm.ex(event);return false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span style="font-size:80%">About this capture</span></a>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+            <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+    </div>
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="./Command Line Interface – Customer Feedback for AnyDesk_files/loading.gif" alt="loading"></div>
+    </div>
+  </div></div></div></div><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="./Command Line Interface – Customer Feedback for AnyDesk_files/timestamp.js.téléchargement" charset="utf-8"></script>
+<script type="text/javascript" src="./Command Line Interface – Customer Feedback for AnyDesk_files/graph-calc.js.téléchargement" charset="utf-8"></script>
+<script type="text/javascript" src="./Command Line Interface – Customer Feedback for AnyDesk_files/auto-complete.js.téléchargement" charset="utf-8"></script>
+<script type="text/javascript" src="./Command Line Interface – Customer Feedback for AnyDesk_files/toolbar.js.téléchargement" charset="utf-8"></script>
+
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+.wb-autocomplete-suggestions {
+    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+    position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+}
+.wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
+.wb-autocomplete-suggestion b { font-weight: bold; }
+.wb-autocomplete-suggestion.selected { background: #f0f0f0; }
+</style>
+<script type="text/javascript">
+__wm.bt(575,27,25,2,"web","http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface","2017-08-10",1996);
+</script><div class="wb-autocomplete-suggestions " style="left: 17px; top: 22px; width: 651px;"></div>
+<!-- END WAYBACK TOOLBAR INSERT -->
+  <div id="fb-root" class=" fb_reset"><script src="./Command Line Interface – Customer Feedback for AnyDesk_files/all.js.téléchargement" async=""></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f78d8ceee007fc" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" src="./Command Line Interface – Customer Feedback for AnyDesk_files/ping.html" style="display: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Command Line Interface – Customer Feedback for AnyDesk_files/XBwzv5Yrm_1.html" style="border: none;"></iframe></div></div></div>
+  <div class="uvPageContainer">
+
+      <header class="uvContainer uvMasthead ">
+  <div class="uvRow">
+    <div class="uvCol-12">
+      <div class="uvMastheadWrapper">
+        
+          <a class="uvMastheadHomeLink" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/" title="Customer Feedback for AnyDesk">
+            <img class="uvMastheadLogo" src="./Command Line Interface – Customer Feedback for AnyDesk_files/anydesk.png" alt="AnyDesk Software GmbH">
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+
+
+<div class="uvContainer uvBody">
+  <div class="uvRow">
+    <div class="uvCol-8">
+
+      <article>
+        <header class="uvPageHeader">
+          <h1 class="uvPageTitle uvCustomPrimary-color">Command Line Interface</h1>
+          <div class="uvBreadcrumbs">
+              <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/70519-advanced">← Advanced</a>
+          </div>
+        </header>
+        <section class="uvFaq typeset">
+            Advanced users can control AnyDesk from scripts using the command line. AnyDesk uses the pipe mechanism of the operating system in some cases instead of parameters for higher security.<br><br><span style="font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;">See also:&nbsp;</span><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/475883-exit-codes" style="font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal;">exit codes</a><span style="font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;">.</span><br><h3>Overview</h3><br><br><code>AnyDesk.exe [id|alias|--control|--start-service|--with-password|--set-password|--get-alias|--get-id|--register-license][--silent]</code><br>
+
+<table border="1">
+  <tbody><tr>
+    <th>Parameter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code></code><span style="background-color: rgb(243, 246, 250);"><code>--control</code></span><br></td>
+    <td>This starts the process which creates the tray icon.<br>During installation, AnyDesk creates a link with this parameter in the autostart start menu entry.<br>This process also handles the clipboard.</td>
+  </tr>
+  <tr>
+    <td><code>--start-service</code><br></td>
+    <td><font color="#000000">Start the AnyDesk service, if not already running.</font></td>
+  </tr>
+  <tr>
+    <td><code>--with-password</code><br></td>
+    <td><font color="#000000">Read the password from <code>stdin</code> and connect to the alias given in the command line using the password.</font></td></tr>
+  <tr>
+    <td><code>--set-password</code><br></td>
+    <td>Sets a password.</td>
+  </tr>
+  <tr>
+    <td><code>--get-alias</code><br></td>
+    <td><font color="#000000">Gets the current AnyDesk alias.</font><font color="#000000"><br></font></td>
+  </tr>
+  <tr>
+    <td><code>--get-id</code><br></td>
+    <td>Gets the current AnyDesk ID.<br></td>
+  </tr>
+  <tr><td valign="top"><code>--get-status</code><br></td><td valign="top">Returns the network status of AnyDesk (online or offline).<br></td></tr><tr>
+    <td><code>--register-licence</code><br></td>
+    <td><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;"></span><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;">Registers a licence key with AnyDesk.&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;"><br></span></td>
+  </tr>
+ 
+  <tr>
+    <td><span style="font-family: monospace; font-size: 14px; font-style: normal; font-variant: normal; line-height: 14px; background-color: rgb(243, 246, 250);"></span><span style="font-family: monospace; font-size: 14px; font-style: normal; font-variant: normal; line-height: 14px; background-color: rgb(243, 246, 250);">--silent</span></td>
+    <td><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;">AnyDesk will not display message boxes when this parameter is specified. Recommended for scripts.<br></span></td></tr></tbody></table>For installation parameters, see&nbsp;<a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/435750-automatic-deployment" style="font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal;">Automatic Deployment</a><span style="font-family: sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.6000003814697px;">.</span><br><h3><span style="font-size: 16.7999992370605px; font-weight: bold;">Obtaining Alias and Id</span><br></h3>To get the AnyDesk-Alias or Id of the currently installed and running AnyDesk, you can use the following syntax:<br><br><code>anydesk --get-alias</code><br><code>anydesk --get-id</code><br><br>AnyDesk will write the requested information to <code>stdout</code>. The service must be running for this to work. If the service is not running,&nbsp;<code>SERVICE_NOT_RUNNING </code>is returned, and an exit code is set indicating the error. If AnyDesk is not installed, it needs to be started first, so it can launch a local service.<br><br>For an example, see this windows batch file, which will write the current alias to the console.<br><code>@echo off</code><div><code>path=C:\Program Files (x86)\AnyDesk\;%path%</code></div><div><code>for /f "delims=" %%i in ('anydesk --get-alias') do set CID=%%i&nbsp;</code></div><div><code>echo AnyDesk alias is: %CID%</code></div><div><code>pause</code></div><h3>Starting the AnyDesk Service</h3><br><code>anydesk --start-service</code><br><br><i>This requires administrator privileges.</i><h3>Connecting with password</h3><br>This example script line connects to <i>alias@ad</i> with <i>password</i>.<br><br><code>echo <i>password</i> | anydesk <i>alias@ad&nbsp;</i></code><span style="color: rgb(50, 67, 84); font-family: monospace; font-size: 13.63636302948px; font-style: normal; font-variant: normal; line-height: 13.63636302948px; background-color: rgb(243, 246, 250);">--with-password</span><br><h3>Setting a Password</h3>For security reasons, a password can not be set from the command line directly as this would enable malicious users to spy the password from the command line in Task Manager. Instead, a pipe is used to set the password.<br><br><code>echo&nbsp;<i>password&nbsp;</i>| anydesk.exe --set-password</code><br><br><i style="font-family: sans-serif; font-size: 14px; font-variant: normal;">This requires administrator privileges.<br></i><h3>Registering Licence Key</h3>You can register a licence with the current AnyDesk installation using the command line. The service must be running.<br><br><code>echo <i>licence_key </i>| anydesk.exe&nbsp;--register-licence</code><br><br>Almost every scripting language has a pipe interface for <code>stdin </code>and <code>stdout</code>. See the programming language documentation for more information.<br><br><div><br></div><div></div>
+        </section>
+        <footer class="uvFaqFooter">
+          <span class="uvFaqAction uvFaqAction-helpful">
+            <button href="/api/v1/articles/441867/useful" class="uvStyle-button uvStyle-button-helpful">
+              <!--<img width="32" alt="smiley face" src="//assets0.uvcdn.com/pkg/clients/_icons/icon.smile.32px-7404a3b9fa862ace06fc90f307720ec8.png" />-->
+              <span class="uvStyle-button-label" data-washelpful="Great! Glad we could help.">This article was helpful</span>
+            </button>
+            <span style="display: none;">(thinking…)</span>
+            <!-- <span class="uvFieldEtc-thinking">(thinking…)</span> -->
+          </span>
+          <span class="uvStyle-separator">&nbsp;·&nbsp;</span>
+          <span class="uvFaqAction uvFaqAction-flag">
+            <a class="uvAnonymousOnly uvStyle-link" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/site/signin?lang=en">Flag this article as inaccurate…</a><button class="uvFlagObject uvUserOnly uvUserOnly-inline uvStyle-link" data-success="Flagged" data-url="/api/v1/faqs/441867-command-line-interface/flags?code=inaccurate" type="button">Flag this article as inaccurate…</button>
+          </span>
+            <span class="uvStyle-separator uvAdminOnly uvAdminOnly-inline">&nbsp;·&nbsp;</span>
+              <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/admin/faqs/441867" rel="nofollow" class="uvAdminOnly uvAdminOnly-inline">Admin →</a>
+          
+        </footer>
+      </article>
+
+    </div>
+
+    <div class="uvCol-4 uvSidebar uvCol-last">
+      <div class="uvModule uvModule-session" aria-live="polite" aria-relevant="additions removals">
+  <section class="uvModuleSection uvModuleSection-userbox uvModuleSection-signin">
+      <p class="uvStyle-signin">New and returning users may <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/signin">sign in</a></p>
+    <form novalidate="" class="uvjSigninStandalone uvSignin-prestine">
+      
+<fieldset class="uvSignin uvSignin-default uvFieldset" data-options="{&quot;subclass&quot;:&quot;StandaloneSignin&quot;}" aria-live="polite" aria-relevant="additions removals" data-subclass="StandaloneSignin">
+  <legend class="uvSigninLegend">Sign in</legend>
+  <div class="uvSigninMode" style="display:none">prestine</div>
+      <div class="uvField uvField-display_name uvField-first">
+        <label class="uvFieldInner" for="display_name_2286">
+          <span class="uvFieldPlaceholder">Your name</span>
+          <input class="uvFieldText" type="text" name="display_name" id="display_name_2286" title="Your name">
+        </label>
+      </div>
+      <div class="uvField uvField-email uvField-first">
+        <label class="uvFieldInner" for="email_2286">
+          <span class="uvFieldPlaceholder">Your email address</span>
+          <input class="uvFieldText" type="email" name="email" id="email_2286" value="" title="Your email address">
+        </label>
+        <div class="uvFieldEtc uvFieldEtc-unprotected">Check!</div>
+        <div class="uvFieldEtc uvFieldEtc-email_invalid">invalid email</div>
+        <div class="uvFieldEtc uvFieldEtc-thinking">(thinking…)</div>
+        <div class="uvFieldEtc uvFieldEtc-reset">Reset</div>
+        <div class="uvFieldEtc uvFieldEtc-providers">
+            <span class="uvFieldEtcLabel">or sign in with</span>
+            <ul>
+                            <li data-provider="facebook"><a href="https://web.archive.org/web/20170810044353/https://graph.facebook.com/oauth/authorize?client_id=46468144668&amp;redirect_uri=https%3A%2F%2Fauth.uservoice.com%2Ffacebook%2F214963&amp;scope=email&amp;display=popup" tabindex="0" title="Sign in via Facebook"><img class="favicon" src="./Command Line Interface – Customer Feedback for AnyDesk_files/facebook-8b92ce8bf5e8258f342c1990afd055fc.png" alt="facebook"></a></li>
+              <li data-provider="google"><a href="https://web.archive.org/web/20170810044353/http://auth.uservoice.com/google/214963" tabindex="0" title="Sign in via Google"><img class="favicon" src="./Command Line Interface – Customer Feedback for AnyDesk_files/google-3c303af007c64a872d4822fbac21253e.png" alt="google"></a></li>
+
+            </ul>
+        </div>
+      </div>
+      <div class="uvField uvField-authentication">
+        <ul class="uvFieldEtc uvFieldEtc-providers uvFieldEtc-third_party"></ul>
+        <img class="password" alt="Password icon" src="./Command Line Interface – Customer Feedback for AnyDesk_files/password-d904f06a67a7b29d489489d3a35f548b.png">
+        <div class="password">
+          <label class="uvFieldInner" for="password_2286">
+            <span class="uvFieldPlaceholder">UserVoice password</span>
+            <input class="uvFieldPassword" type="password" name="password" id="password_2286" title="UserVoice password">
+          </label>
+          <div class="uvFieldEtc uvFieldEtc-password_invalid"></div>
+          <div class="uvFieldEtc uvFieldEtc-forgot_password"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/users/forgot_password" class="uvFieldEtc-password_reset">Forgot password?</a></div>
+          <div class="uvFieldEtc uvFieldEtc-create_password"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/users/forgot_password" class="uvFieldEtc-password_reset">Create a password</a></div>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+        <div class="uvField uvField-terms_implicit">
+          <span class="uvFieldInner">I agree to the <a target="_blank" rel="external" title="Opens in new window" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/tos">terms of service</a></span>
+        </div>
+
+  <div class="uvField uvField-logged_in uvField-first">
+    <span>
+      Signed in as <span class="logged_in_as"></span>
+      (<a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/logout">Sign out</a>)
+    </span>
+  </div>
+
+  <input type="hidden" name="uninitialized" value="true">
+</fieldset>
+
+      <div class="uvFormFlash uvFormFlash-error">
+  <div class="uvFormFlashMessage"></div>
+  <a class="uvFormFlashClose" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#close">Close</a>
+</div>
+
+<div class="uvFormFlash uvFormFlash-info">
+  <div class="uvFormFlashMessage"></div>
+  <a class="uvFormFlashClose" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface#close">Close</a>
+</div>
+
+      <div class="submit_region">
+  <button class="uvFieldEtc-submit-button uvStyle-button">Sign in</button>
+  <ul class="button-states-language">
+    <li class="sign-in-button-text">Sign in</li>
+    <li class="sign-up-button-text">Sign up</li>
+  </ul>
+  <button class="uvFieldEtc-cancel-page">Cancel</button>
+</div>
+
+
+    </form>
+  </section>
+</div>
+
+      
+        <div class="uvModule uvModule-helpdesk">
+        <section class="uvModuleSection uvModuleSection-list">
+          <h1 class="uvModuleSectionHeader uvCustomPrimary-color"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/70519-advanced">Advanced</a></h1>
+          <ol class="uvList uvList-articles">
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/696033-customize-anydesk">Customize AnyDesk</a></li>
+              <li class="uvListItem uvListItem-article uvListItem-selected"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface">Command Line Interface</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/475883-exit-codes">Exit Codes</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/435750-automatic-deployment">Automatic Deployment</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/656662-mirror-driver">Mirror Driver</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/1077709-remote-restart">Remote Restart</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/1155313-how-to-add-a-client-to-your-namespace">How to add a client to your namespace</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/1173367-setting-up-a-download-link-on-your-website">Setting up a download link on your website</a></li>
+              <li class="uvListItem uvListItem-article"><a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/1178599-anydesk-download-banner-html-snippet">AnyDesk Download Banner / HTML-Snippet</a></li>
+          </ol>
+        </section>
+      </div>          
+
+
+
+
+
+<div class="uvModule uvModule-mainSidebar">
+
+  <header class="uvModuleHeader hide" style="position: absolute;">
+    <!-- Header should be present for screenreaders, but hidden, we need an accessible class for this -->
+    <h1 class="uvCustomPrimary-color hidden"><span class="uvModuleTriggerTwirl"></span> Feedback and Knowledge Base</h1>
+    <!-- end -->
+  </header>
+
+  <section class="uvModuleSection uvModuleSection-search">
+    <form action="https://web.archive.org/web/20170810044353/http://support.anydesk.com/api/v1/search?weight_minimum=40&amp;lang=en">
+      <div class="uvField uvField-search">
+        <label class="uvFieldInner" for="combined_search_sidebar">
+        <!-- this should be a search for knowledgebase and helpdesk. -->
+          <span class="uvFieldPlaceholder">Search</span>
+          <input class="uvFieldText" name="query" type="text" id="combined_search_sidebar">
+
+          <script type="text/x-jquery-tmpl" id="uvSearch-template-articles">
+            <h4 class="uvNavListItemSubtitle">${total_articles} {{if total_articles > 1}}articles{{else}}article{{/if}}</h4>
+            <ul class="uvList uvList-searchResults">
+              {{each(i, article) articles}}
+                <li class="uvListItem uvListItem-searchResult" data-search-weight="${article.weight}">
+                  <a href="${article.path}">${article.question}</a>
+                </li>
+              {{/each}}
+            </ul>
+            {{if more_articles}}
+              <p class="uvSearch-more-results"><a href="/search?filter=articles&query=${response_data.query}">More articles &rarr;</a></p>
+            {{/if}}
+          </script>
+
+          <script type="text/x-jquery-tmpl" id="uvSearch-template-ideas">
+            <h4 class="uvNavListItemSubtitle">${total_suggestions} {{if total_suggestions > 1}}ideas{{else}}idea{{/if}}</h4>
+            <ul class="uvList uvList-searchResults">
+              {{each(i, idea) suggestions}}
+                <li class="uvListItem uvListItem-searchResult" data-search-weight="${idea.weight}">
+                {{if idea.status && idea.status.name}}
+                  <em class="uvStyle-status uvStyle-status-${idea.status.key}"
+                      title="This idea is ${idea.status.name} ${$.tmplHelpers.toLocalDate(idea.updated_at, '- updated %date%')}">${idea.status.name}</em>
+                {{/if}}
+                  <a href="${idea.path}">
+                    ${idea.title}
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+            {{if more_suggestions}}
+              <p class="uvSearch-more-results"><a href="/search?filter=ideas&query=${response_data.query}">More ideas &rarr;</a></p>
+            {{/if}}
+          </script>
+
+          <script type="text/x-jquery-tmpl" id="uvSearch-template-title">
+            {{if searching}}
+              Searching&hellip;
+            {{else}}
+              <a href="/search?filter=merged&query=${query}">Search results</a>
+            {{/if}}
+          </script>
+        </label>
+        <button class="uvFieldButton uvStyle-button" type="submit"><span class="uvFieldButtonImage-sidebar">Search</span></button>
+          <div class="uvFieldEtc uvFieldEtc-thinking">(thinking…)</div>
+          <button type="reset" class="uvFieldEtc uvFieldEtc-reset">Reset</button>
+      </div>
+    </form>
+    <ul class="uvNavList">
+      <li class="uvNavListItem uvNavListItem-search uvSearch-results-container" style="display: none;">
+        <h2 class="uvNavListItemTitle uvSearch-results-title uvCustomPrimary-color">
+          Searching…
+        </h2>
+        <div id="uvSearch-results-articles" class="uvSearchResults uvSearchResults-articles"></div>
+        <div id="uvSearch-results-ideas" class="uvSearchResults uvSearchResults-ideas"></div>
+        <p class="uvNoResults">No results.</p>
+        <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/441867-command-line-interface" class="uvSearch-results-clear">Clear search results</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="uvModuleSection">
+    <ul class="uvNavList">
+
+        <li class="uvNavListItem uvNavListItem-contactus">
+          <h2 class="uvNavListItemTitle">
+              <a id="contactus-touchpoint" class="uvLink-contactus-touchpoint uvStyle-link uvCustomLink-color">
+                Contact support
+              </a>
+          </h2>
+        </li>
+
+        <li class="uvNavListItem uvNavListItem-feedback">
+          <h2 class="uvNavListItemTitle">
+            <a class="uvLink-idea" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/forums/251923-general">Give feedback</a>
+          </h2>
+          <ul class="uvList uvList-forums" style="display:none;" data-tmpl="sidebarForumsTmpl">
+              <li class="uvListItem uvListItem-forum uvListItem-forum-251923">
+                <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/forums/251923-general" title="View all ideas in General">General</a>&nbsp;<span class="uvStyle-count">654<span class="uvStyle-count-label"> ideas</span></span>
+              </li>
+          </ul>
+        </li>
+
+        <li class="uvNavListItem uvNavListItem-helpdesk">
+        <!-- popular articles in topics box  HELPDESK -->
+          <h2 class="uvNavListItemTitle">
+            <a class="uvLink-knowledgebase" href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase">Knowledge Base</a>
+          </h2>
+            <ul class="uvList uvList-topics">
+                  <li class="uvListItem uvListItem-topic uvListItem-topic-70519 uvListItem-selected">
+                    <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/70519-advanced" title="View all articles in Advanced">Advanced</a>&nbsp;<span class="uvStyle-count">9<span class="uvStyle-count-label"> articles</span></span>
+                  </li>
+                  <li class="uvListItem uvListItem-topic uvListItem-topic-134842">
+                    <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/134842-anydesk-for-mobile-devices" title="View all articles in AnyDesk for Mobile Devices">AnyDesk for Mobile Devices</a>&nbsp;<span class="uvStyle-count">1<span class="uvStyle-count-label"> article</span></span>
+                  </li>
+                  <li class="uvListItem uvListItem-topic uvListItem-topic-54942">
+                    <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/54942-usage" title="View all articles in Usage">Usage</a>&nbsp;<span class="uvStyle-count">14<span class="uvStyle-count-label"> articles</span></span>
+                  </li>
+                  <li class="uvListItem uvListItem-topic uvListItem-topic-54944">
+                    <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/54944-security" title="View all articles in Security">Security</a>&nbsp;<span class="uvStyle-count">7<span class="uvStyle-count-label"> articles</span></span>
+                  </li>
+                  <li class="uvListItem uvListItem-topic uvListItem-topic-54943">
+                    <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/topics/54943-troubleshooting" title="View all articles in Troubleshooting">Troubleshooting</a>&nbsp;<span class="uvStyle-count">14<span class="uvStyle-count-label"> articles</span></span>
+                  </li>
+              <li class="uvListItem uvListItem-topic uvListItem-topic-all ">
+                <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/knowledgebase/articles/all">All articles</a>
+              </li>
+            </ul>
+        </li>
+
+      <li class="uvNavListItem uvNavListItem-home">
+        <h2 class="uvNavListItemTitle">
+          <a class="uvLink-home" href="https://web.archive.org/web/20170810044353/http://anydesk.com/">AnyDesk Software GmbH</a>
+        </h2>
+      </li>
+
+    </ul>
+  </section>
+
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+      <footer class="uvContainer uvFooter">
+  <div class="uvRow">
+    <div class="uvCol-12">
+      <p>
+        
+          <a href="https://web.archive.org/web/20170810044353/http://anydesk.com/">AnyDesk Software GmbH</a>
+          <span class="uvStyle-separator"> · </span>
+        
+        <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/" class="site-frontpage-link">Customer Feedback for AnyDesk</a>
+        <span class="uvStyle-separator"> · </span>
+        <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/tos">Terms of Service &amp; Privacy Policy</a>
+      </p>
+      
+        <p>
+          <a href="https://web.archive.org/web/20170810044353/http://www.uservoice.com/powered-by/?uv_company_name=AnyDesk%20Software%20GmbH&amp;uv_experience=portal&amp;uv_contact_url=support.anydesk.com&amp;utm_campaign=footer_poweredby&amp;utm_medium=product&amp;utm_source=support.anydesk.com">
+            Powered By UserVoice
+          </a>
+          <span class="uvStyle-separator"> · </span>
+          <a href="https://web.archive.org/web/20170810044353/https://www.uservoice.com/powered-by/?uv_company_name=AnyDesk%20Software%20GmbH&amp;uv_experience=portal&amp;uv_contact_url=support.anydesk.com&amp;utm_campaign=footer_feedback&amp;utm_medium=product&amp;utm_source=support.anydesk.com">
+            Product Management Platform
+          </a>
+        </p>
+      
+      <p>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script id="uv-user-panel" type="text/x-jquery-tmpl">
+    <section class="uvModuleSection uvModuleSection-userbox uvModuleSection-signout">
+      <div class="vcard">
+        <a class="url" href="${user.uservoice_url}">
+          <span class="uvUserBadge">
+            <img alt="" class="uvUserBadgePhoto photo" src="${user.avatar_url}" width="40">
+          </span>
+          <span class="fn">${user.name}</span>
+        </a>
+        {{if (!user.remembered) }}
+        <span class="uvRememberMe">(<a title="Click this link to stay signed in on this computer even after your browser is closed." href="/remember_me">Stay signed in</a>)</span>
+        {{/if}}
+      </div>
+      <div class="uvUserNav">
+        <a class="url" href="${user.uservoice_url}">Settings</a>
+        {{if user.roles.admin}}
+          <span class="uvStyle-separator">&middot;</span>
+          <a href="https://web.archive.org/web/20170810044353/http://support.anydesk.com/admin">Admin Console</a>
+        {{/if}}
+        <span class="uvStyle-separator">&middot;</span>
+        <a href="/logout">Sign out</a>
+      </div>
+    </section>
+  </script>
+
+
+  <script type="text/javascript">
+    var current_forum_id = null;
+  </script>
+
+  <script id="portalForumsTmpl" type="text/x-jquery-tmpl">
+    <li class="uvListItem{{if current_forum_id==id}} uvListItem-selected{{/if}} uvListItem-forum-${id}">
+      <h4 class="uvListItemHeader">
+        <a href="${url}">${name}</a>
+        {{if is_private}}
+         <span class="uvIcon-private-16">(private)</span>
+        {{/if}}
+      </h4>
+      <div class="uvListItemFooter">${idea_count} <span class="uvStyle-count-label">ideas</span></div>
+    </li>
+  </script>
+
+  <script id="portalAltForumsTmpl" type="text/x-jquery-tmpl">
+    <li class="uvListItem{{if current_forum_id==id}} uvListItem-selected{{/if}} uvListItem-forum-${id}">
+      <h4 class="uvListItemHeader">
+        <a href="${url}">${name}</a>
+        {{if is_private}}
+         <span class="uvIcon-private-10">(private)</span>
+        {{/if}}
+      </h4>
+      <p class="uvStyle-meta">
+        ${idea_count}
+        ideas
+      </p>
+    </li>
+  </script>
+
+  <script id="sidebarForumsTmpl" type="text/x-jquery-tmpl">
+    <li class="uvListItem uvListItem-forum{{if current_forum_id==id}} uvListItem-selected{{/if}} uvListItem-forum-${id}">
+      <a href="${url}" title="View all ideas in ${name}">${name}</a>
+      {{if is_private}}
+        <span class="uvIcon-private-10">(private)</span>
+      {{/if}}
+      &nbsp;<span class="uvStyle-count">${idea_count} <span class="uvStyle-count-label">ideas</span></span>
+    </li>
+  </script>
+
+  <script src="./Command Line Interface – Customer Feedback for AnyDesk_files/site2-f4117c207d1271f6209c27577744063d.js.téléchargement"></script>
+  <script type="text/javascript">
+  (function($) { $.uvMessages = {"cookies-disabled":"Uh-oh! Cookies are disabled. Access the feedback forum directly at \u003ca target=\"_blank\" style=\"color: #fff; text-decoration: underline;\" href=\"http://support.anydesk.com/\"\u003ehttp://support.anydesk.com/\u003c/a\u003e or enable cookies in your browser settings and refresh this page.","communication-error":"Server communication problems! Please try again.","submit-error":"Sorry, we couldn't submit your request.","voting-submit-error":"We couldn't submit your vote at this time.","out-of-votes-error":"Sorry, we couldn't submit your idea since you're out of votes.","required-fields-error":"Whoops! Please fill in all required fields before continuing.","email-invalid-error":"Invalid email address!","password-invalid-error":"Invalid password!","terms-invalid-error":"You must accept the terms to continue.","large-file-error":"Whoops! You are attempting to upload a file that is too big. Please attach a smaller file and try again.","try-again-error":"Error! Try again.","saving":"Saving","saved":"Saved","nonmatching-passwords":"Passwords must match","password-updated":"Your password has been updated","sent":"Sent!","delete-comment":"Are you sure you want to delete your comment?","delete-suggestion":"Are you sure you want to delete your idea?","dissociate-suggestion":"Since other people support this idea, you cannot delete it. However, you can remove yourself from this idea and it will be associated with 'Anonymous'\n\nAre you sure you want to remove yourself from this idea?"}; })(jQuery || UV.jQuery);
+</script>
+
+
+
+  <script type="text/javascript">
+    var currentUser = null;
+    var currentUserVersion = parseInt("0", 10);
+
+    var currentClient = {
+      client_key: "kyvsSlmbCOlutxq6MD8LVQ",
+      client_secret: "HdkC3FnJ3kBQzyzR7Oeie6SqnN51l7dZnHw53v5k",
+      subdomain_key: "anydesk"
+    };
+  </script>
+
+  <script type="text/javascript">
+  window.fbAsyncInit = function() {
+    (function($) {
+    })(jQuery || UV.jQuery);
+  };
+</script>
+<script type="text/javascript">
+  (function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//web.archive.org/web/20170810044353/http://connect.facebook.net/en_US/all.js#xfbml=1&appId='+46468144668;
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+
+
+
+    <script type="text/javascript">
+      window.UserVoice || (window.UserVoice = []);
+
+        UserVoice.push(['addTrigger', '#contactus-touchpoint', {"contact_us":true,"mode":"contact","menu":true,"forum_id":251923,"accent_color":"007DBF","smartvote_enabled":true,"post_idea_enabled":true,"position":"left"}]);
+
+      UserVoice.push(['set', 'locale', 'en']);
+
+      (function() {
+        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +  'widget.uservoice.com/g6zr56UrgzHHOkkGW4Cg.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+      })();
+    </script>
+
+  <!-- start Mixpanel --><script type="text/javascript">var mpq=[];mpq.push(["init","21070e89b14d1c143a1f3155e0c00b01"]);(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//web.archive.org/web/20170810044353/http://api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c< d.length;c++){mpq[d[c]]=e(d[c])}})();
+</script><!-- end Mixpanel -->
+
+<script type="text/javascript">
+  // each subdomain to have a separate set of super properties
+  mpq.set_config({ cross_subdomain_cookie: false });
+
+  // Default to anonymous if user not logged in
+  mpq.register({
+    'Anonymous': true
+  });
+
+    mpq.register({
+      'Subdomain':   'anydesk',
+      'Product':     'UserVoice'
+    });
+</script>
+  <script type="text/javascript">
+    
+  </script>
+  <div class="uvPasswordReset-overlay" style="display: none">
+  <div class="uvPasswordReset-dialog ">
+    <div class="uvPasswordReset-dialog-header">
+      <button class="uvPasswordReset-dialog-close-button close-button" onclick="event.preventDefault(); UV.jQuery(&#39;.uvPasswordReset-overlay&#39;).hide();"></button>
+      <h1>Your password has been reset</h1>
+    </div>
+    <div class="uvPasswordReset-dialog-content typeset">
+      <p>
+      Due to a <a target="_blank" href="https://web.archive.org/web/20170810044353/https://community.uservoice.com/blog/uservoice-security-incident-notification/">security incident</a> we have reset your password.
+      </p>
+      <p>
+      We've just sent you an email to <span class="uvPasswordReset-email"></span>.
+      Click the link to create a password, then come back here and sign in.
+      </p>
+      <div class="uvPasswordReset-dialog-buttons">
+        <button class="uvStyle-button" onclick="event.preventDefault(); UV.jQuery(&#39;.uvPasswordReset-overlay&#39;).hide();">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+     FILE ARCHIVED ON 04:43:53 Aug 10, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:25:01 Jun 10, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  LoadShardBlock: 796.876 (3)
+  esindex: 0.006
+  captures_list: 2447.207
+  CDXLines.iter: 14.739 (3)
+  PetaboxLoader3.datanode: 1875.418 (4)
+  exclusion.robots.fetch: 1615.95 (4)
+  exclusion.robots: 1616.742
+  exclusion.robots.policy: 0.412
+  RedisCDXSource: 14.149
+  PetaboxLoader3.resolve: 477.732
+  load_resource: 1559.499
+--><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="tiptip_holder" style="max-width:300px;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div></body></html>

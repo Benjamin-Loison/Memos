@@ -1,0 +1,7 @@
+Aquiring license and fail: => license of Windows isn't good ?
+
+Softwares:
+
+calculator
+picture
+remote desktop (microsoft app)

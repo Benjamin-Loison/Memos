@@ -1,0 +1,1 @@
+application from Microsoft Store (no .exe): C:\Users\Username\Appdata\Local\Packages

@@ -1,0 +1,4 @@
+Ctrl + Maj + G: Black and white
+
+Shift + magic wand: select pixels by color
+

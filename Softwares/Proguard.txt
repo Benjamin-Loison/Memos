@@ -1,0 +1,1 @@
+To obfusque an lambda project: Files/lib/proguardgui.jar

@@ -1,0 +1,13 @@
+Ctrl + Maj + +: exposant
+Ctrl + =: indice
+
+Ctrl + E: centrer
+
+Ctrl + I: italic
+Ctrl + G: bold
+Ctrl + U: underline
+
+Alt + 0149: •
+
+.asd -> .doc and open with OpenOffice
+

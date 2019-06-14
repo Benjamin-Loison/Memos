@@ -1,0 +1,58 @@
+no vm in vm
+
+resize vhd: VBoxManage modifyhd <absolute path to file> --resize <size in MB>
+
+VHD: repair corrupted -> <3 BitRecover VHD Recovery <3
+
+crontab: @reboot sleep 5s; /usr/bin/VBoxHeadless -startvm "Windows 10"
+
+all config of a vm: nameOfVM.vbox
+
+VBoxManage controlvm VMName acpipowerbutton
+or poweroff :D
+
+(sensitive to upper case): vboxmanage showvminfo "Windows 10"
+Add: VBoxManage modifyvm "Windows 10" --natpf1 "Web 1,udp,,8181,,80"
+Remove: VBoxManage modifyvm "Debian compilator" --natpf1 delete "AC Dev"
+
+nohup vboxheadless -startvm "Windows 10" &
+
+change directory for VM: vboxmanage setproperty machinefolder /path/to/directory/
+verify: vboxmanage list systemproperties | grep folder
+
+VBoxManage list vms
+VBoxManage list runningvms
+
+/root/.config/VirtualBox/VirtualBox.xml <- here are all remembered VMs
+
+VM does not forward correct client IP when using Virtualbox NAT: (need to be stopped)
+vboxmanage modifyvm VMName --nataliasmode1 proxyonly
+
+Get IPv4 of guest machine: VBoxManage guestproperty get "Windows 10" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+
+Create a virtual box/storage from a storage device:
+---------------------------------------------------
+
+Windows:
+
+cd %programfiles%\oracle\virtualbox
+VBoxManage interalcommands createrawvmdk -filename "%USERPROFILE%"\.VirtualBox\usb.vmdk -rawdisk \\.\PhysicalDrive#
+
+Linux: vboxmanage internalcommands createrawvmdk -filename ~/usb.vmdl -rawdisk /dev/sdx
+
+-----
+
+Restart: (better ?)
+-------
+
+VBoxManage controlvm "Debian compilator" poweroff
+(launch with shell thread ? :/) /usr/bin/VBoxHeadless -startvm "Debian compilator"
+
+Network:
+--------
+
+Bridge interface give another internal IPv4
+Linux: VBoxManage modifyvm "VM Name" --nic1 bridged --nictype1 82545EM --bridgeadapter1 eth0
+
+Mac Mojave: https://www.youtube.com/watch?v=v_hENCR6nEw
+

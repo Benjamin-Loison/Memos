@@ -1,0 +1,7 @@
+change RegInfo.ini in C:\ProgramData\TechSmith\Camtasia Studio 18
+
+Exporting as MP4 is 6x smaller in size than the blank Camtasia project video #AbusedJustRecordDirectlyMP4WithForInstanceOBSInstead
+And archiving is useless for the exported MP4
+
+Only use CPU for exporting...
+

@@ -1,0 +1,6 @@
+data (and passwords): %appdata%\FileZilla
+
+decode base64 with something like that or my java (see memo): https://www.base64decode.org/
+
+Augmenter nombre de transferts simultanés: Edition -> Paramètres -> Transfert
+

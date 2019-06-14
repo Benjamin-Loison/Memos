@@ -1,0 +1,2 @@
+scan internal network: nmap -sn 192.168.1.0/24
+scan ip: nmap -p 1-65535 -T4 -A -v ip

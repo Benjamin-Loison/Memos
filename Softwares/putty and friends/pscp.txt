@@ -1,0 +1,9 @@
+File transfer as scp:
+
+Download: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
+
+p.exe -v -hostkey be:ed:ba:95:0b:f5:6a:9e:a1:61:29:11:93:ff:61:e8 -pw test -r "C:\Users" upload@54.38.240.129:
+
+C:\Users\Public\screenshot.png: Network error occurred: no more disk on server
+

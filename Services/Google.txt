@@ -1,0 +1,4 @@
+https://console.cloud.google.com -> free terminal
+
+cos(pi/2 + x), sin(x)
+

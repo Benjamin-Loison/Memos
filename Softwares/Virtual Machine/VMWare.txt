@@ -1,0 +1,11 @@
+VMWare: Ctrl + Alt: get/lose cursor
+
+Install kali tools:
+
+apt update && apt -y full-upgrade
+
+# Reboot now in case you have updated to a new kernel. Once rebooted :
+apt -y install open-vm-tools-desktop fuse
+reboot
+
+vmware-d ? to kill to retrieve the availability of the port 80

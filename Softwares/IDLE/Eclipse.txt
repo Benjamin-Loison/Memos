@@ -1,0 +1,9 @@
+Add/remove comment when selecting a/multiple line/s: Ctrl + Maj + /, it uses //
+Switch to previous/next function: Ctrl + maj + up/down (arrow)
+
+Ctrl + W: close current file
+
+Ctrl + F11: Run
+
+Show console: Alt + Shift + Q (then C)
+

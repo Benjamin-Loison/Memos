@@ -1,0 +1,8 @@
+execute a linux command from a windows shortcut: C:\cygwin64\bin\mintty.exe C:\cygwin64\bin\rsnapshot -v daily
+
+install apt:
+
+wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg
+install apt-cyg /bin
+apt-cyg install vim
+

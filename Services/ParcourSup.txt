@@ -1,0 +1,20 @@
+Comment ils font pour en même temps compute les propositions pour le jour suivants et en même temps en recevoir dans la nuit ?
+
+Security:
+---------
+
+old: admission-postbac.fr (193.50.43.66)
+
+new:
+----
+
+parcoursup.fr (193.50.43.66)
+dossierappel.parcoursup.fr (193.50.43.67) try .68 ? or before ...
+debordement5.parcoursup.fr (193.51.147.249)
+
+debordement1.parcoursup.fr -> apb (ping enabled - 193.48.203.112)
+debordement2.parcoursup.fr -> apb (ping enabled - 195.83.231.27)
+debordement3.parcoursup.fr -> apb (ping enabled - 193.55.245.20)
+debordement4.parcoursup.fr -> apb (ping disabled like all others - 193.50.43.55)
+
+host by ate ?

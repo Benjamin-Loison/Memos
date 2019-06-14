@@ -1,0 +1,63 @@
+TS3 Port: 9987
+Query (telnet): 10011
+
+login client_login_name=serveradmin client_login_password=password
+
+serverlist
+use 9
+
+@@
+
+servergrouplist
+clientlist
+servergroupaddclient sgid=2 cldbid=22750
+
+@@
+
+clientfind pattern=Benjamin\ Loison
+clientinfo clid=17
+
+@@
+
+clientsetserverquerylogin client_login_name=serveradmin
+
+@@
+
+Msg:
+C:\Users\Asus\AppData\Roaming\TS3Client\logs - private
+C:\Users\Asus\AppData\Roaming\TS3Client\chats - channel
+
+Se faire déban:
+Ordinateur\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProductId <- modif 5 derniers
+
+flood prevention, please try again later -> increase the reduce per tick value in the server settings
+
+Doc for PhP API: https://docs.planetteamspeak.com/ts3/php/framework/
+
+@@
+
+Multiple virtual servers (all but not one) stopped can be configured on the same port (select this server by using the server id and not the port)
+
+@@
+
+<00:44:27> "Bilou Draft" was banned permanently from the server by "TeamSpeak d'AltisCraft.fr (ts.altiscraft.fr)" (Blacklist - Contactez Benjamin pour un déblacklist)
+occured when user take the ip of a banned person
+
+@@
+
+use this tool to get the full range: http://www.whoisxy.com/
+
+Ban a range of ip: banadd ip=90.91.[0-255].[0-255]
+banadd ip=37.[160-175].[0-255].[0-255] (seems not to work)
+* works
+
+@@
+
+Selected icon file is too large. => Server group permission: i_max_icon_filesize
+
+@@
+
+./ts3server_minimal_runscript.sh serveradmin_password=pw
+
+@@
+

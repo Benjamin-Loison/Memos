@@ -1,0 +1,13 @@
+Redirect:
+@@@@@@@@@
+
+a2enmod rewrite
+systemctl restart apache2
+
+.htaccess:
+
+RewriteEngine on
+Redirect /Facebook https://www.facebook.com/altiscraft.fr (https://altiscraft.fr/Facebook)
+
+a2ensite: Error: mysite.com does not exist => add .conf
+

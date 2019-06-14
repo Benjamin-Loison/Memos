@@ -1,0 +1,6 @@
+*bold*: in a text message
+
+send url (bot Messenger check it to load info like picture...) @log apache to get info from user
+
+can use a discord bot to send picture of latex (only latex-messenger on navigator)
+

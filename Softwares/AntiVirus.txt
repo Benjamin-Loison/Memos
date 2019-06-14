@@ -1,0 +1,7 @@
+Avast
+Kaspersky ?
+North ?
+Windows Defender
+MalwareByte anti malware: remove with admin rights: "c:\program files\malwarebytes\anti-malware\unins000.exe" /verysilent /suppressmsgboxes /norestart (no special notif) - can't kill as admin the process
+adcleaner ?
+BitDefender ?

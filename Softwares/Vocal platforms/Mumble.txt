@@ -1,0 +1,6 @@
+Murmur (server)
+
+linux: mumble-server and configure with autostart and high priority and pw then can connect on: 64738
+
+too much complex to be used for AC ?
+

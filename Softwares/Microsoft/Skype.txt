@@ -1,0 +1,10 @@
+get public ipv4 of a user:
+
+Launch wireshark and filter: !(udp.port == 9987) && !(udp.port == 443) && udp && ip.src == 192.168.1.43 && stun && frame.cap_len >= 114 && frame.cap_len <= 200
+and call someone (doesn't need to answer but need to be in your contact otherwise if not friend and user answer to the call we will reach an ip in Redmond (USA) of the Skype office)
+
+work ? can get internal ipv4 of the other user: (with a call without answer) stun && !icmp && ip.src == 192.168.1.43 && frame.cap_len >= 114 && frame.cap_len <= 200
+
+get computer local users: cd %appdata%/Skype & dir
+or: powershell cd %appdata%/Skype & Get-Content shared.xml -Head 10 (need to see </Account> at the end)
+

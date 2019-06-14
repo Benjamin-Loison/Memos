@@ -1,0 +1,6 @@
+exposant excel: ctrl + maj + +
+
+cell format: text wrapping (for new line)
+
+Sort two columns (one with username and the other with a price): select both columns and at the top right, click on Sort button
+

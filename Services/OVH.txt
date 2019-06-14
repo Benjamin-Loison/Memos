@@ -1,0 +1,4 @@
+Download speed: http://ovh.net/files/
+
+seuls nos serveurs Game sont équipés nativement de la mitigation permanente. Nos autres solutions peuvent toutefois en bénéficier, en l'activant manuellement depuis l'espace client. VPS aussi ? Oui -> Section IP sur l'onglet Dédié ou Cloud
+

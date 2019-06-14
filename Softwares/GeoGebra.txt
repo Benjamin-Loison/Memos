@@ -1,0 +1,2 @@
+Input fonction at the bottom:
+Specific interval: Fonction[func, begin, end]
