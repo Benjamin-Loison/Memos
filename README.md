@@ -1,5 +1,5 @@
 # Memos
-My personnal memos for everything
+My personnal memos for everything.
 
 <!--  (some are not very professionnal so find what you are looking for) -->
 
