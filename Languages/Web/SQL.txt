@@ -1,0 +1,65 @@
+XAMPP: /opt/lampp/bin/mysql -u root
+
+apt install mysql-server
+
+(if root password forget: dpkg-reconfigure mysql-server-5.5)
+APACHE: mysql -u root -p
+
+change root password (sql console): SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
+
+mysqld_safe Directory '/var/run/mysqld' for UNIX socket file don't exists. => 
+mkdir -p /var/run/mysqld
+chown mysql:mysql /var/run/mysqld
+
+changer user password:
+
+UPDATE mysql.user SET authentication_string = PASSWORD('PASSWORD') WHERE User = 'user' AND Host = 'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'bill'@'%' IDENTIFIED BY 'passpass';
+grant all privileges on *.* to 'bill'@'%' with grant option;
+
+SHOW DATABASES;
+CREATE DATABASE name;
+USE name;
+SHOW tables;
+CREATE TABLE accounts(id INT AUTO_INCREMENT, username VARCHAR(60), address VARCHAR(200), tel VARCHAR(20), email VARCHAR(60), password VARCHAR(30), PRIMARY KEY(id));
+SHOW COLUMNS FROM accounts;
+INSERT INTO accounts(username, address, tel, email, password) VALUES ('Benjamin LOISON', 'Quelque part', '06XXXXXXXX', 'email@gmail.com', 'test123');
+(see everything in the table): SELECT * FROM items;
+SELECT price FROM items WHERE name='test';
+UPDATE accounts SET username = 'Benjamin LOISON', address = 'Quelque part' WHERE id=0;
+DELETE FROM accounts WHERE id=1;
+(delete all content of the table) DELETE FROM accounts;
+DROP TABLE items;
+DROP DATABASE name;
+
+add a column to a table: ALTER TABLE items ADD commands VARCHAR(2500);
+
+Error: could not find driver => apt install php-mysql
+
+Full reinstallation:
+
+apt autoremove --purge mysql-server\* mariadb-server\*
+mv /var/lib/mysql /var/lib/mysql.bak
+mv /etc/mysql /etc/mysql.bak
+mkdir -p /etc/mysql/conf.d
+apt clean
+
+After installation: mysql_secure_installation
+
+/etc/mysql/my.cnf
+
+[mysqld]
+port=3306
+sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+skip-networking
+
+MySQL version: mysqld --version
+different from: mysql -V
+
+Import sql file (database): first create the database with the right name, then: mysql -u username -p databaseName < file.sql
+
+OVERVIEW replacing: select replace(commands, '%s', 'USERNAME') from items;
+do it: update items set commands = replace(commands, '%s', 'USERNAME');
+
